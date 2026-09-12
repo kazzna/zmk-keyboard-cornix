@@ -1425,7 +1425,7 @@
         // -------------------------------------------------------------
         combo_za {
             timeout-ms = <80>;
-            key-positions = <16 8>;
+            key-positions = <16 7>;
             bindings = <&kana_za>;
             layers = <2 3>;
         };
@@ -1727,7 +1727,7 @@
 
         combo_cha {
             timeout-ms = <80>;
-            key-positions = <18 16>;
+            key-positions = <18 17>;
             bindings = <&kana_cha>;
             layers = <2 3>;
         };
@@ -1779,7 +1779,7 @@
 
         combo_chu {
             timeout-ms = <80>;
-            key-positions = <10 16>;
+            key-positions = <10 17>;
             bindings = <&kana_chu>;
             layers = <2 3>;
         };
@@ -1831,7 +1831,7 @@
 
         combo_cho {
             timeout-ms = <80>;
-            key-positions = <8 16>;
+            key-positions = <8 17>;
             bindings = <&kana_cho>;
             layers = <2 3>;
         };
@@ -1862,7 +1862,7 @@
 
         combo_dya {
             timeout-ms = <80>;
-            key-positions = <19 18 16>;
+            key-positions = <19 18 17>;
             bindings = <&kana_dya>;
             layers = <2 3>;
         };
@@ -1893,7 +1893,7 @@
 
         combo_dyu {
             timeout-ms = <80>;
-            key-positions = <19 10 16>;
+            key-positions = <19 10 17>;
             bindings = <&kana_dyu>;
             layers = <2 3>;
         };
@@ -1924,7 +1924,7 @@
 
         combo_dyo {
             timeout-ms = <80>;
-            key-positions = <19 8 16>;
+            key-positions = <19 8 17>;
             bindings = <&kana_dyo>;
             layers = <2 3>;
         };
@@ -2099,7 +2099,7 @@
 
         combo_vu {
             timeout-ms = <80>;
-            key-positions = <16 21>;
+            key-positions = <16 21 22>;
             bindings = <&kana_vu>;
             layers = <2 3>;
         };
