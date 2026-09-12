@@ -2350,16 +2350,16 @@
             display-name = "Symbols-Ja";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |       |TO_ARN |
+            // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |  UP   |TO_ARN |
             // |       |  [  |  ]  |  ?   |  /   |  =   |                   |      |  4    |  5    |  6   |RECONV |       |
-            // |       |  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   |       |       |
+            // |       |  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   | DOWN  |       |
             //               |     |      | (RET)|SPACE | (DEL)|  |  (BSPC) |SPACE | (RET)|      |      |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &none         &to_arensito
+&kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &kp UP        &to_arensito
 &none          &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
-&none          &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &none   &none  &kp N0  &kp N7  &kp N8  &kp N9  &none         &none
+&none          &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &none   &none  &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &none
 &none          &none     &none     &trans     &kp SPACE  &trans                    &trans  &kp SPACE &trans &none  &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
