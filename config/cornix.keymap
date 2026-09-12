@@ -1092,6 +1092,86 @@
             tap-ms = <10>;
             bindings = <&kp P>, <&kp Y>, <&kp O>;
         };
+
+        kana_thi: kana_thi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp H>, <&kp I>;
+        };
+
+        kana_thu: kana_thu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp H>, <&kp U>;
+        };
+
+        kana_dhi: kana_dhi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp H>, <&kp I>;
+        };
+
+        kana_dhu: kana_dhu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp H>, <&kp U>;
+        };
+
+        kana_twu: kana_twu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp W>, <&kp U>;
+        };
+
+        kana_dwu: kana_dwu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp W>, <&kp U>;
+        };
+
+        kana_sye: kana_sye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp S>, <&kp Y>, <&kp E>;
+        };
+
+        kana_tye: kana_tye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp Y>, <&kp E>;
+        };
+
+        kana_zye: kana_zye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp J>, <&kp E>;
+        };
+
+        kana_dye: kana_dye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp Y>, <&kp E>;
+        };
     };
 
     /*
@@ -1645,6 +1725,88 @@
             timeout-ms = <80>;
             key-positions = <33 26 8>;
             bindings = <&kana_pyo>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「な」(33) / 「あ」(19) + 「て」(3) (ティ・テュ・ディ・デュ)
+        // -------------------------------------------------------------
+        combo_thi {
+            timeout-ms = <80>;
+            key-positions = <33 3 20>;
+            bindings = <&kana_thi>;
+            layers = <2 3>;
+        };
+
+        combo_thu {
+            timeout-ms = <80>;
+            key-positions = <33 3 10>;
+            bindings = <&kana_thu>;
+            layers = <2 3>;
+        };
+
+        combo_dhi {
+            timeout-ms = <80>;
+            key-positions = <19 3 20>;
+            bindings = <&kana_dhi>;
+            layers = <2 3>;
+        };
+
+        combo_dhu {
+            timeout-ms = <80>;
+            key-positions = <19 3 10>;
+            bindings = <&kana_dhu>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「な」(33) / 「あ」(19) + 「と」(15) (トゥ・ドゥ)
+        // -------------------------------------------------------------
+        combo_twu {
+            timeout-ms = <80>;
+            key-positions = <33 15 21>;
+            bindings = <&kana_twu>;
+            layers = <2 3>;
+        };
+
+        combo_dwu {
+            timeout-ms = <80>;
+            key-positions = <19 15 21>;
+            bindings = <&kana_dwu>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「な」(33) + 「す」(9: え) + 左手キー (シェ・チェ)
+        // -------------------------------------------------------------
+        combo_sye {
+            timeout-ms = <80>;
+            key-positions = <33 9 4>;
+            bindings = <&kana_sye>;
+            layers = <2 3>;
+        };
+
+        combo_tye {
+            timeout-ms = <80>;
+            key-positions = <33 9 17>;
+            bindings = <&kana_tye>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「あ」(19) + 「す」(9: え) + 左手キー (ジェ・ヂェ)
+        // -------------------------------------------------------------
+        combo_zye {
+            timeout-ms = <80>;
+            key-positions = <19 9 4>;
+            bindings = <&kana_zye>;
+            layers = <2 3>;
+        };
+
+        combo_dye {
+            timeout-ms = <80>;
+            key-positions = <19 9 17>;
+            bindings = <&kana_dye>;
             layers = <2 3>;
         };
     };
