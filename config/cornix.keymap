@@ -1260,6 +1260,150 @@
             tap-ms = <10>;
             bindings = <&kp V>, <&kp Y>, <&kp U>;
         };
+
+        kana_wi: kana_wi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp W>, <&kp I>;
+        };
+
+        kana_we: kana_we {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp W>, <&kp E>;
+        };
+
+        kana_who: kana_who {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp W>, <&kp H>, <&kp O>;
+        };
+
+        kana_ye: kana_ye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Y>, <&kp E>;
+        };
+
+        kana_tsa: kana_tsa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp S>, <&kp A>;
+        };
+
+        kana_tsi: kana_tsi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp S>, <&kp I>;
+        };
+
+        kana_tse: kana_tse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp S>, <&kp E>;
+        };
+
+        kana_tso: kana_tso {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp S>, <&kp O>;
+        };
+
+        kana_kwa: kana_kwa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Q>, <&kp A>;
+        };
+
+        kana_kwi: kana_kwi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Q>, <&kp I>;
+        };
+
+        kana_kwe: kana_kwe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Q>, <&kp E>;
+        };
+
+        kana_kwo: kana_kwo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Q>, <&kp O>;
+        };
+
+        kana_kxwa: kana_kxwa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp K>, <&kp U>, <&kp X>, <&kp W>, <&kp A>;
+        };
+
+        kana_gwa: kana_gwa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp W>, <&kp A>;
+        };
+
+        kana_gwi: kana_gwi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp W>, <&kp I>;
+        };
+
+        kana_gwe: kana_gwe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp W>, <&kp E>;
+        };
+
+        kana_gwo: kana_gwo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp W>, <&kp O>;
+        };
+
+        kana_gxwa: kana_gxwa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp U>, <&kp X>, <&kp W>, <&kp A>;
+        };
     };
 
     /*
@@ -1978,6 +2122,147 @@
             timeout-ms = <80>;
             key-positions = <16 21 10>;
             bindings = <&kana_vyu>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「こ」(28) + 「う」(21) + 「ー」(22: ふ相当) + 母音 (ウィ・ウェ・ウォ)
+        // -------------------------------------------------------------
+        combo_wi {
+            timeout-ms = <80>;
+            key-positions = <28 21 22 20>;
+            bindings = <&kana_wi>;
+            layers = <2 3>;
+        };
+
+        combo_we {
+            timeout-ms = <80>;
+            key-positions = <28 21 22 9>;
+            bindings = <&kana_we>;
+            layers = <2 3>;
+        };
+
+        combo_who {
+            timeout-ms = <80>;
+            key-positions = <28 21 22 32>;
+            bindings = <&kana_who>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「こ」(28) + 「い」(20) + 「す」(9: え相当) (イェ)
+        // -------------------------------------------------------------
+        combo_ye {
+            timeout-ms = <80>;
+            key-positions = <28 20 9>;
+            bindings = <&kana_ye>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「こ」(28) + 「う」(21) + 母音 (ツァ・ツィ・ツェ・ツォ)
+        // -------------------------------------------------------------
+        combo_tsa {
+            timeout-ms = <80>;
+            key-positions = <28 21 19>;
+            bindings = <&kana_tsa>;
+            layers = <2 3>;
+        };
+
+        combo_tsi {
+            timeout-ms = <80>;
+            key-positions = <28 21 20>;
+            bindings = <&kana_tsi>;
+            layers = <2 3>;
+        };
+
+        combo_tse {
+            timeout-ms = <80>;
+            key-positions = <28 21 9>;
+            bindings = <&kana_tse>;
+            layers = <2 3>;
+        };
+
+        combo_tso {
+            timeout-ms = <80>;
+            key-positions = <28 21 32>;
+            bindings = <&kana_tso>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「こ」(28) + 「く」(18) + 母音 (クァ・クィ・クェ・クォ・クヮ)
+        // -------------------------------------------------------------
+        combo_kwa {
+            timeout-ms = <80>;
+            key-positions = <28 18 19>;
+            bindings = <&kana_kwa>;
+            layers = <2 3>;
+        };
+
+        combo_kwi {
+            timeout-ms = <80>;
+            key-positions = <28 18 20>;
+            bindings = <&kana_kwi>;
+            layers = <2 3>;
+        };
+
+        combo_kwe {
+            timeout-ms = <80>;
+            key-positions = <28 18 9>;
+            bindings = <&kana_kwe>;
+            layers = <2 3>;
+        };
+
+        combo_kwo {
+            timeout-ms = <80>;
+            key-positions = <28 18 32>;
+            bindings = <&kana_kwo>;
+            layers = <2 3>;
+        };
+
+        combo_kxwa {
+            timeout-ms = <80>;
+            key-positions = <28 18 35>;
+            bindings = <&kana_kxwa>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「か」(16) + 「く」(18) + 母音 (グァ・グィ・グェ・グォ・グヮ)
+        // -------------------------------------------------------------
+        combo_gwa {
+            timeout-ms = <80>;
+            key-positions = <16 18 19>;
+            bindings = <&kana_gwa>;
+            layers = <2 3>;
+        };
+
+        combo_gwi {
+            timeout-ms = <80>;
+            key-positions = <16 18 20>;
+            bindings = <&kana_gwi>;
+            layers = <2 3>;
+        };
+
+        combo_gwe {
+            timeout-ms = <80>;
+            key-positions = <16 18 9>;
+            bindings = <&kana_gwe>;
+            layers = <2 3>;
+        };
+
+        combo_gwo {
+            timeout-ms = <80>;
+            key-positions = <16 18 32>;
+            bindings = <&kana_gwo>;
+            layers = <2 3>;
+        };
+
+        combo_gxwa {
+            timeout-ms = <80>;
+            key-positions = <16 18 35>;
+            bindings = <&kana_gxwa>;
             layers = <2 3>;
         };
     };
