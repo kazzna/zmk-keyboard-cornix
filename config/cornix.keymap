@@ -364,6 +364,158 @@
             tap-ms = <10>;
             bindings = <&kp R>, <&kp E>;
         };
+
+        kana_ne: kana_ne {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N>, <&kp E>;
+        };
+
+        kana_ri: kana_ri {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp R>, <&kp I>;
+        };
+
+        kana_me: kana_me {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp M>, <&kp E>;
+        };
+
+        kana_yo: kana_yo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Y>, <&kp O>;
+        };
+
+        kana_yu: kana_yu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Y>, <&kp U>;
+        };
+
+        kana_se: kana_se {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp S>, <&kp E>;
+        };
+
+        kana_mi: kana_mi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp M>, <&kp I>;
+        };
+
+        kana_ni: kana_ni {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N>, <&kp I>;
+        };
+
+        kana_ma: kana_ma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp M>, <&kp A>;
+        };
+
+        kana_chi: kana_chi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp C>, <&kp H>, <&kp I>;
+        };
+
+        kana_ya: kana_ya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp Y>, <&kp A>;
+        };
+
+        kana_no: kana_no {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N>, <&kp O>;
+        };
+
+        kana_mo: kana_mo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp M>, <&kp O>;
+        };
+
+        kana_tsu: kana_tsu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp T>, <&kp S>, <&kp U>;
+        };
+
+        kana_fu: kana_fu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp F>, <&kp U>;
+        };
+
+        kana_wo: kana_wo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp W>, <&kp O>;
+        };
+
+        kana_nu: kana_nu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp N>, <&kp U>;
+        };
+
+        kana_mu: kana_mu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp M>, <&kp U>;
+        };
+
+        kana_wa: kana_wa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp W>, <&kp A>;
+        };
     };
 
     /*
@@ -458,14 +610,33 @@
             // |       |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
             // |       |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
             // |       |  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  |       |
-            //               |IME_TG|     |L1/RET|SFT/SP| DEL  |  |  BSPC   |SFT/SP|L1/RET|      |TO_ARN|
+            //               |IME_TG|     |L1/RET|L3/SP | DEL  |  |  BSPC   |L3/SP |L1/RET|      |TO_ARN|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none  &none          &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he      &none
 &none  &kana_ro       &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS     &none
 &none  &kana_ho       &kana_hi  &kana_ha  &kana_ko   &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re      &none
-&none  &kp LA(GRAVE)  &none     &lt 1 RET &mt LSHIFT SPACE &kp DEL              &kp BSPC   &mt RSHIFT SPACE &lt 1 RET &none &to_arensito  &none
+&none  &kp LA(GRAVE)  &none     &lt 1 RET &lt 3 SPACE &kp DEL                   &kp BSPC   &lt 3 SPACE &lt 1 RET &none    &to_arensito  &none
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        SandS_layer {
+            display-name = "SandS";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
+            // |       |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
+            // |       |  ほ |  ひ  |  を  |  、  |  ぬ  |        |  |       |  お  |  。  |  む  |  わ  |  れ  |       |
+            //               |IME_TG|     | (RET)| (SP) | (DEL)|  |  (BSPC) | (SP) | (RET)|      |TO_ARN|
+            // ------------------------------------------------------------------------------------------------------------
+
+            bindings = <
+&none  &none          &kana_ne  &kana_ri  &kana_me  &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E     &kana_yu      &none
+&none  &kana_se       &kana_mi  &kana_ni  &kana_ma  &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu &kana_fu      &none
+&none  &kana_ho       &kana_hi  &kana_wo  &kp COMMA &kana_nu   &none   &none   &kp O          &kp DOT   &kana_mu  &kana_wa  &kana_re      &none
+&none  &kp LA(GRAVE)  &none     &trans    &trans    &trans                     &trans         &trans    &trans    &none     &to_arensito  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
