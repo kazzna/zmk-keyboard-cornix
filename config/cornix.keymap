@@ -972,6 +972,126 @@
             tap-ms = <10>;
             bindings = <&kp H>, <&kp Y>, <&kp O>;
         };
+
+        kana_gya: kana_gya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp Y>, <&kp A>;
+        };
+
+        kana_gyu: kana_gyu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp Y>, <&kp U>;
+        };
+
+        kana_gyo: kana_gyo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp G>, <&kp Y>, <&kp O>;
+        };
+
+        kana_ja: kana_ja {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp J>, <&kp A>;
+        };
+
+        kana_ju: kana_ju {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp J>, <&kp U>;
+        };
+
+        kana_jo: kana_jo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp J>, <&kp O>;
+        };
+
+        kana_dya: kana_dya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp Y>, <&kp A>;
+        };
+
+        kana_dyu: kana_dyu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp Y>, <&kp U>;
+        };
+
+        kana_dyo: kana_dyo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp D>, <&kp Y>, <&kp O>;
+        };
+
+        kana_bya: kana_bya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp B>, <&kp Y>, <&kp A>;
+        };
+
+        kana_byu: kana_byu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp B>, <&kp Y>, <&kp U>;
+        };
+
+        kana_byo: kana_byo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp B>, <&kp Y>, <&kp O>;
+        };
+
+        kana_pya: kana_pya {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp P>, <&kp Y>, <&kp A>;
+        };
+
+        kana_pyu: kana_pyu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp P>, <&kp Y>, <&kp U>;
+        };
+
+        kana_pyo: kana_pyo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp P>, <&kp Y>, <&kp O>;
+        };
     };
 
     /*
@@ -1408,6 +1528,123 @@
             timeout-ms = <80>;
             key-positions = <8 25>;
             bindings = <&kana_hyo>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 濁音拗音: 「あ」(19) + 「く」(18) + 左手キー (Layer 2 & 3)
+        // -------------------------------------------------------------
+        combo_gya {
+            timeout-ms = <80>;
+            key-positions = <19 18 2>;
+            bindings = <&kana_gya>;
+            layers = <2 3>;
+        };
+
+        combo_ja {
+            timeout-ms = <80>;
+            key-positions = <19 18 4>;
+            bindings = <&kana_ja>;
+            layers = <2 3>;
+        };
+
+        combo_dya {
+            timeout-ms = <80>;
+            key-positions = <19 18 16>;
+            bindings = <&kana_dya>;
+            layers = <2 3>;
+        };
+
+        combo_bya {
+            timeout-ms = <80>;
+            key-positions = <19 18 25>;
+            bindings = <&kana_bya>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 濁音拗音: 「あ」(19) + 「へ」(10) + 左手キー (Layer 2 & 3)
+        // -------------------------------------------------------------
+        combo_gyu {
+            timeout-ms = <80>;
+            key-positions = <19 10 2>;
+            bindings = <&kana_gyu>;
+            layers = <2 3>;
+        };
+
+        combo_ju {
+            timeout-ms = <80>;
+            key-positions = <19 10 4>;
+            bindings = <&kana_ju>;
+            layers = <2 3>;
+        };
+
+        combo_dyu {
+            timeout-ms = <80>;
+            key-positions = <19 10 16>;
+            bindings = <&kana_dyu>;
+            layers = <2 3>;
+        };
+
+        combo_byu {
+            timeout-ms = <80>;
+            key-positions = <19 10 25>;
+            bindings = <&kana_byu>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 濁音拗音: 「あ」(19) + 「る」(8) + 左手キー (Layer 2 & 3)
+        // -------------------------------------------------------------
+        combo_gyo {
+            timeout-ms = <80>;
+            key-positions = <19 8 2>;
+            bindings = <&kana_gyo>;
+            layers = <2 3>;
+        };
+
+        combo_jo {
+            timeout-ms = <80>;
+            key-positions = <19 8 4>;
+            bindings = <&kana_jo>;
+            layers = <2 3>;
+        };
+
+        combo_dyo {
+            timeout-ms = <80>;
+            key-positions = <19 8 16>;
+            bindings = <&kana_dyo>;
+            layers = <2 3>;
+        };
+
+        combo_byo {
+            timeout-ms = <80>;
+            key-positions = <19 8 25>;
+            bindings = <&kana_byo>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 半濁音拗音: 「な」(33) + 「ひ」(26) + 拗音キー (Layer 2 & 3)
+        // -------------------------------------------------------------
+        combo_pya {
+            timeout-ms = <80>;
+            key-positions = <33 26 18>;
+            bindings = <&kana_pya>;
+            layers = <2 3>;
+        };
+
+        combo_pyu {
+            timeout-ms = <80>;
+            key-positions = <33 26 10>;
+            bindings = <&kana_pyu>;
+            layers = <2 3>;
+        };
+
+        combo_pyo {
+            timeout-ms = <80>;
+            key-positions = <33 26 8>;
+            bindings = <&kana_pyo>;
             layers = <2 3>;
         };
     };
