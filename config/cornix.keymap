@@ -165,20 +165,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        to_ja_henkan: to_ja_henkan {
+        to_naginata: to_naginata {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp INT4>, <&macro_release &kp INT4>, <&macro_tap &to 2>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to 2>;
         };
 
-        to_en_muhenkan: to_en_muhenkan {
+        to_arensito: to_arensito {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp INT5>, <&macro_release &kp INT5>, <&macro_tap &to 0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to 0>;
         };
 
         kana_ki: kana_ki {
@@ -439,14 +439,14 @@
             // |       |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |       |
             // |       |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
             // |       |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |       |
-            //               |TO_JA|      | (RET)|SPACE | (DEL)|  |  (BSPC) |SPACE | (RET)|      |MUHEN |
+            //               |TO_NAG|     | (RET)|SPACE | (DEL)|  |  (BSPC) |SPACE | (RET)|      |IME_TG|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none  &kp LBRC       &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &none
-&none  &kp SEMI       &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
-&none  &kp N6         &kp N7    &kp N8     &kp N9    &kp PLUS   &none   &none   &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &none
-&none  &to_ja_henkan  &none     &trans     &kp SPACE &trans                     &trans     &kp SPACE  &trans    &none     &kp INT5   &none
+&none  &kp LBRC      &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR       &none
+&none  &kp SEMI      &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL      &none
+&none  &kp N6        &kp N7    &kp N8     &kp N9    &kp PLUS   &none   &none   &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5         &none
+&none  &to_naginata  &none     &trans     &kp SPACE &trans                     &trans     &kp SPACE  &trans    &none     &kp LA(GRAVE)  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -458,14 +458,14 @@
             // |       |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
             // |       |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
             // |       |  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  |       |
-            //               |HENKAN|     |L1/RET|SFT/SP| DEL  |  |  BSPC   |SFT/SP|L1/RET|      |TO_EN |
+            //               |IME_TG|     |L1/RET|SFT/SP| DEL  |  |  BSPC   |SFT/SP|L1/RET|      |TO_ARN|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none  &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he  &none
-&none  &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS &none
-&none  &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re  &none
-&none  &kp INT4  &none     &lt 1 RET &mt LSHIFT SPACE &kp DEL              &kp BSPC   &mt RSHIFT SPACE &lt 1 RET &none &to_en_muhenkan &none
+&none  &none          &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he      &none
+&none  &kana_ro       &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS     &none
+&none  &kana_ho       &kana_hi  &kana_ha  &kana_ko   &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re      &none
+&none  &kp LA(GRAVE)  &none     &lt 1 RET &mt LSHIFT SPACE &kp DEL              &kp BSPC   &mt RSHIFT SPACE &lt 1 RET &none &to_arensito  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
