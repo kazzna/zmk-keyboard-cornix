@@ -2334,14 +2334,14 @@
             // |       |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
             // |       |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
             // |       |  ほ |  ひ  |  を  |  、  |  ぬ  |        |  |       |  お  |  。  |  む  |  わ  |  れ  |       |
-            //               |IME_TG|     | (RET)| (SP) | (DEL)|  |  (BSPC) | (SP) | (RET)|      |TO_ARN|
+            //               |IME_TG|     |S+RET | (SP) | (DEL)|  |  (BSPC) | (SP) |S+RET |      |TO_ARN|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none  &none          &kana_ne  &kana_ri  &kana_me  &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E     &kana_yu      &none
 &none  &kana_se       &kana_mi  &kana_ni  &kana_ma  &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu &kana_fu      &none
 &none  &kana_ho       &kana_hi  &kana_wo  &kp COMMA &kana_nu   &none   &none   &kp O          &kp DOT   &kana_mu  &kana_wa  &kana_re      &none
-&none  &kp LA(GRAVE)  &none     &trans    &trans    &trans                     &trans         &trans    &trans    &none     &to_arensito  &none
+&none  &kp LA(GRAVE)  &none     &kp LS(RET) &trans  &trans                     &trans         &trans    &kp LS(RET) &none   &to_arensito  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
