@@ -2315,14 +2315,14 @@
             // |       |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
             // |       |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
             // |       |  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  |       |
-            //               |     |      | RET  |L3/SP |L4/DEL|  | L4/BSPC  |L3/SP | RET  |      |      |
+            //               |     |      |L4/RET|L3/SP | DEL  |  |  BSPC   |L3/SP |L4/RET|      |      |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none  &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
 &none  &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
 &none  &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &none
-&none  &none     &none     &kp RET   &lt 3 SPACE &lt 4 DEL                 &lt 4 BSPC &lt 3 SPACE &kp RET &none        &none      &none
+&none  &none     &none     &lt 4 RET &lt 3 SPACE &kp DEL                  &kp BSPC   &lt 3 SPACE &lt 4 RET &none        &none      &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
