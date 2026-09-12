@@ -136,6 +136,34 @@
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;
         };
+
+        mm_comma_qmark: mm_comma_qmark {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_dot_excl: mm_dot_excl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_at_hash: mm_at_hash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AT>, <&kp HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_pipe_amps: mm_pipe_amps {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -187,17 +215,17 @@
             display-name = "Base";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  Q  |  L  |  ,   |  P   |  @   |                   |  |   |  F    |  U    |  D   |   K   |       |
+            // |       |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
             // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
-            // |       |  Z  |  W  |  .   |  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |       |
-            //               |     |      | DEL  | SPACE|      |  |         | RET  | BSPC  |       |      |
+            // |       |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |       |
+            //               |     |      | RET  |SFT/SP| DEL  |  |  BSPC   |SFT/SP| RET   |       |      |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none      &kp Q  &kp L  &kp COMMA  &kp P      &kp AT                     &kp PIPE  &kp F    &kp U     &kp D  &kp K  &none
-&kp GRAVE  &kp A  &kp R  &kp E      &kp N      &kp B                      &kp G     &kp S    &kp I     &kp T  &kp O  &kp SQT
-&none      &kp Z  &kp W  &kp DOT    &kp H      &kp J      &none   &none   &kp V     &kp C    &kp Y     &kp M  &kp X  &none
-&none      &none  &none  &kp DEL    &kp SPACE  &none                      &none     &kp RET  &kp BSPC  &none  &none  &none
+&none      &kp Q  &kp L  &mm_comma_qmark  &kp P      &mm_at_hash                    &mm_pipe_amps  &kp F    &kp U     &kp D  &kp K  &none
+&kp GRAVE  &kp A  &kp R  &kp E            &kp N      &kp B                          &kp G          &kp S    &kp I     &kp T  &kp O  &kp SQT
+&none      &kp Z  &kp W  &mm_dot_excl     &kp H      &kp J      &none   &none       &kp V          &kp C    &kp Y     &kp M  &kp X  &none
+&none      &none  &none  &kp RET          &mt LSHIFT SPACE  &kp DEL                 &kp BSPC       &mt RSHIFT SPACE  &kp RET  &none  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
