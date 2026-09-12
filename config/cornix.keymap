@@ -225,7 +225,7 @@
 &none      &kp Q  &kp L  &mm_comma_qmark  &kp P      &mm_at_hash                    &mm_pipe_amps  &kp F    &kp U     &kp D  &kp K  &none
 &kp GRAVE  &kp A  &kp R  &kp E            &kp N      &kp B                          &kp G          &kp S    &kp I     &kp T  &kp O  &kp SQT
 &none      &kp Z  &kp W  &mm_dot_excl     &kp H      &kp J      &none   &none       &kp V          &kp C    &kp Y     &kp M  &kp X  &none
-&none      &none  &none  &kp RET          &mt LSHIFT SPACE  &kp DEL                 &kp BSPC       &mt RSHIFT SPACE  &kp RET  &none  &none  &none
+&none      &none  &none  &kp RET          &mt LSHIFT SPACE  &lt 2 DEL               &lt 2 BSPC     &mt RSHIFT SPACE  &kp RET  &none  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -252,19 +252,18 @@
         Symbol_layer {
             display-name = "Symbols";
 
-            // TODO: Some binds are waiting for shifted keycode support.
-            // -------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |       |
+            // |       |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
+            // |       |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |       |
+            //               |     |      | (RET)|(SFT) | (DEL)|  |  (BSPC) |(SFT) | (RET)|       |      |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                  &kp CARET  &kp AMPS      &kp ASTRK  &kp LPAR   &kp RPAR  &kp PIPE
-&none  &none     &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC                   &kp EQUAL  &kp UNDER     &kp MINUS  &kp PLUS   &kp DQT   &kp SQT
-&none  &none     &kp RBKT  &kp RPAR  &kp PIPE  &kp BSLH   &trans  &trans  &kp FSLH   &kp QUESTION  &kp GRAVE  &kp TILDE  &kp SQT   &none
-&none  &none     &none     &none     &trans    &trans                     &kp TILDE  &trans        &kp GRAVE  &none      &none     &none
+&none  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &none
+&none  &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
+&none  &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &none   &none   &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &none
+&none  &none     &none     &trans     &trans    &trans                     &trans     &trans     &trans    &none     &none      &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
