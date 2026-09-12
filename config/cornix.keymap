@@ -1172,6 +1172,94 @@
             tap-ms = <10>;
             bindings = <&kp D>, <&kp Y>, <&kp E>;
         };
+
+        kana_fa: kana_fa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp F>, <&kp A>;
+        };
+
+        kana_fi: kana_fi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp F>, <&kp I>;
+        };
+
+        kana_fe: kana_fe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp F>, <&kp E>;
+        };
+
+        kana_fo: kana_fo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp F>, <&kp O>;
+        };
+
+        kana_fyu: kana_fyu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp F>, <&kp Y>, <&kp U>;
+        };
+
+        kana_va: kana_va {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp V>, <&kp A>;
+        };
+
+        kana_vi: kana_vi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp V>, <&kp I>;
+        };
+
+        kana_vu: kana_vu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp V>, <&kp U>;
+        };
+
+        kana_ve: kana_ve {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp V>, <&kp E>;
+        };
+
+        kana_vo: kana_vo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp V>, <&kp O>;
+        };
+
+        kana_vyu: kana_vyu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp V>, <&kp Y>, <&kp U>;
+        };
     };
 
     /*
@@ -1807,6 +1895,89 @@
             timeout-ms = <80>;
             key-positions = <19 9 17>;
             bindings = <&kana_dye>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「こ」(28) + 「ー」(22: ふ相当) + 母音 (ファ・フィ・フェ・フォ・フュ)
+        // -------------------------------------------------------------
+        combo_fa {
+            timeout-ms = <80>;
+            key-positions = <28 22 19>;
+            bindings = <&kana_fa>;
+            layers = <2 3>;
+        };
+
+        combo_fi {
+            timeout-ms = <80>;
+            key-positions = <28 22 20>;
+            bindings = <&kana_fi>;
+            layers = <2 3>;
+        };
+
+        combo_fe {
+            timeout-ms = <80>;
+            key-positions = <28 22 9>;
+            bindings = <&kana_fe>;
+            layers = <2 3>;
+        };
+
+        combo_fo {
+            timeout-ms = <80>;
+            key-positions = <28 22 32>;
+            bindings = <&kana_fo>;
+            layers = <2 3>;
+        };
+
+        combo_fyu {
+            timeout-ms = <80>;
+            key-positions = <28 22 10>;
+            bindings = <&kana_fyu>;
+            layers = <2 3>;
+        };
+
+        // -------------------------------------------------------------
+        // 外来音: 「か」(16) + 「う」(21) + 母音 (ヴァ・ヴィ・ヴ・ヴェ・ヴォ・ヴュ)
+        // -------------------------------------------------------------
+        combo_va {
+            timeout-ms = <80>;
+            key-positions = <16 21 19>;
+            bindings = <&kana_va>;
+            layers = <2 3>;
+        };
+
+        combo_vi {
+            timeout-ms = <80>;
+            key-positions = <16 21 20>;
+            bindings = <&kana_vi>;
+            layers = <2 3>;
+        };
+
+        combo_vu {
+            timeout-ms = <80>;
+            key-positions = <16 21>;
+            bindings = <&kana_vu>;
+            layers = <2 3>;
+        };
+
+        combo_ve {
+            timeout-ms = <80>;
+            key-positions = <16 21 9>;
+            bindings = <&kana_ve>;
+            layers = <2 3>;
+        };
+
+        combo_vo {
+            timeout-ms = <80>;
+            key-positions = <16 21 32>;
+            bindings = <&kana_vo>;
+            layers = <2 3>;
+        };
+
+        combo_vyu {
+            timeout-ms = <80>;
+            key-positions = <16 21 10>;
+            bindings = <&kana_vyu>;
             layers = <2 3>;
         };
     };
