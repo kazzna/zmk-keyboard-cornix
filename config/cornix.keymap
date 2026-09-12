@@ -149,7 +149,7 @@
 
     combos {
         compatible = "zmk,combos";
-
+        /*
         cb_ltm {
             bindings = <&kp ESC>;
             key-positions = <2 4>;
@@ -177,6 +177,7 @@
             bindings = <&kp N4>;
             key-positions = <5 6>;
         };
+        */
     };
 
     keymap {
@@ -186,17 +187,17 @@
             display-name = "Base";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+            // |       |  Q  |  L  |  ,   |  P   |  @   |                   |  |   |  F    |  U    |  D   |   K   |       |
+            // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
+            // |       |  Z  |  W  |  .   |  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |       |
+            //               |     |      | DEL  | SPACE|      |  |         | RET  | BSPC  |       |      |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp TAB  &kp Q          &kp W         &kp E         &kp R                &kp T                      &kp Y      &kp U                &kp I            &kp O         &kp P             &kp BSLH
-&kp ESC  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                      &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL SEMI  &kp SQT
-&mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B        &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &kp FSLH          &kp BACKSPACE
-&none    &none          &none         &lt 6 ESCAPE  &mo 2                &lt 5 SPACE                &kp ENTER  &mo 3                &lt 2 BACKSPACE  &none         &none             &none
+&none      &kp Q  &kp L  &kp COMMA  &kp P      &kp AT                     &kp PIPE  &kp F    &kp U     &kp D  &kp K  &none
+&kp GRAVE  &kp A  &kp R  &kp E      &kp N      &kp B                      &kp G     &kp S    &kp I     &kp T  &kp O  &kp SQT
+&none      &kp Z  &kp W  &kp DOT    &kp H      &kp J      &none   &none   &kp V     &kp C    &kp Y     &kp M  &kp X  &none
+&none      &none  &none  &kp DEL    &kp SPACE  &none                      &none     &kp RET  &kp BSPC  &none  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
