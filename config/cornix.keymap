@@ -992,49 +992,49 @@
         // 濁音: 「か」(16) + 右手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_za {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 8>;
             bindings = <&kana_za>;
             layers = <2 3>;
         };
 
         combo_zu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 9>;
             bindings = <&kana_zu>;
             layers = <2 3>;
         };
 
         combo_be {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 10>;
             bindings = <&kana_be>;
             layers = <2 3>;
         };
 
         combo_gu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 18>;
             bindings = <&kana_gu>;
             layers = <2 3>;
         };
 
         combo_du {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 21>;
             bindings = <&kana_du>;
             layers = <2 3>;
         };
 
         combo_bu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 22>;
             bindings = <&kana_bu>;
             layers = <2 3>;
         };
 
         combo_da {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <16 32>;
             bindings = <&kana_da>;
             layers = <2 3>;
@@ -1044,91 +1044,91 @@
         // 濁音: 「あ」(19) + 左手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_gi {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 2>;
             bindings = <&kana_gi>;
             layers = <2 3>;
         };
 
         combo_de {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 3>;
             bindings = <&kana_de>;
             layers = <2 3>;
         };
 
         combo_ji {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 4>;
             bindings = <&kana_ji>;
             layers = <2 3>;
         };
 
         combo_ze {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 13>;
             bindings = <&kana_ze>;
             layers = <2 3>;
         };
 
         combo_ge {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 14>;
             bindings = <&kana_ge>;
             layers = <2 3>;
         };
 
         combo_do {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 15>;
             bindings = <&kana_do>;
             layers = <2 3>;
         };
 
         combo_ga {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 16>;
             bindings = <&kana_ga>;
             layers = <2 3>;
         };
 
         combo_di {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 17>;
             bindings = <&kana_di>;
             layers = <2 3>;
         };
 
         combo_bo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 25>;
             bindings = <&kana_bo>;
             layers = <2 3>;
         };
 
         combo_bi {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 26>;
             bindings = <&kana_bi>;
             layers = <2 3>;
         };
 
         combo_ba {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 27>;
             bindings = <&kana_ba>;
             layers = <2 3>;
         };
 
         combo_go {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 28>;
             bindings = <&kana_go>;
             layers = <2 3>;
         };
 
         combo_zo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <19 29>;
             bindings = <&kana_zo>;
             layers = <2 3>;
@@ -1138,14 +1138,14 @@
         // 半濁音: 「こ」(28) + 右手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_pe {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <28 10>;
             bindings = <&kana_pe>;
             layers = <2 3>;
         };
 
         combo_pu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <28 22>;
             bindings = <&kana_pu>;
             layers = <2 3>;
@@ -1155,21 +1155,21 @@
         // 半濁音: 「な」(33) + 左手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_po {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <33 25>;
             bindings = <&kana_po>;
             layers = <2 3>;
         };
 
         combo_pi {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <33 26>;
             bindings = <&kana_pi>;
             layers = <2 3>;
         };
 
         combo_pa {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <33 27>;
             bindings = <&kana_pa>;
             layers = <2 3>;
@@ -1179,77 +1179,77 @@
         // 小書き: 「小」(1) + 各キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_xyo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 8>;
             bindings = <&kana_xyo>;
             layers = <2 3>;
         };
 
         combo_xe {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 9>;
             bindings = <&kana_xe>;
             layers = <2 3>;
         };
 
         combo_xyu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 10>;
             bindings = <&kana_xyu>;
             layers = <2 3>;
         };
 
         combo_xke {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 14>;
             bindings = <&kana_xke>;
             layers = <2 3>;
         };
 
         combo_xka {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 16>;
             bindings = <&kana_xka>;
             layers = <2 3>;
         };
 
         combo_xya {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 18>;
             bindings = <&kana_xya>;
             layers = <2 3>;
         };
 
         combo_xa {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 19>;
             bindings = <&kana_xa>;
             layers = <2 3>;
         };
 
         combo_xi {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 20>;
             bindings = <&kana_xi>;
             layers = <2 3>;
         };
 
         combo_xu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 21>;
             bindings = <&kana_xu>;
             layers = <2 3>;
         };
 
         combo_xo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 32>;
             bindings = <&kana_xo>;
             layers = <2 3>;
         };
 
         combo_xwa {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 35>;
             bindings = <&kana_xwa>;
             layers = <2 3>;
@@ -1259,49 +1259,49 @@
         // 清音拗音: 「く」(18) + 左手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_kya {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 2>;
             bindings = <&kana_kya>;
             layers = <2 3>;
         };
 
         combo_rya {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 3>;
             bindings = <&kana_rya>;
             layers = <2 3>;
         };
 
         combo_sha {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 4>;
             bindings = <&kana_sha>;
             layers = <2 3>;
         };
 
         combo_mya {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 13>;
             bindings = <&kana_mya>;
             layers = <2 3>;
         };
 
         combo_nya {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 14>;
             bindings = <&kana_nya>;
             layers = <2 3>;
         };
 
         combo_cha {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 16>;
             bindings = <&kana_cha>;
             layers = <2 3>;
         };
 
         combo_hya {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <18 25>;
             bindings = <&kana_hya>;
             layers = <2 3>;
@@ -1311,49 +1311,49 @@
         // 清音拗音: 「へ」(10) + 左手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_kyu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 2>;
             bindings = <&kana_kyu>;
             layers = <2 3>;
         };
 
         combo_ryu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 3>;
             bindings = <&kana_ryu>;
             layers = <2 3>;
         };
 
         combo_shu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 4>;
             bindings = <&kana_shu>;
             layers = <2 3>;
         };
 
         combo_myu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 13>;
             bindings = <&kana_myu>;
             layers = <2 3>;
         };
 
         combo_nyu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 14>;
             bindings = <&kana_nyu>;
             layers = <2 3>;
         };
 
         combo_chu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 16>;
             bindings = <&kana_chu>;
             layers = <2 3>;
         };
 
         combo_hyu {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <10 25>;
             bindings = <&kana_hyu>;
             layers = <2 3>;
@@ -1363,49 +1363,49 @@
         // 清音拗音: 「る」(8) + 左手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_kyo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 2>;
             bindings = <&kana_kyo>;
             layers = <2 3>;
         };
 
         combo_ryo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 3>;
             bindings = <&kana_ryo>;
             layers = <2 3>;
         };
 
         combo_sho {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 4>;
             bindings = <&kana_sho>;
             layers = <2 3>;
         };
 
         combo_myo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 13>;
             bindings = <&kana_myo>;
             layers = <2 3>;
         };
 
         combo_nyo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 14>;
             bindings = <&kana_nyo>;
             layers = <2 3>;
         };
 
         combo_cho {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 16>;
             bindings = <&kana_cho>;
             layers = <2 3>;
         };
 
         combo_hyo {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <8 25>;
             bindings = <&kana_hyo>;
             layers = <2 3>;
