@@ -137,6 +137,17 @@
             quick-tap-ms = <200>;
         };
 
+        sp_shift_arrows: sp_shift_arrows {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <10 36>;
+        };
+
         mm_comma_qmark: mm_comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -2353,14 +2364,14 @@
             // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |  UP   |TO_ARN |
             // |       |  [  |  ]  |  ?   |  /   |  =   |                   |      |  4    |  5    |  6   |RECONV |       |
             // |       |  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   | DOWN  |       |
-            //               |     |      | (RET)|SPACE | (DEL)|  |  (BSPC) |SPACE | (RET)|      |      |
+            //               |     |      | (RET)|SFT/SP| (DEL)|  |  (BSPC) |SFT/SP| (RET)|      |      |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &kp UP        &to_arensito
 &none          &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
 &none          &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &none   &none  &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &none
-&none          &none     &none     &trans     &kp SPACE  &trans                    &trans  &kp SPACE &trans &none  &none         &none
+&none          &none     &none     &trans     &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &trans &none  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
