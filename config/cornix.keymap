@@ -2302,14 +2302,14 @@
             // |       |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
             // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
             // | LCTRL |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   | RCTRL |
-            // | LALT  | GUI | TAB | DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC | ESC  | MENU | RALT  |
+            // | LALT  | GUI | L6/TAB| DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC | ESC  | MENU | RALT  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none      &kp Q     &kp L    &mm_comma_qmark  &kp P             &mm_at_hash                    &mm_pipe_amps  &kp F             &kp U         &kp D    &kp K      &none
-&kp GRAVE  &kp A     &kp R    &kp E            &kp N             &kp B                          &kp G          &kp S             &kp I         &kp T    &kp O      &kp SQT
-&kp LCTRL  &kp Z     &kp W    &mm_dot_excl     &kp H             &kp J      &none   &none       &kp V          &kp C             &kp Y         &kp M    &kp X      &kp RCTRL
-&kp LALT   &kp LGUI  &kp TAB  &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del  &kp ESC  &kp K_APP  &kp RALT
+&none      &kp Q     &kp L       &mm_comma_qmark  &kp P             &mm_at_hash                    &mm_pipe_amps  &kp F             &kp U         &kp D    &kp K      &none
+&kp GRAVE  &kp A     &kp R       &kp E            &kp N             &kp B                          &kp G          &kp S             &kp I         &kp T    &kp O      &kp SQT
+&kp LCTRL  &kp Z     &kp W       &mm_dot_excl     &kp H             &kp J      &none   &none       &kp V          &kp C             &kp Y         &kp M    &kp X      &kp RCTRL
+&kp LALT   &kp LGUI  &lt 6 TAB   &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del  &kp ESC  &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -2411,12 +2411,21 @@
 
         Navi_layer {
             display-name = "Navi";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |      |  K   |      |       |       |
+            // |       |     |     |      |      |      |                   |      |  H   |  J   |  L   |       |       |
+            // |       |     |     |      |      |      |        |  |       |      |      |      |      |       |       |
+            // |       |     |     |      |      |      |  |     |      |      |      |      |
+            // ------------------------------------------------------------------------------------------------------------
+
             bindings = <
-&none  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1  &mkp MB3  &mkp MB2  &msc SCRL_UP  &msc SCRL_DOWN  &none
-&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT     &none           &none
-&none  &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &trans    &trans    &none     &none         &none           &none
-&none  &none  &none           &mo 7           &trans           &trans                          &none     &none     &kp N5    &none         &none           &none
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp K   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp H   &kp J   &kp L   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         KeyPad_layer {
