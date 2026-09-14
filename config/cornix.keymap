@@ -2330,14 +2330,14 @@
             // |TO_NAG |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |IME_TG |
             // |  TAB  |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
             // | LCTRL |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   | RCTRL |
-            // | LALT  | GUI |      | (DEL)|SPACE | (RET)|  | (RET)|SPACE |(BSPC)|      | MENU | RALT  |
+            // | LALT  | GUI |      | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC |      | MENU | RALT  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &to_naginata  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &kp LA(GRAVE)
 &kp TAB       &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
 &kp LCTRL     &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &none   &none   &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &kp RCTRL
-&kp LALT      &kp LGUI  &none     &trans     &kp SPACE &trans                     &trans     &kp SPACE  &trans    &none     &kp K_APP  &kp RALT
+&kp LALT      &kp LGUI  &none     &mm_del_bspc &kp SPACE &trans                   &trans     &kp SPACE  &mm_bspc_del &none  &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -2387,14 +2387,14 @@
             // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |  UP   |TO_ARN |
             // |  TAB  |  [  |  ]  |  ?   |  /   |  =   |                   |      |  4    |  5    |  6   |RECONV |       |
             // | LCTRL |  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   | DOWN  | RCTRL |
-            // | LALT  | GUI |      | (DEL)|SFT/SP| (RET)|  | (RET)|SFT/SP|(BSPC)|      | MENU | RALT  |
+            // | LALT  | GUI |      | DEL  |SFT/SP| (RET)|  | (RET)|SFT/SP| BSPC |      | MENU | RALT  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &kp UP        &to_arensito
 &kp TAB        &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
 &kp LCTRL      &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &none   &none  &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &kp RCTRL
-&kp LALT       &kp LGUI  &none     &trans     &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &trans &none    &kp K_APP  &kp RALT
+&kp LALT       &kp LGUI  &none     &mm_del_bspc &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
