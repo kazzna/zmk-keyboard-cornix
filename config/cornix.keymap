@@ -2413,17 +2413,17 @@
             display-name = "Navi";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |      |  K   |      |       |       |
-            // |       |     |     |      |      |      |                   |      |  H   |  J   |  L   |       |       |
-            // |       |     |     |      |      |      |        |  |       |      |      |      |      |       |       |
-            // |       |     |     |      |      |      |  |     |      |      |      |      |
+            // |       |     |     |      |      |      |                   |  b   |      |  e   |  w   |  H   |       |
+            // |       |     |     |      |      |      |                   |  h   |  j   |  k   |  l   |  M   |       |
+            // |       |     |     |      |      |      |        |  |       |  0   |      |      |  $   |  L   | (CTRL)|
+            // | (ALT) |(GUI)|(TAB)|(DEL) | (SP) |(RET) |  | (RET)| (SP) |(BSPC)|(ESC) |(MENU)|(ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp K   &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp H   &kp J   &kp L   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&none   &none   &none   &none   &none   &none                   &kp B   &none   &kp E  &kp W      &kp LS(H)  &none
+&none   &none   &none   &none   &none   &none                   &kp H   &kp J   &kp K  &kp L      &kp LS(M)  &none
+&none   &none   &none   &none   &none   &none   &none   &none   &kp N0  &none   &none  &kp DLLR   &kp LS(L)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans &trans     &trans     &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
