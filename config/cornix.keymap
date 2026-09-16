@@ -1458,6 +1458,30 @@
         };
 
         // -------------------------------------------------------------
+        // Fn & Nav レイヤー呼び出し (3キー同時ホールド):
+        // 左手: 「w」(26) + 「.」(27) + 「h」(28) (Layer 0 & 2)
+        // -------------------------------------------------------------
+        combo_fn_nav_l {
+            timeout-ms = <50>;
+            key-positions = <26 27 28>;
+            bindings = <&mo 5>;
+            layers = <0 2>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // Fn & Nav レイヤー呼び出し (3キー同時ホールド):
+        // 右手: 「c」(33) + 「y」(34) + 「m」(35) (Layer 0 & 2)
+        // -------------------------------------------------------------
+        combo_fn_nav_r {
+            timeout-ms = <50>;
+            key-positions = <33 34 35>;
+            bindings = <&mo 5>;
+            layers = <0 2>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
         // 濁音: 「か」(16) + 右手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_za {
@@ -2403,22 +2427,23 @@
         };
 
 
-        Adjust_layer {
-            display-name = "Adjust";
+        Fn_Nav_layer {
+            display-name = "Fn & Nav";
 
-            // ----------------------------------------------------------------------------------------------------------------------------
-            // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
-            // | moDEBUG| RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
-            // | EXTPWR | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
-            // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
-            //                    |         |         |         |         |         | |      |      |      |       |      |
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |       |
+            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN |       |
+            // | (CTRL)| F11 |     |      |      |  F12 |        |  |       |SCRLCK|      |      |      |INSERT| (CTRL)|
+            // | (ALT) |(GUI)|TO_JA| (DEL)| (SP) | (RET)|  | (RET)| (SP) |(BSPC)|TO_EN |(MENU)|(ALT) |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                   &none   &none  &none   &none  &none             &none
-&none           &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                  &tog 1  &to 0  &none   &none  &none             &tog 1
-&bt BT_CLR_ALL  &none          &none          &none          &none          &none          &trans  &trans  &none   &none  &none   &none  &ext_power EP_ON  &kp CAPSLOCK
-&none           &none          &none          &none          &none          &none                          &none   &none  &kp N4  &none  &none             &none
+&kp ESC          &kp F1   &kp F2  &kp F3  &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP    &kp END    &kp PG_UP   &none
+&kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8  &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN   &none
+&trans           &kp F11  &none   &none   &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &none     &none      &kp INSERT  &trans
+&trans           &trans   &to 2   &trans  &trans  &trans                  &trans           &trans    &trans    &to 0      &trans      &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Navi_layer {
