@@ -191,10 +191,207 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mm_test_ka_fu: mm_test_ka_fu {
+        // Japanese SandS mod-morph bindings
+        mm_kana_ki_ne: mm_kana_ki_ne {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kana_ka>, <&kana_fu>;
+            bindings = <&kana_ki>, <&kana_ne>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_te_ri: mm_kana_te_ri {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_te>, <&kana_ri>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_shi_me: mm_kana_shi_me {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_shi>, <&kana_me>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_left_sleft: mm_left_sleft {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&kp LS(LEFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_right_sright: mm_right_sright {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&kp LS(RIGHT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_sa_sa: mm_kana_sa_sa {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_sa>, <&kana_sa>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ru_yo: mm_kana_ru_yo {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ru>, <&kana_yo>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_su_e: mm_kana_su_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_su>, <&kp E>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_he_yu: mm_kana_he_yu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_he>, <&kana_yu>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ro_se: mm_kana_ro_se {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ro>, <&kana_se>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ke_mi: mm_kana_ke_mi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ke>, <&kana_mi>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_to_ni: mm_kana_to_ni {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_to>, <&kana_ni>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ka_ma: mm_kana_ka_ma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ka>, <&kana_ma>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_xtsu_chi: mm_kana_xtsu_chi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_xtsu>, <&kana_chi>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ku_ya: mm_kana_ku_ya {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ku>, <&kana_ya>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_a_no: mm_kana_a_no {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kana_no>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_i_mo: mm_kana_i_mo {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kana_mo>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_u_tsu: mm_kana_u_tsu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&kana_tsu>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_minus_fu: mm_kana_minus_fu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kana_fu>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ho_ho: mm_kana_ho_ho {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ho>, <&kana_ho>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_hi_hi: mm_kana_hi_hi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_hi>, <&kana_hi>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ha_wo: mm_kana_ha_wo {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ha>, <&kana_wo>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ko_comma: mm_kana_ko_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ko>, <&kp COMMA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_so_nu: mm_kana_so_nu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_so>, <&kana_nu>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ta_o: mm_kana_ta_o {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ta>, <&kp O>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_na_dot: mm_kana_na_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_na>, <&kp DOT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_nn_mu: mm_kana_nn_mu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_nn>, <&kana_mu>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_ra_wa: mm_kana_ra_wa {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ra>, <&kana_wa>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_kana_re_re: mm_kana_re_re {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_re>, <&kana_re>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -2381,17 +2578,17 @@
             display-name = "Naginata";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
-            // |   `   |  ろ |  け  |  と  |か/S:ふ|  っ |                   |  く  |  あ  |  い  |  う  |  ー  |       |
-            // | LCTRL |  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  | RCTRL |
+            // |  ESC  |     | き/ね | て/り | し/め | <-/S  |                   | ->/S  | さ/さ | る/よ | す/え | へ/ゆ |       |
+            // |   `   | ろ/せ | け/み | と/に | か/ま | っ/ち |                   | く/や | あ/の | い/も | う/つ | ー/ふ |       |
+            // | LCTRL | ほ/ほ | ひ/ひ | は/を | こ/、 | そ/ぬ |        |  |       | た/お | な/。 | ん/む | ら/わ | れ/れ | RCTRL |
             // | LALT  | GUI |      | DEL  |SFT/SP|L4/RET|  |L4/RET|SFT/SP| BSPC |      | MENU | RALT  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp ESC    &none     &kana_ki  &kana_te  &kana_shi       &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
-&kp GRAVE  &kana_ro  &kana_ke  &kana_to  &mm_test_ka_fu  &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&kp LCTRL  &kana_ho  &kana_hi  &kana_ha  &kana_ko        &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &kp RCTRL
-&kp LALT   &kp LGUI  &none     &mm_del_bspc &mt LSHIFT SPACE &lt 4 RET              &lt 4 RET  &mt RSHIFT SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
+&kp ESC    &none           &mm_kana_ki_ne   &mm_kana_te_ri   &mm_kana_shi_me  &mm_left_sleft                    &mm_right_sright  &mm_kana_sa_sa  &mm_kana_ru_yo  &mm_kana_su_e   &mm_kana_he_yu    &none
+&kp GRAVE  &mm_kana_ro_se  &mm_kana_ke_mi   &mm_kana_to_ni   &mm_kana_ka_ma   &mm_kana_xtsu_chi                 &mm_kana_ku_ya    &mm_kana_a_no   &mm_kana_i_mo   &mm_kana_u_tsu  &mm_kana_minus_fu &none
+&kp LCTRL  &mm_kana_ho_ho  &mm_kana_hi_hi   &mm_kana_ha_wo   &mm_kana_ko_comma &mm_kana_so_nu   &none   &none   &mm_kana_ta_o     &mm_kana_na_dot &mm_kana_nn_mu  &mm_kana_ra_wa  &mm_kana_re_re    &kp RCTRL
+&kp LALT   &kp LGUI        &none            &mm_del_bspc     &mt LSHIFT SPACE &lt 4 RET                         &lt 4 RET         &mt RSHIFT SPACE &mm_bspc_del   &none           &kp K_APP         &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
