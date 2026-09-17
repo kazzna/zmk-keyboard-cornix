@@ -191,6 +191,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        rot_scroll_vert: rot_scroll_vert {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+        };
+
+        rot_scroll_horiz: rot_scroll_horiz {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            tap-ms = <20>;
+        };
+
 
 
         to_naginata: to_naginata {
@@ -2346,10 +2360,10 @@
             bindings = <
 &kp ESC    &kp Q     &kp L       &mm_comma_qmark  &kp P             &mm_at_hash                    &mm_pipe_amps  &kp F             &kp U         &kp D    &kp K      &none
 &kp GRAVE  &kp A     &kp R       &kp E            &kp N             &kp B                          &kp G          &kp S             &kp I         &kp T    &kp O      &kp SQT
-&kp LCTRL  &kp Z     &kp W       &mm_dot_excl     &kp H             &kp J      &none   &none       &kp V          &kp C             &kp Y         &kp M    &kp X      &kp RCTRL
+&kp LCTRL  &kp Z     &kp W       &mm_dot_excl     &kp H             &kp J      &kp C_MUTE &kp LG(L)   &kp V       &kp C             &kp Y         &kp M    &kp X      &kp RCTRL
 &kp LALT   &kp LGUI  &none       &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         Symbol_layer {
@@ -2365,10 +2379,10 @@
             bindings = <
 &to_naginata  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &kp LA(GRAVE)
 &kp TAB       &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
-&kp LCTRL     &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &none   &none   &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &kp RCTRL
+&kp LCTRL     &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &kp RCTRL
 &kp LALT      &kp LGUI  &none     &mm_del_bspc &kp SPACE &trans                   &trans     &kp SPACE  &mm_bspc_del &none  &kp K_APP  &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         Naginata_layer {
@@ -2384,10 +2398,10 @@
             bindings = <
 &kp ESC    &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
 &kp GRAVE  &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&kp LCTRL  &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &kp RCTRL
+&kp LCTRL  &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &kp RCTRL
 &kp LALT   &kp LGUI  &none     &mm_del_bspc &lt 3 SPACE &lt 4 RET                  &lt 4 RET   &lt 3 SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         SandS_layer {
@@ -2403,10 +2417,10 @@
             bindings = <
 &kp LS(ESC)    &none         &kana_ne  &kana_ri  &kana_me   &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E      &kana_yu  &none
 &kp LS(GRAVE)  &kana_se      &kana_mi  &kana_ni  &kana_ma   &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu  &kana_fu  &none
-&kp LS(LCTRL)  &kana_ho      &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &none   &none   &kp O          &kp DOT   &kana_mu  &kana_wa   &kana_re  &kp LS(RCTRL)
+&kp LS(LCTRL)  &kana_ho      &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &kp C_MUTE &kp LG(L) &kp O  &kp DOT   &kana_mu  &kana_wa   &kana_re  &kp LS(RCTRL)
 &kp LS(LALT)   &kp LS(LGUI)  &none     &mm_bspc_del &trans  &kp LS(RET)                &kp LS(RET)    &trans    &mm_del_bspc &none    &kp LS(K_APP) &kp LS(RALT)
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         Symbol_ja_layer {
@@ -2422,10 +2436,10 @@
             bindings = <
 &kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &kp UP        &to_arensito
 &kp TAB        &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
-&kp LCTRL      &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &none   &none  &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &kp RCTRL
+&kp LCTRL      &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &kp RCTRL
 &kp LALT       &kp LGUI  &none     &mm_del_bspc &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
 
@@ -2442,10 +2456,10 @@
             bindings = <
 &kp ESC          &kp F1   &kp F2  &kp F3  &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP    &kp END    &kp PG_UP   &none
 &kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8  &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN   &none
-&trans           &kp F11  &none   &none   &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &none     &none      &kp INSERT  &trans
+&trans           &kp F11  &none   &none   &none   &kp F12  &kp C_MUTE &kp LG(L)  &kp SCROLLLOCK   &none     &none     &none      &kp INSERT  &trans
 &trans           &trans   &to 2   &trans  &trans  &to 7                   &to 7            &trans    &trans    &to 0      &trans      &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         Navi_layer {
@@ -2464,7 +2478,7 @@
 &none   &none   &none   &none   &none   &none   &none   &none   &kp N0  &none   &none  &kp DLLR   &kp LS(L)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans &trans     &trans     &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
         };
 
         System_layer {
@@ -2480,10 +2494,10 @@
             bindings = <
 &to 0   &none         &none         &none         &none         &none                         &none        &none  &none  &none  &none  &to 0
 &none   &bt BT_CLR    &out OUT_TOG  &none         &none         &bootloader                   &bootloader  &none  &none  &none  &none  &none
-&none   &none         &none         &none         &none         &sys_reset    &none   &none   &sys_reset   &none  &none  &none  &none  &none
+&none   &none         &none         &none         &none         &sys_reset    &kp C_MUTE &kp LG(L)   &sys_reset   &none  &none  &none  &none  &none
 &none   &none         &to 2         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                  &none        &none  &none  &to 2  &none  &none
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         Debug_layer {
