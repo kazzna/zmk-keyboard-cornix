@@ -191,6 +191,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        mm_test_ka_fu: mm_test_ka_fu {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kana_ka>, <&kana_fu>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
 
         to_naginata: to_naginata {
             compatible = "zmk,behavior-macro";
@@ -2375,16 +2382,16 @@
 
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
-            // |   `   |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
+            // |   `   |  ろ |  け  |  と  |か/S:ふ|  っ |                   |  く  |  あ  |  い  |  う  |  ー  |       |
             // | LCTRL |  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  | RCTRL |
-            // | LALT  | GUI |      | DEL  |L3/SP |L4/RET|  |L4/RET|L3/SP | BSPC |      | MENU | RALT  |
+            // | LALT  | GUI |      | DEL  |SFT/SP|L4/RET|  |L4/RET|SFT/SP| BSPC |      | MENU | RALT  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp ESC    &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
-&kp GRAVE  &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&kp LCTRL  &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &kp RCTRL
-&kp LALT   &kp LGUI  &none     &mm_del_bspc &lt 3 SPACE &lt 4 RET                  &lt 4 RET   &lt 3 SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
+&kp ESC    &none     &kana_ki  &kana_te  &kana_shi       &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
+&kp GRAVE  &kana_ro  &kana_ke  &kana_to  &mm_test_ka_fu  &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
+&kp LCTRL  &kana_ho  &kana_hi  &kana_ha  &kana_ko        &kana_so   &none   &none   &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &kp RCTRL
+&kp LALT   &kp LGUI  &none     &mm_del_bspc &mt LSHIFT SPACE &lt 4 RET              &lt 4 RET  &mt RSHIFT SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
