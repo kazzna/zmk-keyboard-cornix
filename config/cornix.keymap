@@ -2411,14 +2411,14 @@
             // | S+ESC |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
             // |   ~   |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
             // | S+CTRL|  ほ |  ひ  |  を  |  、  |  ぬ  |        |  |       |  お  |  。  |  む  |  わ  |  れ  | S+CTRL|
-            // | S+ALT |S+GUI|      | BSPC | (SP) |S+RET |  |S+RET | (SP) | DEL  |      |S+MENU| S+ALT |
+            // | S+ALT |S+GUI|      | BSPC | S+SP |S+RET |  |S+RET | S+SP | DEL  |      |S+MENU| S+ALT |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp LS(ESC)    &none         &kana_ne  &kana_ri  &kana_me   &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E      &kana_yu  &none
 &kp LS(GRAVE)  &kana_se      &kana_mi  &kana_ni  &kana_ma   &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu  &kana_fu  &none
 &kp LS(LCTRL)  &kana_ho      &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &kp C_MUTE &kp LG(L) &kp O  &kp DOT   &kana_mu  &kana_wa   &kana_re  &kp LS(RCTRL)
-&kp LS(LALT)   &kp LS(LGUI)  &none     &mm_bspc_del &trans  &kp LS(RET)                &kp LS(RET)    &trans    &mm_del_bspc &none    &kp LS(K_APP) &kp LS(RALT)
+&kp LS(LALT)   &kp LS(LGUI)  &none     &mm_bspc_del &kp LS(SPACE)  &kp LS(RET)         &kp LS(RET)    &kp LS(SPACE)  &mm_del_bspc &none    &kp LS(K_APP) &kp LS(RALT)
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
