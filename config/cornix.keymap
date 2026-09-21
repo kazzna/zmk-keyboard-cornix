@@ -207,7 +207,18 @@
             tap-ms = <20>;
         };
 
-
+        lm: lm {
+            compatible = "zmk,behavior-macro-two-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <2>;
+            bindings
+                = <&macro_param_1to1 &macro_press &mo MACRO_PLACEHOLDER>
+                , <&macro_param_2to1 &macro_press &kp MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
+                , <&macro_param_2to1 &macro_release &kp MACRO_PLACEHOLDER>
+                , <&macro_param_1to1 &macro_release &mo MACRO_PLACEHOLDER>;
+        };
 
         to_naginata: to_naginata {
             compatible = "zmk,behavior-macro";
@@ -2411,16 +2422,16 @@
 
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
-            // |   `   |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
-            // | LCTRL |  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  | RCTRL |
-            // | LALT  | GUI |      | DEL  |L4/SP |L5/RET|  |L5/RET|L4/SP | BSPC |      | MENU | RALT  |
+            // |       |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
+            // |LM0/CTL|  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  |LM0/CTL|
+            // |LM0/ALT|LM0/GUI|    | DEL  |L4/SP |L5/RET|  |L5/RET|L4/SP | BSPC |      | MENU |LM0/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp ESC    &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
-&kp GRAVE  &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&kp LCTRL  &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &kp RCTRL
-&kp LALT   &kp LGUI  &none     &mm_del_bspc &lt 4 SPACE &lt 5 RET                  &lt 5 RET   &lt 4 SPACE &mm_bspc_del &none    &kp K_APP  &kp RALT
+&kp ESC     &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
+&none       &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
+&lm 0 LCTRL &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm 0 RCTRL
+&lm 0 LALT  &lm 0 LGUI &none    &mm_del_bspc &lt 4 SPACE &lt 5 RET                  &lt 5 RET   &lt 4 SPACE &mm_bspc_del &none    &kp K_APP  &lm 0 RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -2430,14 +2441,14 @@
 
             // ------------------------------------------------------------------------------------------------------------
             // | S+ESC |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
-            // |   ~   |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
+            // |       |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
             // | S+CTRL|  ほ |  ひ  |  を  |  、  |  ぬ  |        |  |       |  お  |  。  |  む  |  わ  |  れ  | S+CTRL|
             // | S+ALT |S+GUI|      | BSPC | S+SP |S+RET |  |S+RET | S+SP | DEL  |      |S+MENU| S+ALT |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp LS(ESC)    &none         &kana_ne  &kana_ri  &kana_me   &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E      &kana_yu  &none
-&kp LS(GRAVE)  &kana_se      &kana_mi  &kana_ni  &kana_ma   &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu  &kana_fu  &none
+&none          &kana_se      &kana_mi  &kana_ni  &kana_ma   &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu  &kana_fu  &none
 &kp LS(LCTRL)  &kana_ho      &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &kp C_MUTE &kp LG(L) &kp O  &kp DOT   &kana_mu  &kana_wa   &kana_re  &kp LS(RCTRL)
 &kp LS(LALT)   &kp LS(LGUI)  &none     &mm_bspc_del &kp LS(SPACE)  &kp LS(RET)         &kp LS(RET)    &kp LS(SPACE)  &mm_del_bspc &none    &kp LS(K_APP) &kp LS(RALT)
             >;
