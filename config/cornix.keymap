@@ -6,6 +6,7 @@
 
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
+#include "includes/arensito.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -2371,9 +2372,7 @@
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp ESC    &kp Q     &kp L       &mm_comma_qmark  &kp P             &mm_at_hash                    &mm_pipe_amps  &kp F             &kp U         &kp D    &kp K      &none
-&kp GRAVE  &kp A     &kp R       &kp E            &kp N             &kp B                          &kp G          &kp S             &kp I         &kp T    &kp O      &kp SQT
-&kp LCTRL  &kp Z     &kp W       &mm_dot_excl     &kp H             &kp J      &kp C_MUTE &kp LG(L)   &kp V       &kp C             &kp Y         &kp M    &kp X      &kp RCTRL
+ARENSITO_ALPHA_ROWS
 &kp LALT   &kp LGUI  &none       &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -2423,15 +2422,15 @@
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |     |  き  |  て  |  し  |  <-  |                   |  ->  |  さ  |  る  |  す  |  へ  |       |
             // |       |  ろ |  け  |  と  |  か  |  っ  |                   |  く  |  あ  |  い  |  う  |  ー  |       |
-            // |LM0/CTL|  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  |LM0/CTL|
-            // |LM0/ALT|LM0/GUI|    | DEL  |L4/SP |L5/RET|  |L5/RET|L4/SP | BSPC |      | MENU |LM0/ALT|
+            // |LM8/CTL|  ほ |  ひ  |  は  |  こ  |  そ  |        |  |       |  た  |  な  |  ん  |  ら  |  れ  |LM8/CTL|
+            // |LM8/ALT|LM8/GUI|    | DEL  |L4/SP |L5/RET|  |L5/RET|L4/SP | BSPC |      | MENU |LM8/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp ESC     &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
 &none       &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&lm 0 LCTRL &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm 0 RCTRL
-&lm 0 LALT  &lm 0 LGUI &none    &mm_del_bspc &lt 4 SPACE &lt 5 RET                  &lt 5 RET   &lt 4 SPACE &mm_bspc_del &none    &kp K_APP  &lm 0 RALT
+&lm 8 LCTRL &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm 8 RCTRL
+&lm 8 LALT  &lm 8 LGUI &none    &mm_del_bspc &lt 4 SPACE &lt 5 RET                  &lt 5 RET   &lt 4 SPACE &mm_bspc_del &none    &kp K_APP  &lm 8 RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -2512,22 +2511,21 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Debug_layer {
-            display-name = "Debug";
+        Arensito_mod_layer {
+            display-name = "Arn-Mod";
 
-            // ----------------------------------------------------------------------------------------------------------------------------
-            // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
-            // | EXTPWR | BTCLR | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
-            // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
-            // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
-            //                    |         |         |         |         |         | |      |      |      |       |      |
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
+            // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
+            // | LCTRL |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   | RCTRL |
+            // | (ALT) |(GUI)|      | DEL  |SFT/SP|  RET |  |  RET |SFT/SP| BSPC |      | MENU |(ALT)  |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none        &none  &none   &none  &none  &none
-&none       &none         &none         &none         &none         &none                         &none        &none  &none   &none  &none  &none
-&none       &none         &none         &none         &none         &bootloader   &trans  &trans  &bootloader  &none  &none   &none  &none  &none
-&none       &none         &none         &none         &none         &none                         &none        &none  &kp N7  &none  &none  &none
+ARENSITO_ALPHA_ROWS
+&trans     &trans    &none       &mm_del_bspc     &mt LSHIFT SPACE  &kp RET               &kp RET        &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
     };
 };
