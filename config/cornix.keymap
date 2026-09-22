@@ -2368,12 +2368,12 @@
             // |  ESC  |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
             // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
             // | LCTRL |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   | RCTRL |
-            // | LALT  | GUI |      | DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC |      | MENU | RALT  |
+            // | LALT  | GUI | TAB  | DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC |      | MENU | RALT  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 ARENSITO_ALPHA_ROWS
-&kp LALT   &kp LGUI  &none       &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &kp RALT
+&kp LALT   &kp LGUI  &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -2518,12 +2518,12 @@ ARENSITO_ALPHA_ROWS
             // |  ESC  |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
             // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
             // | LCTRL |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   | RCTRL |
-            // | (ALT) |(GUI)|      | DEL  |SFT/SP|  RET |  |  RET |SFT/SP| BSPC |      | MENU |(ALT)  |
+            // | (ALT) |(GUI)| TAB  | DEL  |SFT/SP|  RET |  |  RET |SFT/SP| BSPC |      | MENU |(ALT)  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 ARENSITO_ALPHA_ROWS
-&trans     &trans    &none       &mm_del_bspc     &mt LSHIFT SPACE  &kp RET               &kp RET        &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &trans
+&trans     &trans    &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &kp RET               &kp RET        &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
