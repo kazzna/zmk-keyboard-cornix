@@ -2478,16 +2478,16 @@ ARENSITO_ALPHA_ROWS
 
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |       |
-            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN |       |
-            // | (CTRL)| F11 |     |      |      |  F12 |        |  |       |SCRLCK|      |      |      |INSERT| (CTRL)|
-            // | (ALT) |(GUI)|TO_JA| (DEL)| (SP) | TO_SYS |  | TO_SYS | (SP) |(BSPC)|TO_EN |(MENU)|(ALT) |
+            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN |  RET  |
+            // | (CTRL)| F11 |     |LSHIFT|      |  F12 |        |  |       |SCRLCK|      |RSHIFT|      |INSERT| (CTRL)|
+            // | (ALT) |(GUI)|TO_JA| (DEL)|SFT/SP| TO_SYS |  | TO_SYS |SFT/SP|(BSPC)|TO_EN |(MENU)|(ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp ESC          &kp F1   &kp F2  &kp F3  &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP    &kp END    &kp PG_UP   &none
-&kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8  &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN   &none
-&trans           &kp F11  &none   &none   &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &none     &none      &kp INSERT  &trans
-&trans           &trans   &to 3   &trans  &trans  &to 7                   &to 7            &trans    &trans    &to 0      &trans      &trans
+&kp ESC          &kp F1   &kp F2  &kp F3     &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP      &kp END    &kp PG_UP   &none
+&kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8     &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN    &kp RIGHT  &kp PG_DN   &kp RET
+&trans           &kp F11  &none   &kp LSHIFT &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &kp RSHIFT  &none      &kp INSERT  &trans
+&trans           &trans   &to 3   &trans     &mt LSHIFT SPACE &to 7          &to 7            &mt RSHIFT SPACE &trans &to 0  &trans      &trans
             >;
             sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
         };
