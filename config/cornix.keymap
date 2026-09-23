@@ -322,7 +322,7 @@ ARENSITO_ALPHA_ROWS
 
             bindings = <
 &kp ESC     &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
-&none       &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_xtsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
+&none       &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_ltsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
 &lm 8 LCTRL &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm 8 RCTRL
 &lm 8 LALT  &lm 8 LGUI &none    &mm_del_bspc &lt 4 SPACE &lt 5 RET                  &lt 5 RET   &lt 4 SPACE &mm_bspc_del &none    &kp K_APP  &lm 8 RALT
             >;

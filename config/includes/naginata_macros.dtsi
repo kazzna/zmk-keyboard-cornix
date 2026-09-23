@@ -64,7 +64,7 @@
             bindings = <&kp K>, <&kp A>;
         };
 
-        kana_xtsu: kana_xtsu { // っ
+        kana_ltsu: kana_ltsu { // っ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -544,7 +544,7 @@
             bindings = <&kp P>, <&kp A>;
         };
 
-        kana_xa: kana_xa { // ぁ
+        kana_la: kana_la { // ぁ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -552,7 +552,7 @@
             bindings = <&kp L>, <&kp A>;
         };
 
-        kana_xi: kana_xi { // ぃ
+        kana_li: kana_li { // ぃ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -560,7 +560,7 @@
             bindings = <&kp L>, <&kp I>;
         };
 
-        kana_xu: kana_xu { // ぅ
+        kana_lu: kana_lu { // ぅ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -568,7 +568,7 @@
             bindings = <&kp L>, <&kp U>;
         };
 
-        kana_xe: kana_xe { // ぇ
+        kana_le: kana_le { // ぇ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -576,7 +576,7 @@
             bindings = <&kp L>, <&kp E>;
         };
 
-        kana_xo: kana_xo { // ぉ
+        kana_lo: kana_lo { // ぉ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -584,7 +584,7 @@
             bindings = <&kp L>, <&kp O>;
         };
 
-        kana_xya: kana_xya { // ゃ
+        kana_lya: kana_lya { // ゃ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -592,7 +592,7 @@
             bindings = <&kp L>, <&kp Y>, <&kp A>;
         };
 
-        kana_xyu: kana_xyu { // ゅ
+        kana_lyu: kana_lyu { // ゅ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -600,7 +600,7 @@
             bindings = <&kp L>, <&kp Y>, <&kp U>;
         };
 
-        kana_xyo: kana_xyo { // ょ
+        kana_lyo: kana_lyo { // ょ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -608,7 +608,7 @@
             bindings = <&kp L>, <&kp Y>, <&kp O>;
         };
 
-        kana_xwa: kana_xwa { // ゎ
+        kana_lwa: kana_lwa { // ゎ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -616,7 +616,7 @@
             bindings = <&kp L>, <&kp W>, <&kp A>;
         };
 
-        kana_xka: kana_xka { // ヵ
+        kana_lka: kana_lka { // ヵ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -624,7 +624,7 @@
             bindings = <&kp L>, <&kp K>, <&kp A>;
         };
 
-        kana_xke: kana_xke { // ヶ
+        kana_lke: kana_lke { // ヶ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
@@ -1184,12 +1184,12 @@
             bindings = <&kp Q>, <&kp O>;
         };
 
-        kana_kxwa: kana_kxwa { // クヮ
+        kana_kulwa: kana_kulwa { // クヮ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp K>, <&kp U>, <&kp X>, <&kp W>, <&kp A>;
+            bindings = <&kp K>, <&kp U>, <&kp L>, <&kp W>, <&kp A>;
         };
 
         kana_gwa: kana_gwa { // グァ
@@ -1224,12 +1224,12 @@
             bindings = <&kp G>, <&kp W>, <&kp O>;
         };
 
-        kana_gxwa: kana_gxwa { // グヮ
+        kana_gulwa: kana_gulwa { // グヮ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp G>, <&kp U>, <&kp X>, <&kp W>, <&kp A>;
+            bindings = <&kp G>, <&kp U>, <&kp L>, <&kp W>, <&kp A>;
         };
     };
 };

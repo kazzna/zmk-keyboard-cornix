@@ -235,80 +235,80 @@
         // -------------------------------------------------------------
         // 小書き: 「小」(1) + 各キー (Layer 2 & 3)
         // -------------------------------------------------------------
-        combo_xyo { // ょ
+        combo_lyo { // ょ
             timeout-ms = <80>;
             key-positions = <1 8>;
-            bindings = <&kana_xyo>;
+            bindings = <&kana_lyo>;
             layers = <3 4>;
         };
 
-        combo_xe { // ぇ
+        combo_le { // ぇ
             timeout-ms = <80>;
             key-positions = <1 9>;
-            bindings = <&kana_xe>;
+            bindings = <&kana_le>;
             layers = <3 4>;
         };
 
-        combo_xyu { // ゅ
+        combo_lyu { // ゅ
             timeout-ms = <80>;
             key-positions = <1 10>;
-            bindings = <&kana_xyu>;
+            bindings = <&kana_lyu>;
             layers = <3 4>;
         };
 
-        combo_xke { // ヶ
+        combo_lke { // ヶ
             timeout-ms = <80>;
             key-positions = <1 14>;
-            bindings = <&kana_xke>;
+            bindings = <&kana_lke>;
             layers = <3 4>;
         };
 
-        combo_xka { // ヵ
+        combo_lka { // ヵ
             timeout-ms = <80>;
             key-positions = <1 16>;
-            bindings = <&kana_xka>;
+            bindings = <&kana_lka>;
             layers = <3 4>;
         };
 
-        combo_xya { // ゃ
+        combo_lya { // ゃ
             timeout-ms = <80>;
             key-positions = <1 18>;
-            bindings = <&kana_xya>;
+            bindings = <&kana_lya>;
             layers = <3 4>;
         };
 
-        combo_xa { // ぁ
+        combo_la { // ぁ
             timeout-ms = <80>;
             key-positions = <1 19>;
-            bindings = <&kana_xa>;
+            bindings = <&kana_la>;
             layers = <3 4>;
         };
 
-        combo_xi { // ぃ
+        combo_li { // ぃ
             timeout-ms = <80>;
             key-positions = <1 20>;
-            bindings = <&kana_xi>;
+            bindings = <&kana_li>;
             layers = <3 4>;
         };
 
-        combo_xu { // ぅ
+        combo_lu { // ぅ
             timeout-ms = <80>;
             key-positions = <1 21>;
-            bindings = <&kana_xu>;
+            bindings = <&kana_lu>;
             layers = <3 4>;
         };
 
-        combo_xo { // ぉ
+        combo_lo { // ぉ
             timeout-ms = <80>;
             key-positions = <1 32>;
-            bindings = <&kana_xo>;
+            bindings = <&kana_lo>;
             layers = <3 4>;
         };
 
-        combo_xwa { // ゎ
+        combo_lwa { // ゎ
             timeout-ms = <80>;
             key-positions = <1 35>;
-            bindings = <&kana_xwa>;
+            bindings = <&kana_lwa>;
             layers = <3 4>;
         };
 
@@ -846,10 +846,10 @@
             layers = <3 4>;
         };
 
-        combo_kxwa { // クヮ
+        combo_kulwa { // クヮ
             timeout-ms = <80>;
             key-positions = <28 18 35>;
-            bindings = <&kana_kxwa>;
+            bindings = <&kana_kulwa>;
             layers = <3 4>;
         };
 
@@ -884,10 +884,10 @@
             layers = <3 4>;
         };
 
-        combo_gxwa { // グヮ
+        combo_gulwa { // グヮ
             timeout-ms = <80>;
             key-positions = <16 18 35>;
-            bindings = <&kana_gxwa>;
+            bindings = <&kana_gulwa>;
             layers = <3 4>;
         };
     };
