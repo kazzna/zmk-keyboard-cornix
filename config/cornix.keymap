@@ -390,17 +390,17 @@ ARENSITO_ALPHA_ROWS
             display-name = "System";
 
             // ------------------------------------------------------------------------------------------------------------
-            // | TO_EN |     |     |      |      |      |                   |      |      |      |      |      | TO_EN |
-            // |       |BTCLR|OUTTOG|EPTOG|      |BOOT(L)|                   |BOOT(R)|     |      |      |      |       |
+            // | TO_JA |     |     |      |      |      |                   |      |      |      |      |      | TO_EN |
+            // |       |OUTTOG|    |EPTOG |      |BOOT(L)|                   |BOOT(R)| BT 1 | BT 2 | BT 3 |BTCLR |       |
             // |       |     |     |      |      |RST(L)|        |  |       |RST(R)|      |      |      |      |       |
-            // |       |     |TO_JA| BT 1 | BT 2 | BT 3 |  |      |      |      |TO_JA |      |      |
+            // |       |     |TO_EN|      |      |      |  |      |      |      |TO_JA |      |      |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to 0   &none         &none         &none         &none         &none                         &none        &none  &none  &none  &none  &to 0
-&none   &bt BT_CLR    &out OUT_TOG  &ext_power EP_TOG &none     &bootloader                   &bootloader  &none  &none  &none  &none  &none
-&none   &none         &none         &none         &none         &sys_reset    &kp C_MUTE &kp LG(L)   &sys_reset   &none  &none  &none  &none  &none
-&none   &none         &to 3         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2                  &none        &none  &none  &to 3  &none  &none
+&to 3   &none         &none         &none         &none         &none                         &none        &none         &none         &none         &none         &to 0
+&none   &out OUT_TOG  &none         &ext_power EP_TOG &none     &bootloader                   &bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR    &none
+&none   &none         &none         &none         &none         &sys_reset    &kp C_MUTE &kp LG(L)   &sys_reset   &none         &none         &none         &none         &none
+&none   &none         &to 0         &none         &none         &none                         &none        &none         &none         &to 3         &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
