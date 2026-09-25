@@ -13,41 +13,6 @@
         compatible = "zmk,combos";
 
         // -------------------------------------------------------------
-        // Neovim レイヤー呼び出し: 「e」(15) + 「n」(16) (Layer 0: Base)
-        // -------------------------------------------------------------
-        combo_neovim { // Layer 2: Neovim
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&mo LAYER_NEOVIM>;
-            layers = <LAYER_BASE>;
-            slow-release;
-        };
-
-        // -------------------------------------------------------------
-        // Navigation レイヤー呼び出し (3キー同時ホールド):
-        // 左手: 「w」(26) + 「.」(27) + 「h」(28) (Layer 0 & 3)
-        // -------------------------------------------------------------
-        combo_navigation_l { // Layer 6: Navigation (左手)
-            timeout-ms = <50>;
-            key-positions = <26 27 28>;
-            bindings = <&mo LAYER_NAVIGATION>;
-            layers = <LAYER_BASE LAYER_NAGINATA>;
-            slow-release;
-        };
-
-        // -------------------------------------------------------------
-        // Navigation レイヤー呼び出し (3キー同時ホールド):
-        // 右手: 「c」(33) + 「y」(34) + 「m」(35) (Layer 0 & 3)
-        // -------------------------------------------------------------
-        combo_navigation_r { // Layer 6: Navigation (右手)
-            timeout-ms = <50>;
-            key-positions = <33 34 35>;
-            bindings = <&mo LAYER_NAVIGATION>;
-            layers = <LAYER_BASE LAYER_NAGINATA>;
-            slow-release;
-        };
-
-        // -------------------------------------------------------------
         // 濁音: 「か」(16) + 右手キー (Layer 2 & 3)
         // -------------------------------------------------------------
         combo_za { // ざ

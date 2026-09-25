@@ -28,6 +28,7 @@
 #define KANA_WAIT_MS 8
 #define KANA_TAP_MS  8
 
+#include "includes/combos.dtsi"
 #include "includes/naginata_macros.dtsi"
 #include "includes/naginata_combos.dtsi"
 #include "includes/behaviors.dtsi"
