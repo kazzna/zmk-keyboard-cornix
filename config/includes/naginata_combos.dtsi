@@ -537,24 +537,24 @@
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
-        combo_kwi { // クィ
+        combo_qi { // クィ
             timeout-ms = <80>;
             key-positions = <28 18 20>;
-            bindings = <&kana_kwi>;
+            bindings = <&kana_qi>;
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
-        combo_kwe { // クェ
+        combo_qe { // クェ
             timeout-ms = <80>;
             key-positions = <28 18 9>;
-            bindings = <&kana_kwe>;
+            bindings = <&kana_qe>;
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
-        combo_kwo { // クォ
+        combo_qo { // クォ
             timeout-ms = <80>;
             key-positions = <28 18 32>;
-            bindings = <&kana_kwo>;
+            bindings = <&kana_qo>;
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 

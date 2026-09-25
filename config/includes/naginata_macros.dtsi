@@ -1160,28 +1160,28 @@
             bindings = <&kp K>, <&kp W>, <&kp A>;
         };
 
-        kana_kwi: kana_kwi { // クィ
+        kana_qi: kana_qi { // クィ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp K>, <&kp W>, <&kp I>;
+            bindings = <&kp Q>, <&kp I>;
         };
 
-        kana_kwe: kana_kwe { // クェ
+        kana_qe: kana_qe { // クェ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp K>, <&kp W>, <&kp E>;
+            bindings = <&kp Q>, <&kp E>;
         };
 
-        kana_kwo: kana_kwo { // クォ
+        kana_qo: kana_qo { // クォ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp K>, <&kp W>, <&kp O>;
+            bindings = <&kp Q>, <&kp O>;
         };
 
         kana_kulwa: kana_kulwa { // クヮ
