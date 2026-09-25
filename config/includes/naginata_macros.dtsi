@@ -976,12 +976,12 @@
             bindings = <&kp S>, <&kp H>, <&kp E>;
         };
 
-        kana_tye: kana_tye { // チェ
+        kana_che: kana_che { // チェ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp T>, <&kp Y>, <&kp E>;
+            bindings = <&kp C>, <&kp H>, <&kp E>;
         };
 
         kana_zye: kana_zye { // ジェ
@@ -1088,20 +1088,20 @@
             bindings = <&kp V>, <&kp Y>, <&kp U>;
         };
 
-        kana_wi: kana_wi { // ウィ
+        kana_whi: kana_whi { // ウィ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp W>, <&kp I>;
+            bindings = <&kp W>, <&kp H>, <&kp I>;
         };
 
-        kana_we: kana_we { // ウェ
+        kana_whe: kana_whe { // ウェ
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <KANA_WAIT_MS>;
             tap-ms = <KANA_TAP_MS>;
-            bindings = <&kp W>, <&kp E>;
+            bindings = <&kp W>, <&kp H>, <&kp E>;
         };
 
         kana_who: kana_who { // ウォ

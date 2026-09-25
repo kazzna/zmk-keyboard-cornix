@@ -509,17 +509,17 @@
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
-        combo_wi { // ウィ
+        combo_whi { // ウィ
             timeout-ms = <80>;
             key-positions = <28 21 22 20>;
-            bindings = <&kana_wi>;
+            bindings = <&kana_whi>;
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
-        combo_we { // ウェ
+        combo_whe { // ウェ
             timeout-ms = <80>;
             key-positions = <28 21 22 9>;
-            bindings = <&kana_we>;
+            bindings = <&kana_whe>;
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
@@ -614,10 +614,10 @@
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
-        combo_tye { // チェ
+        combo_che { // チェ
             timeout-ms = <80>;
             key-positions = <33 9 17>;
-            bindings = <&kana_tye>;
+            bindings = <&kana_che>;
             layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
