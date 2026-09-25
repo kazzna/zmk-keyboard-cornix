@@ -6,42 +6,44 @@
 
 #pragma once
 
+#include "layers.h"
+
 / {
     combos {
         compatible = "zmk,combos";
 
         // -------------------------------------------------------------
-        // nvim レイヤー呼び出し: 「e」(15) + 「n」(16) (Layer 0)
+        // Neovim レイヤー呼び出し: 「e」(15) + 「n」(16) (Layer 0: Base)
         // -------------------------------------------------------------
-        combo_navi { // Layer 2: Neovim
+        combo_neovim { // Layer 2: Neovim
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&mo 2>;
-            layers = <0>;
+            bindings = <&mo LAYER_NEOVIM>;
+            layers = <LAYER_BASE>;
             slow-release;
         };
 
         // -------------------------------------------------------------
-        // Fn & Nav レイヤー呼び出し (3キー同時ホールド):
+        // Navigation レイヤー呼び出し (3キー同時ホールド):
         // 左手: 「w」(26) + 「.」(27) + 「h」(28) (Layer 0 & 3)
         // -------------------------------------------------------------
-        combo_fn_nav_l { // Layer 6: Fn & Nav (左手)
+        combo_navigation_l { // Layer 6: Navigation (左手)
             timeout-ms = <50>;
             key-positions = <26 27 28>;
-            bindings = <&mo 6>;
-            layers = <0 3>;
+            bindings = <&mo LAYER_NAVIGATION>;
+            layers = <LAYER_BASE LAYER_NAGINATA>;
             slow-release;
         };
 
         // -------------------------------------------------------------
-        // Fn & Nav レイヤー呼び出し (3キー同時ホールド):
+        // Navigation レイヤー呼び出し (3キー同時ホールド):
         // 右手: 「c」(33) + 「y」(34) + 「m」(35) (Layer 0 & 3)
         // -------------------------------------------------------------
-        combo_fn_nav_r { // Layer 6: Fn & Nav (右手)
+        combo_navigation_r { // Layer 6: Navigation (右手)
             timeout-ms = <50>;
             key-positions = <33 34 35>;
-            bindings = <&mo 6>;
-            layers = <0 3>;
+            bindings = <&mo LAYER_NAVIGATION>;
+            layers = <LAYER_BASE LAYER_NAGINATA>;
             slow-release;
         };
 
@@ -52,49 +54,49 @@
             timeout-ms = <80>;
             key-positions = <16 7>;
             bindings = <&kana_za>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_zu { // ず
             timeout-ms = <80>;
             key-positions = <16 9>;
             bindings = <&kana_zu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_be { // べ
             timeout-ms = <80>;
             key-positions = <16 10>;
             bindings = <&kana_be>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_gu { // ぐ
             timeout-ms = <80>;
             key-positions = <16 18>;
             bindings = <&kana_gu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_du { // づ
             timeout-ms = <80>;
             key-positions = <16 21>;
             bindings = <&kana_du>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_bu { // ぶ
             timeout-ms = <80>;
             key-positions = <16 22>;
             bindings = <&kana_bu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_da { // だ
             timeout-ms = <80>;
             key-positions = <16 32>;
             bindings = <&kana_da>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -104,91 +106,91 @@
             timeout-ms = <80>;
             key-positions = <19 2>;
             bindings = <&kana_gi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_de { // で
             timeout-ms = <80>;
             key-positions = <19 3>;
             bindings = <&kana_de>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ji { // じ
             timeout-ms = <80>;
             key-positions = <19 4>;
             bindings = <&kana_ji>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ze { // ぜ
             timeout-ms = <80>;
             key-positions = <19 13>;
             bindings = <&kana_ze>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ge { // げ
             timeout-ms = <80>;
             key-positions = <19 14>;
             bindings = <&kana_ge>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_do { // ど
             timeout-ms = <80>;
             key-positions = <19 15>;
             bindings = <&kana_do>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ga { // が
             timeout-ms = <80>;
             key-positions = <19 16>;
             bindings = <&kana_ga>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_di { // ぢ
             timeout-ms = <80>;
             key-positions = <19 17>;
             bindings = <&kana_di>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_bo { // ぼ
             timeout-ms = <80>;
             key-positions = <19 25>;
             bindings = <&kana_bo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_bi { // び
             timeout-ms = <80>;
             key-positions = <19 26>;
             bindings = <&kana_bi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ba { // ば
             timeout-ms = <80>;
             key-positions = <19 27>;
             bindings = <&kana_ba>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_go { // ご
             timeout-ms = <80>;
             key-positions = <19 28>;
             bindings = <&kana_go>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_zo { // ぞ
             timeout-ms = <80>;
             key-positions = <19 29>;
             bindings = <&kana_zo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -198,14 +200,14 @@
             timeout-ms = <80>;
             key-positions = <28 10>;
             bindings = <&kana_pe>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_pu { // ぷ
             timeout-ms = <80>;
             key-positions = <28 22>;
             bindings = <&kana_pu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -215,21 +217,21 @@
             timeout-ms = <80>;
             key-positions = <33 25>;
             bindings = <&kana_po>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_pi { // ぴ
             timeout-ms = <80>;
             key-positions = <33 26>;
             bindings = <&kana_pi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_pa { // ぱ
             timeout-ms = <80>;
             key-positions = <33 27>;
             bindings = <&kana_pa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -239,77 +241,77 @@
             timeout-ms = <80>;
             key-positions = <1 8>;
             bindings = <&kana_lyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_le { // ぇ
             timeout-ms = <80>;
             key-positions = <1 9>;
             bindings = <&kana_le>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lyu { // ゅ
             timeout-ms = <80>;
             key-positions = <1 10>;
             bindings = <&kana_lyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lke { // ヶ
             timeout-ms = <80>;
             key-positions = <1 14>;
             bindings = <&kana_lke>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lka { // ヵ
             timeout-ms = <80>;
             key-positions = <1 16>;
             bindings = <&kana_lka>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lya { // ゃ
             timeout-ms = <80>;
             key-positions = <1 18>;
             bindings = <&kana_lya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_la { // ぁ
             timeout-ms = <80>;
             key-positions = <1 19>;
             bindings = <&kana_la>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_li { // ぃ
             timeout-ms = <80>;
             key-positions = <1 20>;
             bindings = <&kana_li>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lu { // ぅ
             timeout-ms = <80>;
             key-positions = <1 21>;
             bindings = <&kana_lu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lo { // ぉ
             timeout-ms = <80>;
             key-positions = <1 32>;
             bindings = <&kana_lo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_lwa { // ゎ
             timeout-ms = <80>;
             key-positions = <1 35>;
             bindings = <&kana_lwa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -319,49 +321,49 @@
             timeout-ms = <80>;
             key-positions = <18 2>;
             bindings = <&kana_kya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_rya { // りゃ
             timeout-ms = <80>;
             key-positions = <18 3>;
             bindings = <&kana_rya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_sha { // しゃ
             timeout-ms = <80>;
             key-positions = <18 4>;
             bindings = <&kana_sha>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_mya { // みゃ
             timeout-ms = <80>;
             key-positions = <18 14>;
             bindings = <&kana_mya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_nya { // にゃ
             timeout-ms = <80>;
             key-positions = <18 15>;
             bindings = <&kana_nya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_cha { // ちゃ
             timeout-ms = <80>;
             key-positions = <18 17>;
             bindings = <&kana_cha>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_hya { // ひゃ
             timeout-ms = <80>;
             key-positions = <18 26>;
             bindings = <&kana_hya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -371,49 +373,49 @@
             timeout-ms = <80>;
             key-positions = <10 2>;
             bindings = <&kana_kyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ryu { // りゅ
             timeout-ms = <80>;
             key-positions = <10 3>;
             bindings = <&kana_ryu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_shu { // しゅ
             timeout-ms = <80>;
             key-positions = <10 4>;
             bindings = <&kana_shu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_myu { // みゅ
             timeout-ms = <80>;
             key-positions = <10 14>;
             bindings = <&kana_myu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_nyu { // にゅ
             timeout-ms = <80>;
             key-positions = <10 15>;
             bindings = <&kana_nyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_chu { // ちゅ
             timeout-ms = <80>;
             key-positions = <10 17>;
             bindings = <&kana_chu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_hyu { // ひゅ
             timeout-ms = <80>;
             key-positions = <10 26>;
             bindings = <&kana_hyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -423,49 +425,49 @@
             timeout-ms = <80>;
             key-positions = <8 2>;
             bindings = <&kana_kyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ryo { // りょ
             timeout-ms = <80>;
             key-positions = <8 3>;
             bindings = <&kana_ryo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_sho { // しょ
             timeout-ms = <80>;
             key-positions = <8 4>;
             bindings = <&kana_sho>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_myo { // みょ
             timeout-ms = <80>;
             key-positions = <8 14>;
             bindings = <&kana_myo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_nyo { // にょ
             timeout-ms = <80>;
             key-positions = <8 15>;
             bindings = <&kana_nyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_cho { // ちょ
             timeout-ms = <80>;
             key-positions = <8 17>;
             bindings = <&kana_cho>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_hyo { // ひょ
             timeout-ms = <80>;
             key-positions = <8 26>;
             bindings = <&kana_hyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -475,28 +477,28 @@
             timeout-ms = <80>;
             key-positions = <19 18 2>;
             bindings = <&kana_gya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ja { // じゃ
             timeout-ms = <80>;
             key-positions = <19 18 4>;
             bindings = <&kana_ja>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dya { // ぢゃ
             timeout-ms = <80>;
             key-positions = <19 18 17>;
             bindings = <&kana_dya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_bya { // びゃ
             timeout-ms = <80>;
             key-positions = <19 18 26>;
             bindings = <&kana_bya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -506,28 +508,28 @@
             timeout-ms = <80>;
             key-positions = <19 10 2>;
             bindings = <&kana_gyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ju { // じゅ
             timeout-ms = <80>;
             key-positions = <19 10 4>;
             bindings = <&kana_ju>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dyu { // ぢゅ
             timeout-ms = <80>;
             key-positions = <19 10 17>;
             bindings = <&kana_dyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_byu { // びゅ
             timeout-ms = <80>;
             key-positions = <19 10 26>;
             bindings = <&kana_byu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -537,28 +539,28 @@
             timeout-ms = <80>;
             key-positions = <19 8 2>;
             bindings = <&kana_gyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_jo { // じょ
             timeout-ms = <80>;
             key-positions = <19 8 4>;
             bindings = <&kana_jo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dyo { // ぢょ
             timeout-ms = <80>;
             key-positions = <19 8 17>;
             bindings = <&kana_dyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_byo { // びょ
             timeout-ms = <80>;
             key-positions = <19 8 26>;
             bindings = <&kana_byo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -568,21 +570,21 @@
             timeout-ms = <80>;
             key-positions = <33 26 18>;
             bindings = <&kana_pya>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_pyu { // ぴゅ
             timeout-ms = <80>;
             key-positions = <33 26 10>;
             bindings = <&kana_pyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_pyo { // ぴょ
             timeout-ms = <80>;
             key-positions = <33 26 8>;
             bindings = <&kana_pyo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -592,28 +594,28 @@
             timeout-ms = <80>;
             key-positions = <33 3 20>;
             bindings = <&kana_thi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_thu { // テュ
             timeout-ms = <80>;
             key-positions = <33 3 10>;
             bindings = <&kana_thu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dhi { // ディ
             timeout-ms = <80>;
             key-positions = <19 3 20>;
             bindings = <&kana_dhi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dhu { // デュ
             timeout-ms = <80>;
             key-positions = <19 3 10>;
             bindings = <&kana_dhu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -623,14 +625,14 @@
             timeout-ms = <80>;
             key-positions = <33 15 21>;
             bindings = <&kana_twu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dwu { // ドゥ
             timeout-ms = <80>;
             key-positions = <19 15 21>;
             bindings = <&kana_dwu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -640,14 +642,14 @@
             timeout-ms = <80>;
             key-positions = <33 9 4>;
             bindings = <&kana_sye>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_tye { // チェ
             timeout-ms = <80>;
             key-positions = <33 9 17>;
             bindings = <&kana_tye>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -657,14 +659,14 @@
             timeout-ms = <80>;
             key-positions = <19 9 4>;
             bindings = <&kana_zye>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_dye { // ヂェ
             timeout-ms = <80>;
             key-positions = <19 9 17>;
             bindings = <&kana_dye>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -674,35 +676,35 @@
             timeout-ms = <80>;
             key-positions = <28 22 19>;
             bindings = <&kana_fa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_fi { // フィ
             timeout-ms = <80>;
             key-positions = <28 22 20>;
             bindings = <&kana_fi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_fe { // フェ
             timeout-ms = <80>;
             key-positions = <28 22 9>;
             bindings = <&kana_fe>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_fo { // フォ
             timeout-ms = <80>;
             key-positions = <28 22 32>;
             bindings = <&kana_fo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_fyu { // フュ
             timeout-ms = <80>;
             key-positions = <28 22 10>;
             bindings = <&kana_fyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -712,42 +714,42 @@
             timeout-ms = <80>;
             key-positions = <16 21 19>;
             bindings = <&kana_va>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_vi { // ヴィ
             timeout-ms = <80>;
             key-positions = <16 21 20>;
             bindings = <&kana_vi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_vu { // ヴ
             timeout-ms = <80>;
             key-positions = <16 21 22>;
             bindings = <&kana_vu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_ve { // ヴェ
             timeout-ms = <80>;
             key-positions = <16 21 9>;
             bindings = <&kana_ve>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_vo { // ヴォ
             timeout-ms = <80>;
             key-positions = <16 21 32>;
             bindings = <&kana_vo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_vyu { // ヴュ
             timeout-ms = <80>;
             key-positions = <16 21 10>;
             bindings = <&kana_vyu>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -757,21 +759,21 @@
             timeout-ms = <80>;
             key-positions = <28 21 22 20>;
             bindings = <&kana_wi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_we { // ウェ
             timeout-ms = <80>;
             key-positions = <28 21 22 9>;
             bindings = <&kana_we>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_who { // ウォ
             timeout-ms = <80>;
             key-positions = <28 21 22 32>;
             bindings = <&kana_who>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -781,7 +783,7 @@
             timeout-ms = <80>;
             key-positions = <28 20 9>;
             bindings = <&kana_ye>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -791,28 +793,28 @@
             timeout-ms = <80>;
             key-positions = <28 21 19>;
             bindings = <&kana_tsa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_tsi { // ツィ
             timeout-ms = <80>;
             key-positions = <28 21 20>;
             bindings = <&kana_tsi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_tse { // ツェ
             timeout-ms = <80>;
             key-positions = <28 21 9>;
             bindings = <&kana_tse>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_tso { // ツォ
             timeout-ms = <80>;
             key-positions = <28 21 32>;
             bindings = <&kana_tso>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -822,35 +824,35 @@
             timeout-ms = <80>;
             key-positions = <28 18 19>;
             bindings = <&kana_kwa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_kwi { // クィ
             timeout-ms = <80>;
             key-positions = <28 18 20>;
             bindings = <&kana_kwi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_kwe { // クェ
             timeout-ms = <80>;
             key-positions = <28 18 9>;
             bindings = <&kana_kwe>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_kwo { // クォ
             timeout-ms = <80>;
             key-positions = <28 18 32>;
             bindings = <&kana_kwo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_kulwa { // クヮ
             timeout-ms = <80>;
             key-positions = <28 18 35>;
             bindings = <&kana_kulwa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         // -------------------------------------------------------------
@@ -860,35 +862,35 @@
             timeout-ms = <80>;
             key-positions = <16 18 19>;
             bindings = <&kana_gwa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_gwi { // グィ
             timeout-ms = <80>;
             key-positions = <16 18 20>;
             bindings = <&kana_gwi>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_gwe { // グェ
             timeout-ms = <80>;
             key-positions = <16 18 9>;
             bindings = <&kana_gwe>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_gwo { // グォ
             timeout-ms = <80>;
             key-positions = <16 18 32>;
             bindings = <&kana_gwo>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
 
         combo_gulwa { // グヮ
             timeout-ms = <80>;
             key-positions = <16 18 35>;
             bindings = <&kana_gulwa>;
-            layers = <3 4>;
+            layers = <LAYER_NAGINATA LAYER_NAGINATA_EXT>;
         };
     };
 };

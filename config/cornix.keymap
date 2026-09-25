@@ -7,6 +7,7 @@
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
 #include "includes/arensito.h"
+#include "includes/layers.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -35,7 +36,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base_layer {
             display-name = "Base";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -47,12 +48,12 @@
 
             bindings = <
 ARENSITO_ALPHA_ROWS
-&kp LALT   &kp LGUI  &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt 1 RET             &lt 1 RET      &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &kp RALT
+&kp LALT   &kp LGUI  &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt LAYER_SYMBOLS RET  &lt LAYER_SYMBOLS RET  &mt RSHIFT SPACE  &mm_bspc_del    &none    &kp K_APP  &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Symbol_layer {
+        symbols_layer {
             display-name = "Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -71,8 +72,8 @@ ARENSITO_ALPHA_ROWS
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Navi_layer {
-            display-name = "nvim";
+        neovim_layer {
+            display-name = "Neovim";
 
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |     |     |      |      |      |                   |  b   |      |  e   |  w   |  H   |       |
@@ -90,7 +91,7 @@ ARENSITO_ALPHA_ROWS
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Naginata_layer {
+        naginata_layer {
             display-name = "Naginata";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -101,16 +102,16 @@ ARENSITO_ALPHA_ROWS
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp ESC     &none     &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
-&none       &kana_ro  &kana_ke  &kana_to  &kana_ka   &kana_ltsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&lm 8 LCTRL &kana_ho  &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm 8 RCTRL
-&lm 8 LALT  &lm 8 LGUI &none    &mm_del_bspc &lt 4 SPACE &lt 5 RET                  &lt 5 RET   &lt 4 SPACE &mm_bspc_del &none    &kp K_APP  &lm 8 RALT
+&kp ESC                 &none                 &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
+&none                   &kana_ro              &kana_ke  &kana_to  &kana_ka   &kana_ltsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
+&lm LAYER_ARN_MOD LCTRL &kana_ho              &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm LAYER_ARN_MOD RCTRL
+&lm LAYER_ARN_MOD LALT  &lm LAYER_ARN_MOD LGUI &none    &mm_del_bspc &lt LAYER_NAGINATA_EXT SPACE &lt LAYER_NAGINATA_SYMBOLS RET  &lt LAYER_NAGINATA_SYMBOLS RET &lt LAYER_NAGINATA_EXT SPACE &mm_bspc_del &none &kp K_APP &lm LAYER_ARN_MOD RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        SandS_layer {
-            display-name = "SandS";
+        naginata_ext_layer {
+            display-name = "Naginata-Ext";
 
             // ------------------------------------------------------------------------------------------------------------
             // | S+ESC |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
@@ -128,8 +129,8 @@ ARENSITO_ALPHA_ROWS
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Symbol_ja_layer {
-            display-name = "Symbols-Ja";
+        naginata_symbols_layer {
+            display-name = "Naginata-Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
             // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |  UP   |TO_ARN |
@@ -147,8 +148,8 @@ ARENSITO_ALPHA_ROWS
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Fn_Nav_layer {
-            display-name = "Fn & Nav";
+        navigation_layer {
+            display-name = "Navigation";
 
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |       |
@@ -161,12 +162,12 @@ ARENSITO_ALPHA_ROWS
 &kp ESC          &kp F1   &kp F2  &kp F3     &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP      &kp END    &kp PG_UP   &none
 &kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8     &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN    &kp RIGHT  &kp PG_DN   &kp RET
 &trans           &kp F11  &none   &kp LSHIFT &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &kp RSHIFT  &none      &kp INSERT  &trans
-&trans           &trans   &to 3   &trans     &mt LSHIFT SPACE &to 7          &to 7            &mt RSHIFT SPACE &trans &to 0  &trans      &trans
+&trans           &trans   &to LAYER_NAGINATA &trans &mt LSHIFT SPACE &to LAYER_SYSTEM &to LAYER_SYSTEM &mt RSHIFT SPACE &trans &to LAYER_BASE &trans &trans
             >;
             sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
         };
 
-        System_layer {
+        system_layer {
             display-name = "System";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -177,15 +178,15 @@ ARENSITO_ALPHA_ROWS
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to 3   &none         &none         &none             &none              &none                         &none        &none         &none         &none         &none         &to 0
+&to LAYER_NAGINATA &none &none &none &none &none &none &none &none &none &none &to LAYER_BASE
 &none   &out OUT_USB  &out OUT_BLE  &ext_power EP_ON  &ext_power EP_OFF  &bootloader                   &bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR    &none
 &none   &none         &none         &none             &none              &sys_reset    &kp C_MUTE &kp LG(L)   &sys_reset   &none         &none         &none         &none         &none
-&none   &none         &to 0         &none             &none              &none                         &none        &none         &none         &to 3         &none         &none
+&none   &none         &to LAYER_BASE &none            &none              &none                         &none        &none         &none         &to LAYER_NAGINATA &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        Arensito_mod_layer {
+        arn_mod_layer {
             display-name = "Arn-Mod";
 
             // ------------------------------------------------------------------------------------------------------------

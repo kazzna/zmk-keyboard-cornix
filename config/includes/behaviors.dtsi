@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "layers.h"
+
 / {
     behaviors {
         hm_l: homerow_mods_left {
@@ -163,7 +165,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to 3>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_NAGINATA>;
         };
 
         to_arensito: to_arensito {
@@ -171,7 +173,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to 0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_BASE>;
         };
     };
 };
