@@ -10,7 +10,7 @@
  */
 
 #define ARENSITO_ROW0 \
-    &kp ESC    &kp Q     &kp L       &mm_comma_qmark  &kp P             &mm_at_hash                    &mm_pipe_amps  &kp F             &kp U         &kp D    &kp K      &none
+    &none      &kp Q     &kp L       &mm_comma_qmark  &kp P             &mm_at_hash                    &mm_pipe_amps  &kp F             &kp U         &kp D    &kp K      &none
 
 #define ARENSITO_ROW1 \
     &kp GRAVE  &kp A     &kp R       &kp E            &kp N             &kp B                          &kp G          &kp S             &kp I         &kp T    &kp O      &kp SQT
