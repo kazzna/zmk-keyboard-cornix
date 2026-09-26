@@ -88,7 +88,7 @@ ARENSITO_ALPHA_ROWS
 &none                   &none                 &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
 &none                   &kana_ro              &kana_ke  &kana_to  &kana_ka   &kana_ltsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
 &lm LAYER_ARN_MOD LCTRL &kana_ho              &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm LAYER_ARN_MOD RCTRL
-&lm LAYER_ARN_MOD LALT  &lm LAYER_ARN_MOD LGUI &kp TAB  &mm_del_bspc &lt LAYER_NAGINATA_EXT SPACE &lt LAYER_NAGINATA_SYMBOLS RET  &lt LAYER_NAGINATA_SYMBOLS RET &lt LAYER_NAGINATA_EXT SPACE &mm_bspc_del &kp ESC &kp K_APP &lm LAYER_ARN_MOD RALT
+&lm LAYER_ARN_MOD LALT  &lm LAYER_ARN_MOD LGUI &kp TAB  &kp DEL &lt LAYER_NAGINATA_EXT SPACE &lt LAYER_NAGINATA_SYMBOLS RET  &lt LAYER_NAGINATA_SYMBOLS RET &lt LAYER_NAGINATA_EXT SPACE &kp BSPC &kp ESC &kp K_APP &lm LAYER_ARN_MOD RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
