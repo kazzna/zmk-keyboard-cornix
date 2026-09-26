@@ -80,14 +80,14 @@ ARENSITO_ALPHA_ROWS
             // |       |     |     |      |      |      |                   |  b   |      |  e   |  w   |  H   |       |
             // |       |     |     |      |      |      |                   |  h   |  j   |  k   |  l   |  M   |       |
             // |       |     |     |      |      |      |        |  |       |  0   |      |      |  $   |  L   | (CTRL)|
-            // | (ALT) |(GUI)|      |(DEL) | (SP) |(RET) |  | (RET)| (SP) |(BSPC)| (ESC)|(MENU)|(ALT) |
+            // |       |     |      |      |      |      |  | (RET)| (SP) |(BSPC)| (ESC)|(MENU)|(ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none   &none   &none   &none   &none   &none                   &kp B   &none   &kp E  &kp W      &kp LS(H)  &none
 &none   &none   &none   &none   &none   &none                   &kp H   &kp J   &kp K  &kp L      &kp LS(M)  &none
 &none   &none   &none   &none   &none   &none   &kp C_MUTE &kp LG(L)   &kp N0  &none   &none  &kp DLLR   &kp LS(L)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans &trans     &trans     &trans
+&none   &none   &none   &none   &none   &none                   &trans  &trans  &trans &trans     &trans     &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
