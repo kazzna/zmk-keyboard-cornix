@@ -54,24 +54,6 @@ ARENSITO_ALPHA_ROWS
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        symbols_layer {
-            display-name = "Symbols";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |TO_NAG |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |IME_TG |
-            // |  TAB  |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
-            // | LCTRL |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   | RCTRL |
-            // | LALT  | GUI | TAB  | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU | RALT  |
-            // ------------------------------------------------------------------------------------------------------------
-
-            bindings = <
-&to_naginata  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &kp LA(GRAVE)
-&kp TAB       &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
-&kp LCTRL     &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &kp RCTRL
-&kp LALT      &kp LGUI  &kp TAB   &mm_del_bspc &kp SPACE &trans                   &trans     &kp SPACE  &mm_bspc_del &kp ESC &kp K_APP &kp RALT
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
-        };
 
         neovim_layer {
             display-name = "Neovim";
@@ -145,6 +127,25 @@ ARENSITO_ALPHA_ROWS
 &kp TAB        &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
 &kp LCTRL      &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &kp RCTRL
 &kp LALT       &kp LGUI  &kp TAB   &mm_del_bspc &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &mm_bspc_del &kp ESC  &kp K_APP  &kp RALT
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+        };
+
+        symbols_layer {
+            display-name = "Symbols";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |TO_NAG |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |IME_TG |
+            // |  TAB  |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
+            // | LCTRL |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   | RCTRL |
+            // | LALT  | GUI | TAB  | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU | RALT  |
+            // ------------------------------------------------------------------------------------------------------------
+
+            bindings = <
+&to_naginata  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &kp LA(GRAVE)
+&kp TAB       &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
+&kp LCTRL     &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &kp RCTRL
+&kp LALT      &kp LGUI  &kp TAB   &mm_del_bspc &kp SPACE &trans                   &trans     &kp SPACE  &mm_bspc_del &kp ESC &kp K_APP &kp RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
