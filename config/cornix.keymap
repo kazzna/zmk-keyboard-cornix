@@ -118,15 +118,15 @@ ARENSITO_ALPHA_ROWS
             // ------------------------------------------------------------------------------------------------------------
             // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |  UP   |TO_ARN |
             // |  TAB  |  [  |  ]  |  ?   |  /   |  =   |                   |      |  4    |  5    |  6   |RECONV |       |
-            // | LCTRL |  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   | DOWN  | RCTRL |
-            // | LALT  | GUI | TAB  | DEL  |SFT/SP| (RET)|  | (RET)|SFT/SP| BSPC | ESC  | MENU | RALT  |
+            // |LM5/CTL|  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   | DOWN  |LM5/CTL|
+            // |LM5/ALT|LM5/GUI| TAB| DEL  |SFT/SP| (RET)|  | (RET)|SFT/SP| BSPC | ESC  | MENU |LM5/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &kp UP        &to_arensito
 &kp TAB        &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
-&kp LCTRL      &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &kp RCTRL
-&kp LALT       &kp LGUI  &kp TAB   &mm_del_bspc &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &mm_bspc_del &kp ESC  &kp K_APP  &kp RALT
+&lm LAYER_SYMBOLS LCTRL &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &lm LAYER_SYMBOLS RCTRL
+&lm LAYER_SYMBOLS LALT  &lm LAYER_SYMBOLS LGUI &kp TAB   &mm_del_bspc &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &mm_bspc_del &kp ESC  &kp K_APP  &lm LAYER_SYMBOLS RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
