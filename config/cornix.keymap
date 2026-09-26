@@ -153,17 +153,17 @@ ARENSITO_ALPHA_ROWS
             display-name = "Navigation";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |       |
+            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |TO_EN |
             // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN |  RET  |
             // | (CTRL)| F11 |     |LSHIFT|      |  F12 |        |  |       |SCRLCK|      |RSHIFT|      |INSERT| (CTRL)|
-            // | (ALT) |(GUI)|TO_JA| (DEL)|SFT/SP| TO_SYS |  | TO_SYS |SFT/SP|(BSPC)|TO_EN |(MENU)|(ALT) |
+            // | (ALT) |(GUI)|TO_JA| (DEL)|SFT/SP| TO_SYS |  | TO_SYS |SFT/SP|(BSPC)| ESC  |(MENU)|(ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none            &kp F1   &kp F2  &kp F3     &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP      &kp END    &kp PG_UP   &none
+&none            &kp F1   &kp F2  &kp F3     &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP      &kp END    &kp PG_UP   &to LAYER_BASE
 &kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8     &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN    &kp RIGHT  &kp PG_DN   &kp RET
 &trans           &kp F11  &none   &kp LSHIFT &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &kp RSHIFT  &none      &kp INSERT  &trans
-&trans           &trans   &to LAYER_NAGINATA &trans &mt LSHIFT SPACE &to LAYER_SYSTEM &to LAYER_SYSTEM &mt RSHIFT SPACE &trans &to LAYER_BASE &trans &trans
+&trans           &trans   &to LAYER_NAGINATA &trans &mt LSHIFT SPACE &to LAYER_SYSTEM &to LAYER_SYSTEM &mt RSHIFT SPACE &trans &kp ESC &trans &trans
             >;
             sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
         };
