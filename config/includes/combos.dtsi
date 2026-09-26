@@ -86,5 +86,45 @@
             layers = <LAYER_BASE>;
             slow-release;
         };
+
+        // -------------------------------------------------------------
+        // 薙刀式面: Enter + 右上端キー ➔ Base面へ復帰 (IMEオフ連携)
+        // 左手Enter (43) / 右手Enter (44) + 右上端 (11)
+        // -------------------------------------------------------------
+        combo_naginata_to_base_l {
+            timeout-ms = <50>;
+            key-positions = <43 11>;
+            bindings = <&to_arensito>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        combo_naginata_to_base_r {
+            timeout-ms = <50>;
+            key-positions = <44 11>;
+            bindings = <&to_arensito>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // 薙刀式面: Enter + 左上端キー ➔ IME切り替え (Alt + Grave)
+        // 左手Enter (43) / 右手Enter (44) + 左上端 (0)
+        // -------------------------------------------------------------
+        combo_naginata_ime_toggle_l {
+            timeout-ms = <50>;
+            key-positions = <43 0>;
+            bindings = <&kp LA(GRAVE)>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        combo_naginata_ime_toggle_r {
+            timeout-ms = <50>;
+            key-positions = <44 0>;
+            bindings = <&kp LA(GRAVE)>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
     };
 };
