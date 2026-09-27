@@ -37,23 +37,43 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            display-name = "Base";
+        latin_layer {
+            display-name = "Latin";
 
             // ------------------------------------------------------------------------------------------------------------
             // |       |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
             // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
-            // | LCTRL |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   | RCTRL |
-            // | LALT  | GUI | TAB  | DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC | ESC  | MENU | RALT  |
+            // |LM8/CTL|  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |LM8/CTL|
+            // |LM8/ALT|LM8/GUI| TAB | DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC | ESC  | MENU |LM8/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-ARENSITO_ALPHA_ROWS
-&kp LALT   &kp LGUI  &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt LAYER_SYMBOLS RET  &lt LAYER_SYMBOLS RET  &mt RSHIFT SPACE  &mm_bspc_del    &kp ESC  &kp K_APP  &kp RALT
+ARENSITO_ROW0
+ARENSITO_ROW1
+&lm LAYER_MOD_LATIN LCTRL &kp Z &kp W &mm_dot_excl &kp H &kp J &kp C_MUTE &kp LG(L) &kp V &kp C &kp Y &kp M &kp X &lm LAYER_MOD_LATIN RCTRL
+&lm LAYER_MOD_LATIN LALT  &lm LAYER_MOD_LATIN LGUI &kp TAB &mm_del_bspc &mt LSHIFT SPACE &lt LAYER_SYMBOLS RET &lt LAYER_SYMBOLS RET &mt RSHIFT SPACE &mm_bspc_del &kp ESC &kp K_APP &lm LAYER_MOD_LATIN RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
+        symbols_layer {
+            display-name = "Symbols";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // | TO_JA |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |IME_TG |
+            // |       |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
+            // |LM9/CTL|  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |LM9/CTL|
+            // |LM9/ALT|LM9/GUI| TAB | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU |LM9/ALT|
+            // ------------------------------------------------------------------------------------------------------------
+
+            bindings = <
+&to_naginata                &kp LBRC                  &kp RBRC &kp LBKT  &kp RBKT &kp CARET                &kp PRCNT  &kp UNDER &kp LT   &kp GT   &kp DLLR  &kp LA(GRAVE)
+&none                       &kp SEMI                  &kp FSLH &kp MINUS &kp N0   &kp COLON                &kp BSLH   &kp N1    &kp LPAR &kp RPAR &kp EQUAL &none
+&lm LAYER_MOD_SYMBOLS LCTRL &kp N6                    &kp N7   &kp N8    &kp N9   &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2    &kp N3   &kp N4   &kp N5    &lm LAYER_MOD_SYMBOLS RCTRL
+&lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp DEL   &kp SPACE &trans     &trans  &kp SPACE  &kp BSPC &kp ESC   &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+        };
 
         neovim_layer {
             display-name = "Neovim";
@@ -62,7 +82,7 @@ ARENSITO_ALPHA_ROWS
             // |       |     |     |      |      |      |                   |  b   |      |  e   |  w   |  H   |       |
             // |       |     |     |      |      |      |                   |  h   |  j   |  k   |  l   |  M   |       |
             // |       |     |     |      |      |      |        |  |       |  0   |      |      |  $   |  L   | (CTRL)|
-            // |       |     |      |      |      |      |  | (RET)| (SP) |(BSPC)| (ESC)|(MENU)|(ALT) |
+            // |       |     |     |      |      |      |  | (RET)| (SP) |(BSPC)| (ESC)|(MENU)|(ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
@@ -87,8 +107,8 @@ ARENSITO_ALPHA_ROWS
             bindings = <
 &none                   &none                 &kana_ki  &kana_te  &kana_shi  &kp LEFT                   &kp RIGHT  &kana_sa  &kana_ru  &kana_su     &kana_he   &none
 &none                   &kana_ro              &kana_ke  &kana_to  &kana_ka   &kana_ltsu                 &kana_ku   &kp A     &kp I     &kp U        &kp MINUS  &none
-&lm LAYER_ARN_MOD LCTRL &kana_ho              &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm LAYER_ARN_MOD RCTRL
-&lm LAYER_ARN_MOD LALT  &lm LAYER_ARN_MOD LGUI &kp TAB  &kp DEL &lt LAYER_NAGINATA_EXT SPACE &lt LAYER_NAGINATA_SYMBOLS RET  &lt LAYER_NAGINATA_SYMBOLS RET &lt LAYER_NAGINATA_EXT SPACE &kp BSPC &kp ESC &kp K_APP &lm LAYER_ARN_MOD RALT
+&lm LAYER_MOD_LATIN LCTRL &kana_ho              &kana_hi  &kana_ha  &kana_ko   &kana_so   &kp C_MUTE &kp LG(L) &kana_ta   &kana_na  &kana_nn  &kana_ra     &kana_re   &lm LAYER_MOD_LATIN RCTRL
+&lm LAYER_MOD_LATIN LALT  &lm LAYER_MOD_LATIN LGUI &kp TAB  &kp DEL &lt LAYER_NAGINATA_EXT SPACE &lt LAYER_NAGINATA_SYMBOLS RET  &lt LAYER_NAGINATA_SYMBOLS RET &lt LAYER_NAGINATA_EXT SPACE &kp BSPC &kp ESC &kp K_APP &lm LAYER_MOD_LATIN RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -100,14 +120,14 @@ ARENSITO_ALPHA_ROWS
             // |       |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
             // |       |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
             // |LMS8/CTL| ほ |  ひ  |  を  |  、  |  ぬ  |        |  |       |  お  |  。  |  む  |  わ  |  れ  |LMS8/CTL|
-            // |LMS8/ALT|LMS8/GUI|S+TAB| BSPC | S+SP |L4/S+RET|  |L4/S+RET| S+SP | DEL  | S+ESC|S+MENU|LMS8/ALT|
+            // |LMS8/ALT|LMS8/GUI|S+TAB| BSPC | S+SP |L5/S+RET|  |L5/S+RET| S+SP | DEL  | S+ESC|S+MENU|LMS8/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none                   &none                  &kana_ne  &kana_ri  &kana_me   &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E      &kana_yu  &none
 &none                   &kana_se               &kana_mi  &kana_ni  &kana_ma   &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu  &kana_fu  &none
-&lms LAYER_ARN_MOD LCTRL &kana_ho              &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &kp C_MUTE &kp LG(L) &kp O  &kp DOT   &kana_mu  &kana_wa   &kana_re  &lms LAYER_ARN_MOD RCTRL
-&lms LAYER_ARN_MOD LALT  &lms LAYER_ARN_MOD LGUI &kp LS(TAB) &kp BSPC &kp LS(SPACE)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &kp LS(SPACE)  &kp DEL &kp LS(ESC) &kp LS(K_APP) &lms LAYER_ARN_MOD RALT
+&lms LAYER_MOD_LATIN LCTRL &kana_ho              &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &kp C_MUTE &kp LG(L) &kp O  &kp DOT   &kana_mu  &kana_wa   &kana_re  &lms LAYER_MOD_LATIN RCTRL
+&lms LAYER_MOD_LATIN LALT  &lms LAYER_MOD_LATIN LGUI &kp LS(TAB) &kp BSPC &kp LS(SPACE)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &kp LS(SPACE)  &kp DEL &kp LS(ESC) &kp LS(K_APP) &lms LAYER_MOD_LATIN RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -116,36 +136,17 @@ ARENSITO_ALPHA_ROWS
             display-name = "Naginata-Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |  UP   |TO_ARN |
-            // |       |  [  |  ]  |  ?   |  /   |  =   |                   |      |  4    |  5    |  6   |RECONV |       |
-            // |LM5/CTL|  <  |  >  |  !   |  ~   |      |        |  |       |  0   |  7    |  8    |  9   | DOWN  |LM5/CTL|
-            // |LM5/ALT|LM5/GUI| TAB| DEL  |SFT/SP| (RET)|  | (RET)|SFT/SP| BSPC | ESC  | MENU |LM5/ALT|
+            // |IME_TG |  (  |  )  |  {   |  }   |      |                   |      |  1    |  2    |  3   |RECONV |TO_LATIN|
+            // |       |  [  |  ]  |  ?   |  ・  |  UP  |                   |      |  4    |  5    |  6   | S+UP  |       |
+            // |LM9/CTL|  <  |  >  |  !   |  ~   | DOWN |        |  |       |  0   |  7    |  8    |  9   |S+DOWN |LM9/CTL|
+            // |LM9/ALT|LM9/GUI| TAB| DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU |LM9/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp LA(GRAVE)  &kp LPAR  &kp RPAR  &kp LBRC   &kp RBRC   &none                     &none   &kp N1  &kp N2  &kp N3  &kp UP        &to_arensito
-&none          &kp LBKT  &kp RBKT  &kp QMARK  &kp FSLH   &kp EQUAL                 &none   &kp N4  &kp N5  &kp N6  &kp LG(FSLH)  &none
-&lm LAYER_SYMBOLS LCTRL &kp LT    &kp GT    &kp EXCL   &kp TILDE  &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN      &lm LAYER_SYMBOLS RCTRL
-&lm LAYER_SYMBOLS LALT  &lm LAYER_SYMBOLS LGUI &kp TAB   &mm_del_bspc &sp_shift_arrows LSHIFT SPACE &trans     &trans  &sp_shift_arrows RSHIFT SPACE &mm_bspc_del &kp ESC  &kp K_APP  &lm LAYER_SYMBOLS RALT
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
-        };
-
-        symbols_layer {
-            display-name = "Symbols";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |TO_NAG |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |IME_TG |
-            // |  TAB  |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
-            // | LCTRL |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   | RCTRL |
-            // | LALT  | GUI | TAB  | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU | RALT  |
-            // ------------------------------------------------------------------------------------------------------------
-
-            bindings = <
-&to_naginata  &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &kp LA(GRAVE)
-&kp TAB       &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
-&kp LCTRL     &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &kp RCTRL
-&kp LALT      &kp LGUI  &kp TAB   &mm_del_bspc &kp SPACE &trans                   &trans     &kp SPACE  &mm_bspc_del &kp ESC &kp K_APP &kp RALT
+&kp LA(GRAVE)               &kp LPAR                  &kp RPAR &kp LBRC  &kp RBRC  &none                     &none   &kp N1  &kp N2  &kp N3  &kp LG(FSLH) &to_latin
+&none                       &kp LBKT                  &kp RBKT &kp QMARK &kp FSLH  &kp UP                    &none   &kp N4  &kp N5  &kp N6  &kp LS(UP)   &none
+&lm LAYER_MOD_SYMBOLS LCTRL &kp LT                    &kp GT   &kp EXCL  &kp TILDE &kp DOWN   &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp LS(DOWN) &lm LAYER_MOD_SYMBOLS RCTRL
+&lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp DEL   &kp SPACE &trans     &trans  &kp SPACE  &kp BSPC &kp ESC &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -161,7 +162,7 @@ ARENSITO_ALPHA_ROWS
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to LAYER_NAGINATA &kp F1 &kp F2  &kp F3     &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP      &kp END    &kp PG_UP   &to LAYER_BASE
+&to LAYER_NAGINATA &kp F1 &kp F2  &kp F3     &kp F4  &kp F5                  &kp PRINTSCREEN  &kp HOME  &kp UP      &kp END    &kp PG_UP   &to LAYER_LATIN
 &kp PAUSE_BREAK  &kp F6   &kp F7  &kp F8     &kp F9  &kp F10                 &kp CAPSLOCK     &kp LEFT  &kp DOWN    &kp RIGHT  &kp PG_DN   &kp RET
 &trans           &kp F11  &none   &kp LSHIFT &none   &kp F12  &none   &none  &kp SCROLLLOCK   &none     &kp RSHIFT  &none      &kp INSERT  &trans
 &trans           &trans   &kp TAB &trans     &mt LSHIFT SPACE &to LAYER_SYSTEM &to LAYER_SYSTEM &mt RSHIFT SPACE &trans &kp ESC &trans &trans
@@ -180,27 +181,48 @@ ARENSITO_ALPHA_ROWS
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to LAYER_NAGINATA &none &none &none &none &none &none &none &none &none &none &to LAYER_BASE
+&to LAYER_NAGINATA &none &none &none &none &none &none &none &none &none &none &to LAYER_LATIN
 &none   &out OUT_USB  &out OUT_BLE  &ext_power EP_ON  &ext_power EP_OFF  &bootloader                   &bootloader  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR    &none
 &none   &none         &none         &none             &none              &sys_reset    &kp C_MUTE &kp LG(L)   &sys_reset   &none         &none         &none         &none         &none
-&none   &none         &to LAYER_BASE &none            &none              &none                         &none        &none         &none         &to LAYER_NAGINATA &none         &none
+&none   &none         &to LAYER_LATIN &none            &none              &none                         &none        &none         &none         &to LAYER_NAGINATA &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        arn_mod_layer {
-            display-name = "Arn-Mod";
+        mod_latin_layer {
+            display-name = "Mod-Latin";
 
             // ------------------------------------------------------------------------------------------------------------
             // |       |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
             // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
-            // | LCTRL |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   | RCTRL |
-            // | (ALT) |(GUI)| TAB  | DEL  |SFT/SP|  RET |  |  RET |SFT/SP| BSPC | ESC  | MENU |(ALT)  |
+            // |(CTRL) |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |(CTRL) |
+            // | (ALT) |(GUI)| TAB  | DEL  |SFT/SP|L9/RET|  |L9/RET|SFT/SP| BSPC | ESC  | MENU |(ALT)  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-ARENSITO_ALPHA_ROWS
-&trans     &trans    &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &kp RET               &kp RET        &mt RSHIFT SPACE  &mm_bspc_del    &kp ESC  &kp K_APP  &trans
+ARENSITO_ROW0
+ARENSITO_ROW1
+&trans     &kp Z     &kp W       &mm_dot_excl     &kp H             &kp J      &kp C_MUTE &kp LG(L)   &kp V       &kp C             &kp Y         &kp M    &kp X      &trans
+&trans     &trans    &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt LAYER_MOD_SYMBOLS RET       &lt LAYER_MOD_SYMBOLS RET  &mt RSHIFT SPACE  &mm_bspc_del    &kp ESC  &kp K_APP  &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+        };
+
+        mod_symbols_layer {
+            display-name = "Mod-Symbols";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |       |
+            // |       |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
+            // |(CTRL) |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |(CTRL) |
+            // | (ALT) |(GUI)| TAB | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU | (ALT) |
+            // ------------------------------------------------------------------------------------------------------------
+
+            bindings = <
+&none     &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &none
+&none     &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
+&trans    &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &trans
+&trans    &trans    &kp TAB   &kp DEL    &kp SPACE &trans                     &trans     &kp SPACE  &kp BSPC  &kp ESC   &kp K_APP  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
