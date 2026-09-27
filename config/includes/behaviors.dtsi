@@ -80,17 +80,6 @@
             quick-tap-ms = <200>;
         };
 
-        sp_shift_arrows: sp_shift_arrows {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <10 24 36 37 38 39 41 46 49>;
-        };
-
         mm_comma_qmark: mm_comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -183,12 +172,20 @@
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_NAGINATA>;
         };
 
+        to_latin: to_latin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_LATIN>;
+        };
+
         to_arensito: to_arensito {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_BASE>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_LATIN>;
         };
     };
 };
