@@ -13,11 +13,11 @@
         compatible = "zmk,combos";
 
         // -------------------------------------------------------------
-        // Neovim レイヤー呼び出し: 「n」(19) + 「e」(20) (Layer 0: Latin)
+        // Neovim レイヤー呼び出し: 「s」(15) + 「t」(16) (Layer 0: Latin)
         // -------------------------------------------------------------
         combo_neovim {
             timeout-ms = <50>;
-            key-positions = <19 20>;
+            key-positions = <15 16>;
             bindings = <&mo LAYER_NEOVIM>;
             layers = <LAYER_LATIN>;
             slow-release;
