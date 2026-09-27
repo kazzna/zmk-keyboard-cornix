@@ -88,7 +88,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <10 36>;
+            hold-trigger-key-positions = <10 24 36 37 38 39 41 46 49>;
         };
 
         mm_comma_qmark: mm_comma_qmark {
