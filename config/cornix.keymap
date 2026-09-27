@@ -6,7 +6,7 @@
 
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
-#include "includes/arensito.h"
+#include "includes/canary.h"
 #include "includes/layers.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -41,16 +41,16 @@
             display-name = "Latin";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
-            // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
-            // |LM8/CTL|  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |LM8/CTL|
+            // |       |  W  |  L  |  Y   |  P   |  B   |                   |  Z   |  F    |  O    |  U   | - / _|       |
+            // |   `   |  C  |  R  |  S   |  T   |  G   |                   |  M   |  N    |  E    |  I   |   A   |   '   |
+            // |LM8/CTL|  Q  |  J  |  V   |  D   |  K   |        |  |       |  X   |  H    | / / \| , / !| . / ? |LM8/CTL|
             // |LM8/ALT|LM8/GUI| TAB | DEL  |SFT/SP|L1/RET|  |L1/RET|SFT/SP| BSPC | ESC  | MENU |LM8/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-ARENSITO_ROW0
-ARENSITO_ROW1
-&lm LAYER_MOD_LATIN LCTRL &kp Z &kp W &mm_dot_excl &kp H &kp J &kp C_MUTE &kp LG(L) &kp V &kp C &kp Y &kp M &kp X &lm LAYER_MOD_LATIN RCTRL
+CANARY_ROW0
+CANARY_ROW1
+&lm LAYER_MOD_LATIN LCTRL &kp Q &kp J &kp V &kp D &kp K &kp C_MUTE &kp LG(L) &kp X &kp H &mm_slash_bslh &mm_comma_excl &mm_dot_qmark &lm LAYER_MOD_LATIN RCTRL
 &lm LAYER_MOD_LATIN LALT  &lm LAYER_MOD_LATIN LGUI &kp TAB &mm_del_bspc &mt LSHIFT SPACE &lt LAYER_SYMBOLS RET &lt LAYER_SYMBOLS RET &mt RSHIFT SPACE &mm_bspc_del &kp ESC &kp K_APP &lm LAYER_MOD_LATIN RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -60,15 +60,15 @@ ARENSITO_ROW1
             display-name = "Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
-            // | TO_JA |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |IME_TG |
-            // |       |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
+            // | TO_JA |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  #    |  <    |  >   |   $   |IME_TG |
+            // |       |  ;  |  |  |  &   |  0   |  :   |                   |  @   |  1    |  (    |  )   |   =   |       |
             // |LM9/CTL|  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |LM9/CTL|
             // |LM9/ALT|LM9/GUI| TAB | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU |LM9/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to_naginata                &kp LBRC                  &kp RBRC &kp LBKT  &kp RBKT &kp CARET                &kp PRCNT  &kp UNDER &kp LT   &kp GT   &kp DLLR  &kp LA(GRAVE)
-&none                       &kp SEMI                  &kp FSLH &kp MINUS &kp N0   &kp COLON                &kp BSLH   &kp N1    &kp LPAR &kp RPAR &kp EQUAL &none
+&to_naginata                &kp LBRC                  &kp RBRC &kp LBKT  &kp RBKT &kp CARET                &kp PRCNT  &kp HASH  &kp LT   &kp GT   &kp DLLR  &kp LA(GRAVE)
+&none                       &kp SEMI                  &kp PIPE &kp AMPS  &kp N0   &kp COLON                &kp AT     &kp N1    &kp LPAR &kp RPAR &kp EQUAL &none
 &lm LAYER_MOD_SYMBOLS LCTRL &kp N6                    &kp N7   &kp N8    &kp N9   &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2    &kp N3   &kp N4   &kp N5    &lm LAYER_MOD_SYMBOLS RCTRL
 &lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp DEL   &kp SPACE &trans     &trans  &kp SPACE  &kp BSPC &kp ESC   &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
             >;
@@ -193,16 +193,16 @@ ARENSITO_ROW1
             display-name = "Mod-Latin";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  Q  |  L  | , / ?|  P   | @ / #|                   | | / &|  F    |  U    |  D   |   K   |       |
-            // |   `   |  A  |  R  |  E   |  N   |  B   |                   |  G   |  S    |  I    |  T   |   O   |   '   |
-            // |(CTRL) |  Z  |  W  | . / !|  H   |  J   |        |  |       |  V   |  C    |  Y    |  M   |   X   |(CTRL) |
+            // |       |  W  |  L  |  Y   |  P   |  B   |                   |  Z   |  F    |  O    |  U   | - / _|       |
+            // |   `   |  C  |  R  |  S   |  T   |  G   |                   |  M   |  N    |  E    |  I   |   A   |   '   |
+            // |(CTRL) |  Q  |  J  |  V   |  D   |  K   |        |  |       |  X   |  H    | / / \| , / !| . / ? |(CTRL) |
             // | (ALT) |(GUI)| TAB  | DEL  |SFT/SP|L9/RET|  |L9/RET|SFT/SP| BSPC | ESC  | MENU |(ALT)  |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-ARENSITO_ROW0
-ARENSITO_ROW1
-&trans     &kp Z     &kp W       &mm_dot_excl     &kp H             &kp J      &kp C_MUTE &kp LG(L)   &kp V       &kp C             &kp Y         &kp M    &kp X      &trans
+CANARY_ROW0
+CANARY_ROW1
+&trans     &kp Q     &kp J       &kp V            &kp D             &kp K      &kp C_MUTE &kp LG(L)   &kp X       &kp H             &mm_slash_bslh &mm_comma_excl &mm_dot_qmark &trans
 &trans     &trans    &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt LAYER_MOD_SYMBOLS RET       &lt LAYER_MOD_SYMBOLS RET  &mt RSHIFT SPACE  &mm_bspc_del    &kp ESC  &kp K_APP  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -212,15 +212,15 @@ ARENSITO_ROW1
             display-name = "Mod-Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  _    |  <    |  >   |   $   |       |
-            // |       |  ;  |  /  |  -   |  0   |  :   |                   |  \   |  1    |  (    |  )   |   =   |       |
+            // |       |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  #    |  <    |  >   |   $   |       |
+            // |       |  ;  |  |  |  &   |  0   |  :   |                   |  @   |  1    |  (    |  )   |   =   |       |
             // |(CTRL) |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |(CTRL) |
             // | (ALT) |(GUI)| TAB | DEL  |SPACE | (RET)|  | (RET)|SPACE | BSPC | ESC  | MENU | (ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&none     &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp UNDER  &kp LT    &kp GT    &kp DLLR   &none
-&none     &kp SEMI  &kp FSLH  &kp MINUS  &kp N0    &kp COLON                  &kp BSLH   &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
+&none     &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp HASH   &kp LT    &kp GT    &kp DLLR   &none
+&none     &kp SEMI  &kp PIPE  &kp AMPS   &kp N0    &kp COLON                  &kp AT     &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
 &trans    &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &trans
 &trans    &trans    &kp TAB   &kp DEL    &kp SPACE &trans                     &trans     &kp SPACE  &kp BSPC  &kp ESC   &kp K_APP  &trans
             >;

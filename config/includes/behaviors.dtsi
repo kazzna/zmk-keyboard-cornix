@@ -101,34 +101,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mm_comma_qmark: mm_comma_qmark {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp QMARK>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_dot_excl: mm_dot_excl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp EXCL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_at_hash: mm_at_hash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp AT>, <&kp HASH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_pipe_amps: mm_pipe_amps {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp PIPE>, <&kp AMPS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         mm_del_bspc: mm_del_bspc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
