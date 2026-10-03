@@ -51,7 +51,7 @@
 GRAPHITE_ROW0
 GRAPHITE_ROW1
 &lm LAYER_MOD_LATIN LCTRL &kp Q &kp X &kp M &kp C &kp V &kp C_MUTE &kp LG(L) &kp K &kp P &mm_dot_qmark &kp MINUS &mm_slash_bslh &lm LAYER_MOD_LATIN RCTRL
-&lm LAYER_MOD_LATIN LALT  &lm LAYER_MOD_LATIN LGUI &kp TAB &mm_del_bspc &mt LSHIFT SPACE &lt LAYER_SYMBOLS RET &lt LAYER_SYMBOLS RET &mt RSHIFT SPACE &mm_bspc_del &kp ESC &kp K_APP &lm LAYER_MOD_LATIN RALT
+&lm LAYER_MOD_LATIN LALT  &lm LAYER_MOD_LATIN LGUI &kp TAB &kp DEL &mt LSHIFT SPACE &lt LAYER_SYMBOLS RET &lt LAYER_SYMBOLS RET &mt RSHIFT SPACE &kp BSPC &kp ESC &kp K_APP &lm LAYER_MOD_LATIN RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -120,14 +120,14 @@ GRAPHITE_ROW1
             // |       |     |  ね  |  り  |  め  | S+<- |                   | S+-> |  さ  |  よ  |  え  |  ゆ  |       |
             // |       |  せ |  み  |  に  |  ま  |  ち  |                   |  や  |  の  |  も  |  つ  |  ふ  |       |
             // |LMS8/CTL| ほ |  ひ  |  を  |  、  |  ぬ  |        |  |       |  お  |  。  |  む  |  わ  |  れ  |LMS8/CTL|
-            // |LMS8/ALT|LMS8/GUI|S+TAB| BSPC | S+SP |L5/S+RET|  |L5/S+RET| S+SP | DEL  | S+ESC|S+MENU|LMS8/ALT|
+            // |LMS8/ALT|LMS8/GUI|S+TAB| DEL  | S+SP |L5/S+RET|  |L5/S+RET| S+SP | BSPC | S+ESC|S+MENU|LMS8/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none                   &none                  &kana_ne  &kana_ri  &kana_me   &kp LS(LEFT)               &kp LS(RIGHT)  &kana_sa  &kana_yo  &kp E      &kana_yu  &none
 &none                   &kana_se               &kana_mi  &kana_ni  &kana_ma   &kana_chi                  &kana_ya       &kana_no  &kana_mo  &kana_tsu  &kana_fu  &none
 &lms LAYER_MOD_LATIN LCTRL &kana_ho              &kana_hi  &kana_wo  &kp COMMA  &kana_nu   &kp C_MUTE &kp LG(L) &kp O  &kp DOT   &kana_mu  &kana_wa   &kana_re  &lms LAYER_MOD_LATIN RCTRL
-&lms LAYER_MOD_LATIN LALT  &lms LAYER_MOD_LATIN LGUI &kp LS(TAB) &kp BSPC &kp LS(SPACE)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &kp LS(SPACE)  &kp DEL &kp LS(ESC) &kp LS(K_APP) &lms LAYER_MOD_LATIN RALT
+&lms LAYER_MOD_LATIN LALT  &lms LAYER_MOD_LATIN LGUI &kp LS(TAB) &kp DEL &kp LS(SPACE)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &lt LAYER_NAGINATA_SYMBOLS LS(RET)  &kp LS(SPACE)  &kp BSPC &kp LS(ESC) &kp LS(K_APP) &lms LAYER_MOD_LATIN RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -203,7 +203,7 @@ GRAPHITE_ROW1
 GRAPHITE_ROW0
 GRAPHITE_ROW1
 &trans     &kp Q     &kp X       &kp M            &kp C             &kp V      &kp C_MUTE &kp LG(L)   &kp K       &kp P             &mm_dot_qmark  &kp MINUS      &mm_slash_bslh &trans
-&trans     &trans    &kp TAB     &mm_del_bspc     &mt LSHIFT SPACE  &lt LAYER_MOD_SYMBOLS RET       &lt LAYER_MOD_SYMBOLS RET  &mt RSHIFT SPACE  &mm_bspc_del    &kp ESC  &kp K_APP  &trans
+&trans     &trans    &kp TAB     &kp DEL          &mt LSHIFT SPACE  &lt LAYER_MOD_SYMBOLS RET       &lt LAYER_MOD_SYMBOLS RET  &mt RSHIFT SPACE  &kp BSPC        &kp ESC  &kp K_APP  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };

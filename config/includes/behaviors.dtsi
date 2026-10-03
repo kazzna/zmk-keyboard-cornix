@@ -101,20 +101,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mm_del_bspc: mm_del_bspc {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DEL>, <&kp BSPC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        mm_bspc_del: mm_bspc_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         rot_scroll_vert: rot_scroll_vert {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
