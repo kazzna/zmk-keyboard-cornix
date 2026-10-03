@@ -81,15 +81,15 @@ GRAPHITE_ROW1
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |  b   |      |  e   |  w   |  H   |       |
             // |       |     |     |      |      |      |                   |  h   |  j   |  k   |  l   |  M   |       |
-            // |       |     |     |      |      |      |        |  |       |  0   |      |      |  $   |  L   | (CTRL)|
-            // |       |     |     |      |      |      |  | (RET)| (SP) |(BSPC)| (ESC)|(MENU)|(ALT) |
+            // |       |     |     |      |      |      |        |  |       |  0   |      |      |  $   |  L   |       |
+            // |       |     |     |      |      |      |  |      |      |      | ESC  |      |      |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none   &none   &none   &none   &none   &none                   &kp B   &none   &kp E  &kp W      &kp LS(H)  &none
 &none   &none   &none   &none   &none   &none                   &kp H   &kp J   &kp K  &kp L      &kp LS(M)  &none
-&none   &none   &none   &none   &none   &none   &kp C_MUTE &kp LG(L)   &kp N0  &none   &none  &kp DLLR   &kp LS(L)  &trans
-&none   &none   &none   &none   &none   &none                   &trans  &trans  &trans &trans     &trans     &trans
+&none   &none   &none   &none   &none   &none   &kp C_MUTE &kp LG(L)   &kp N0  &none   &none  &kp DLLR   &kp LS(L)  &none
+&none   &none   &none   &none   &none   &none                   &none   &none   &none  &kp ESC    &none      &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
