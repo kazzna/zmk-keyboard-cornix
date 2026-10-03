@@ -63,14 +63,14 @@ GRAPHITE_ROW1
             // | TO_JA |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  #    |  <    |  >   |   $   |IME_TG |
             // |       |  ;  |  |  |  &   |  0   |  :   |                   |  @   |  1    |  (    |  )   |   =   |       |
             // |LM9/CTL|  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |LM9/CTL|
-            // |LM9/ALT|LM9/GUI| TAB | BSPC |SPACE | (RET)|  | (RET)|SPACE | DEL  | ESC  | MENU |LM9/ALT|
+            // |LM9/ALT|LM9/GUI| TAB | BSPC |SFT/SP| (RET)|  | (RET)|SFT/SP| DEL  | ESC  | MENU |LM9/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &to_naginata                &kp LBRC                  &kp RBRC &kp LBKT  &kp RBKT &kp CARET                &kp PRCNT  &kp HASH  &kp LT   &kp GT   &kp DLLR  &kp LA(GRAVE)
 &none                       &kp SEMI                  &kp PIPE &kp AMPS  &kp N0   &kp COLON                &kp AT     &kp N1    &kp LPAR &kp RPAR &kp EQUAL &none
 &lm LAYER_MOD_SYMBOLS LCTRL &kp N6                    &kp N7   &kp N8    &kp N9   &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2    &kp N3   &kp N4   &kp N5    &lm LAYER_MOD_SYMBOLS RCTRL
-&lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp BSPC  &kp SPACE &trans     &trans  &kp SPACE  &kp DEL  &kp ESC   &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
+&lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp BSPC  &mt LSHIFT SPACE &trans     &trans  &mt RSHIFT SPACE  &kp DEL  &kp ESC   &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -139,14 +139,14 @@ GRAPHITE_ROW1
             // |IME_TG |  (  |  )  |  {   |  }   |  <-  |                   |  ->  |  1    |  2    |  3   |RECONV |TO_LATIN|
             // |       |  [  |  ]  |  ?   |  ・  |  UP  |                   |      |  4    |  5    |  6   |       |       |
             // |LM9/CTL|  <  |  >  |  !   |  ~   | DOWN |        |  |       |  0   |  7    |  8    |  9   |       |LM9/CTL|
-            // |LM9/ALT|LM9/GUI| TAB| BSPC |SPACE | (RET)|  | (RET)|SPACE | DEL  | ESC  | MENU |LM9/ALT|
+            // |LM9/ALT|LM9/GUI| TAB| BSPC |SFT/SP| (RET)|  | (RET)|SFT/SP| DEL  | ESC  | MENU |LM9/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp LA(GRAVE)               &kp LPAR                  &kp RPAR &kp LBRC  &kp RBRC  &kp LEFT                  &kp RIGHT &kp N1  &kp N2  &kp N3  &kp LG(FSLH) &to_latin
 &none                       &kp LBKT                  &kp RBKT &kp QMARK &kp FSLH  &kp UP                    &none   &kp N4  &kp N5  &kp N6  &none        &none
 &lm LAYER_MOD_SYMBOLS LCTRL &kp LT                    &kp GT   &kp EXCL  &kp TILDE &kp DOWN   &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &none        &lm LAYER_MOD_SYMBOLS RCTRL
-&lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp BSPC  &kp SPACE &trans     &trans  &kp SPACE  &kp DEL  &kp ESC &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
+&lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp BSPC  &mt LSHIFT SPACE &trans     &trans  &mt RSHIFT SPACE  &kp DEL  &kp ESC &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
@@ -215,14 +215,14 @@ GRAPHITE_ROW1
             // |       |  {  |  }  |  [   |  ]   |  ^   |                   |  %   |  #    |  <    |  >   |   $   |       |
             // |       |  ;  |  |  |  &   |  0   |  :   |                   |  @   |  1    |  (    |  )   |   =   |       |
             // |(CTRL) |  6  |  7  |  8   |  9   |  +   |        |  |       |  *   |  2    |  3    |  4   |   5   |(CTRL) |
-            // | (ALT) |(GUI)| TAB | BSPC |SPACE | (RET)|  | (RET)|SPACE | DEL  | ESC  | MENU | (ALT) |
+            // | (ALT) |(GUI)| TAB | BSPC |SFT/SP| (RET)|  | (RET)|SFT/SP| DEL  | ESC  | MENU | (ALT) |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &none     &kp LBRC  &kp RBRC  &kp LBKT   &kp RBKT  &kp CARET                  &kp PRCNT  &kp HASH   &kp LT    &kp GT    &kp DLLR   &none
 &none     &kp SEMI  &kp PIPE  &kp AMPS   &kp N0    &kp COLON                  &kp AT     &kp N1     &kp LPAR  &kp RPAR  &kp EQUAL  &none
 &trans    &kp N6    &kp N7    &kp N8     &kp N9    &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK  &kp N2     &kp N3    &kp N4    &kp N5     &trans
-&trans    &trans    &kp TAB   &kp BSPC   &kp SPACE &trans                     &trans     &kp SPACE  &kp DEL   &kp ESC   &kp K_APP  &trans
+&trans    &trans    &kp TAB   &kp BSPC   &mt LSHIFT SPACE &trans                     &trans     &mt RSHIFT SPACE  &kp DEL   &kp ESC   &kp K_APP  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
