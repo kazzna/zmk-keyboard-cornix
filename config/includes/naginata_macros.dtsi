@@ -1,0 +1,1235 @@
+﻿/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#pragma once
+
+/ {
+    behaviors {
+        kana_la: kana_la { // ぁ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp A>;
+        };
+
+        kana_li: kana_li { // ぃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp I>;
+        };
+
+        kana_lu: kana_lu { // ぅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp U>;
+        };
+
+        kana_le: kana_le { // ぇ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp E>;
+        };
+
+        kana_lo: kana_lo { // ぉ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp O>;
+        };
+
+        kana_ka: kana_ka { // か
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp A>;
+        };
+
+        kana_ga: kana_ga { // が
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp A>;
+        };
+
+        kana_ki: kana_ki { // き
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp I>;
+        };
+
+        kana_kya: kana_kya { // きゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp Y>, <&kp A>;
+        };
+
+        kana_kyu: kana_kyu { // きゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp Y>, <&kp U>;
+        };
+
+        kana_kyo: kana_kyo { // きょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp Y>, <&kp O>;
+        };
+
+        kana_gi: kana_gi { // ぎ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp I>;
+        };
+
+        kana_gya: kana_gya { // ぎゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp Y>, <&kp A>;
+        };
+
+        kana_gyu: kana_gyu { // ぎゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp Y>, <&kp U>;
+        };
+
+        kana_gyo: kana_gyo { // ぎょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp Y>, <&kp O>;
+        };
+
+        kana_ku: kana_ku { // く
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp U>;
+        };
+
+        kana_gu: kana_gu { // ぐ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp U>;
+        };
+
+        kana_ke: kana_ke { // け
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp E>;
+        };
+
+        kana_ge: kana_ge { // げ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp E>;
+        };
+
+        kana_ko: kana_ko { // こ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp O>;
+        };
+
+        kana_go: kana_go { // ご
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp O>;
+        };
+
+        kana_sa: kana_sa { // さ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp A>;
+        };
+
+        kana_za: kana_za { // ざ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Z>, <&kp A>;
+        };
+
+        kana_shi: kana_shi { // し
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp H>, <&kp I>;
+        };
+
+        kana_sha: kana_sha { // しゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp H>, <&kp A>;
+        };
+
+        kana_shu: kana_shu { // しゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp H>, <&kp U>;
+        };
+
+        kana_sho: kana_sho { // しょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp H>, <&kp O>;
+        };
+
+        kana_ji: kana_ji { // じ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp J>, <&kp I>;
+        };
+
+        kana_ja: kana_ja { // じゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp J>, <&kp A>;
+        };
+
+        kana_ju: kana_ju { // じゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp J>, <&kp U>;
+        };
+
+        kana_jo: kana_jo { // じょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp J>, <&kp O>;
+        };
+
+        kana_su: kana_su { // す
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp U>;
+        };
+
+        kana_zu: kana_zu { // ず
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Z>, <&kp U>;
+        };
+
+        kana_se: kana_se { // せ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp E>;
+        };
+
+        kana_ze: kana_ze { // ぜ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Z>, <&kp E>;
+        };
+
+        kana_so: kana_so { // そ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp O>;
+        };
+
+        kana_zo: kana_zo { // ぞ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Z>, <&kp O>;
+        };
+
+        kana_ta: kana_ta { // た
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp A>;
+        };
+
+        kana_da: kana_da { // だ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp A>;
+        };
+
+        kana_chi: kana_chi { // ち
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp C>, <&kp H>, <&kp I>;
+        };
+
+        kana_cha: kana_cha { // ちゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp C>, <&kp H>, <&kp A>;
+        };
+
+        kana_chu: kana_chu { // ちゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp C>, <&kp H>, <&kp U>;
+        };
+
+        kana_cho: kana_cho { // ちょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp C>, <&kp H>, <&kp O>;
+        };
+
+        kana_di: kana_di { // ぢ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp I>;
+        };
+
+        kana_dya: kana_dya { // ぢゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp Y>, <&kp A>;
+        };
+
+        kana_dyu: kana_dyu { // ぢゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp Y>, <&kp U>;
+        };
+
+        kana_dyo: kana_dyo { // ぢょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp Y>, <&kp O>;
+        };
+
+        kana_ltsu: kana_ltsu { // っ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp T>, <&kp S>, <&kp U>;
+        };
+
+        kana_tsu: kana_tsu { // つ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp S>, <&kp U>;
+        };
+
+        kana_du: kana_du { // づ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp U>;
+        };
+
+        kana_te: kana_te { // て
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp E>;
+        };
+
+        kana_de: kana_de { // で
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp E>;
+        };
+
+        kana_to: kana_to { // と
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp O>;
+        };
+
+        kana_do: kana_do { // ど
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp O>;
+        };
+
+        kana_na: kana_na { // な
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp A>;
+        };
+
+        kana_ni: kana_ni { // に
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp I>;
+        };
+
+        kana_nya: kana_nya { // にゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp Y>, <&kp A>;
+        };
+
+        kana_nyu: kana_nyu { // にゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp Y>, <&kp U>;
+        };
+
+        kana_nyo: kana_nyo { // にょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp Y>, <&kp O>;
+        };
+
+        kana_nu: kana_nu { // ぬ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp U>;
+        };
+
+        kana_ne: kana_ne { // ね
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp E>;
+        };
+
+        kana_no: kana_no { // の
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp O>;
+        };
+
+        kana_ha: kana_ha { // は
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp A>;
+        };
+
+        kana_ba: kana_ba { // ば
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp A>;
+        };
+
+        kana_pa: kana_pa { // ぱ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp A>;
+        };
+
+        kana_hi: kana_hi { // ひ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp I>;
+        };
+
+        kana_hya: kana_hya { // ひゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp Y>, <&kp A>;
+        };
+
+        kana_hyu: kana_hyu { // ひゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp Y>, <&kp U>;
+        };
+
+        kana_hyo: kana_hyo { // ひょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp Y>, <&kp O>;
+        };
+
+        kana_bi: kana_bi { // び
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp I>;
+        };
+
+        kana_bya: kana_bya { // びゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp Y>, <&kp A>;
+        };
+
+        kana_byu: kana_byu { // びゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp Y>, <&kp U>;
+        };
+
+        kana_byo: kana_byo { // びょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp Y>, <&kp O>;
+        };
+
+        kana_pi: kana_pi { // ぴ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp I>;
+        };
+
+        kana_pya: kana_pya { // ぴゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp Y>, <&kp A>;
+        };
+
+        kana_pyu: kana_pyu { // ぴゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp Y>, <&kp U>;
+        };
+
+        kana_pyo: kana_pyo { // ぴょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp Y>, <&kp O>;
+        };
+
+        kana_fu: kana_fu { // ふ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp F>, <&kp U>;
+        };
+
+        kana_bu: kana_bu { // ぶ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp U>;
+        };
+
+        kana_pu: kana_pu { // ぷ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp U>;
+        };
+
+        kana_he: kana_he { // へ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp E>;
+        };
+
+        kana_be: kana_be { // べ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp E>;
+        };
+
+        kana_pe: kana_pe { // ぺ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp E>;
+        };
+
+        kana_ho: kana_ho { // ほ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp H>, <&kp O>;
+        };
+
+        kana_bo: kana_bo { // ぼ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp B>, <&kp O>;
+        };
+
+        kana_po: kana_po { // ぽ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp P>, <&kp O>;
+        };
+
+        kana_ma: kana_ma { // ま
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp A>;
+        };
+
+        kana_mi: kana_mi { // み
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp I>;
+        };
+
+        kana_mya: kana_mya { // みゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp Y>, <&kp A>;
+        };
+
+        kana_myu: kana_myu { // みゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp Y>, <&kp U>;
+        };
+
+        kana_myo: kana_myo { // みょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp Y>, <&kp O>;
+        };
+
+        kana_mu: kana_mu { // む
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp U>;
+        };
+
+        kana_me: kana_me { // め
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp E>;
+        };
+
+        kana_mo: kana_mo { // も
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp M>, <&kp O>;
+        };
+
+        kana_lya: kana_lya { // ゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp Y>, <&kp A>;
+        };
+
+        kana_ya: kana_ya { // や
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Y>, <&kp A>;
+        };
+
+        kana_lyu: kana_lyu { // ゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp Y>, <&kp U>;
+        };
+
+        kana_yu: kana_yu { // ゆ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Y>, <&kp U>;
+        };
+
+        kana_lyo: kana_lyo { // ょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp Y>, <&kp O>;
+        };
+
+        kana_yo: kana_yo { // よ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Y>, <&kp O>;
+        };
+
+        kana_ra: kana_ra { // ら
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp A>;
+        };
+
+        kana_ri: kana_ri { // り
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp I>;
+        };
+
+        kana_rya: kana_rya { // りゃ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp Y>, <&kp A>;
+        };
+
+        kana_ryu: kana_ryu { // りゅ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp Y>, <&kp U>;
+        };
+
+        kana_ryo: kana_ryo { // りょ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp Y>, <&kp O>;
+        };
+
+        kana_ru: kana_ru { // る
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp U>;
+        };
+
+        kana_re: kana_re { // れ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp E>;
+        };
+
+        kana_ro: kana_ro { // ろ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp R>, <&kp O>;
+        };
+
+        kana_lwa: kana_lwa { // ゎ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp W>, <&kp A>;
+        };
+
+        kana_wa: kana_wa { // わ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp W>, <&kp A>;
+        };
+
+        kana_wo: kana_wo { // を
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp W>, <&kp O>;
+        };
+
+        kana_nn: kana_nn { // ん
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp N>, <&kp N>;
+        };
+
+        kana_ye: kana_ye { // イェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Y>, <&kp E>;
+        };
+
+        kana_whi: kana_whi { // ウィ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp W>, <&kp H>, <&kp I>;
+        };
+
+        kana_whe: kana_whe { // ウェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp W>, <&kp H>, <&kp E>;
+        };
+
+        kana_who: kana_who { // ウォ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp W>, <&kp H>, <&kp O>;
+        };
+
+        kana_kwa: kana_kwa { // クァ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp W>, <&kp A>;
+        };
+
+        kana_qi: kana_qi { // クィ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Q>, <&kp I>;
+        };
+
+        kana_qe: kana_qe { // クェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Q>, <&kp E>;
+        };
+
+        kana_qo: kana_qo { // クォ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp Q>, <&kp O>;
+        };
+
+        kana_kulwa: kana_kulwa { // クヮ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp K>, <&kp U>, <&kp L>, <&kp W>, <&kp A>;
+        };
+
+        kana_gwa: kana_gwa { // グァ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp W>, <&kp A>;
+        };
+
+        kana_gwi: kana_gwi { // グィ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp W>, <&kp I>;
+        };
+
+        kana_gwe: kana_gwe { // グェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp W>, <&kp E>;
+        };
+
+        kana_gwo: kana_gwo { // グォ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp W>, <&kp O>;
+        };
+
+        kana_gulwa: kana_gulwa { // グヮ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp G>, <&kp U>, <&kp L>, <&kp W>, <&kp A>;
+        };
+
+        kana_she: kana_she { // シェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp S>, <&kp H>, <&kp E>;
+        };
+
+        kana_zye: kana_zye { // ジェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp J>, <&kp E>;
+        };
+
+        kana_che: kana_che { // チェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp C>, <&kp H>, <&kp E>;
+        };
+
+        kana_dye: kana_dye { // ヂェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp Y>, <&kp E>;
+        };
+
+        kana_tsa: kana_tsa { // ツァ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp S>, <&kp A>;
+        };
+
+        kana_tsi: kana_tsi { // ツィ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp S>, <&kp I>;
+        };
+
+        kana_tse: kana_tse { // ツェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp S>, <&kp E>;
+        };
+
+        kana_tso: kana_tso { // ツォ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp S>, <&kp O>;
+        };
+
+        kana_thi: kana_thi { // ティ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp H>, <&kp I>;
+        };
+
+        kana_thu: kana_thu { // テュ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp H>, <&kp U>;
+        };
+
+        kana_dhi: kana_dhi { // ディ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp H>, <&kp I>;
+        };
+
+        kana_dhu: kana_dhu { // デュ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp H>, <&kp U>;
+        };
+
+        kana_twu: kana_twu { // トゥ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp T>, <&kp W>, <&kp U>;
+        };
+
+        kana_dwu: kana_dwu { // ドゥ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp D>, <&kp W>, <&kp U>;
+        };
+
+        kana_fa: kana_fa { // ファ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp F>, <&kp A>;
+        };
+
+        kana_fi: kana_fi { // フィ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp F>, <&kp I>;
+        };
+
+        kana_fe: kana_fe { // フェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp F>, <&kp E>;
+        };
+
+        kana_fo: kana_fo { // フォ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp F>, <&kp O>;
+        };
+
+        kana_fyu: kana_fyu { // フュ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp F>, <&kp Y>, <&kp U>;
+        };
+
+        kana_vu: kana_vu { // ヴ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp V>, <&kp U>;
+        };
+
+        kana_va: kana_va { // ヴァ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp V>, <&kp A>;
+        };
+
+        kana_vi: kana_vi { // ヴィ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp V>, <&kp I>;
+        };
+
+        kana_ve: kana_ve { // ヴェ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp V>, <&kp E>;
+        };
+
+        kana_vo: kana_vo { // ヴォ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp V>, <&kp O>;
+        };
+
+        kana_vyu: kana_vyu { // ヴュ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp V>, <&kp Y>, <&kp U>;
+        };
+
+        kana_lka: kana_lka { // ヵ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp K>, <&kp A>;
+        };
+
+        kana_lke: kana_lke { // ヶ
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <KANA_WAIT_MS>;
+            tap-ms = <KANA_TAP_MS>;
+            bindings = <&kp L>, <&kp K>, <&kp E>;
+        };
+    };
+};

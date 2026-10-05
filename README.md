@@ -111,3 +111,7 @@ roles or flash layouts without resetting the affected devices.
 - [ZMK documentation](https://zmk.dev/docs/)
 - [Issue tracker](https://github.com/hitsmaxft/zmk-keyboard-cornix/issues)
 - [RMK firmware project](https://rmk.rs/)
+
+## Custom layouts
+
+See [Layout](custom/layout.md)
