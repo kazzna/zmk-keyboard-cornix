@@ -1,0 +1,131 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#pragma once
+
+#include "layers.h"
+#include "settings.h"
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // -------------------------------------------------------------
+        // Neovim レイヤー呼び出し: 「t」(15) + 「s」(16) (Layer 0: Latin)
+        // -------------------------------------------------------------
+        combo_neovim {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <15 16>;
+            bindings = <&mo LAYER_NEOVIM>;
+            layers = <LAYER_LATIN>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // Navigation レイヤー呼び出し (3キー同時ホールド):
+        // 左手: 「x」(26) + 「p」(27) + 「c」(28) (Layer 0) / ひ・は・こ (Layer 3)
+        // -------------------------------------------------------------
+        combo_navigation_l {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <26 27 28>;
+            bindings = <&mo LAYER_NAVIGATION>;
+            layers = <LAYER_LATIN LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // Navigation レイヤー呼び出し (3キー同時ホールド):
+        // 右手: 「m」(33) + 「.」(34) + 「-」(35) (Layer 0) / な・ん・ら (Layer 3)
+        // -------------------------------------------------------------
+        combo_navigation_r {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <33 34 35>;
+            bindings = <&mo LAYER_NAVIGATION>;
+            layers = <LAYER_LATIN LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // Latin面: Enter + 左上端キー ➔ 薙刀式面へ遷移 (IMEオン連携)
+        // 左手Enter (43) / 右手Enter (44) + 左上端 (0)
+        // -------------------------------------------------------------
+        combo_latin_to_naginata_l {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <43 0>;
+            bindings = <&to_naginata>;
+            layers = <LAYER_LATIN>;
+            slow-release;
+        };
+
+        combo_latin_to_naginata_r {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <44 0>;
+            bindings = <&to_naginata>;
+            layers = <LAYER_LATIN>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // Latin面: Enter + 右上端キー ➔ IME切り替え (Alt + Grave)
+        // 左手Enter (43) / 右手Enter (44) + 右上端 (11)
+        // -------------------------------------------------------------
+        combo_latin_ime_toggle_l {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <43 11>;
+            bindings = <&kp LA(GRAVE)>;
+            layers = <LAYER_LATIN>;
+            slow-release;
+        };
+
+        combo_latin_ime_toggle_r {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <44 11>;
+            bindings = <&kp LA(GRAVE)>;
+            layers = <LAYER_LATIN>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // 薙刀式面: Enter + 右上端キー ➔ Latin面へ復帰 (IMEオフ連携)
+        // 左手Enter (43) / 右手Enter (44) + 右上端 (11)
+        // -------------------------------------------------------------
+        combo_naginata_to_latin_l {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <43 11>;
+            bindings = <&to_latin>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        combo_naginata_to_latin_r {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <44 11>;
+            bindings = <&to_latin>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        // -------------------------------------------------------------
+        // 薙刀式面: Enter + 左上端キー ➔ IME切り替え (Alt + Grave)
+        // 左手Enter (43) / 右手Enter (44) + 左上端 (0)
+        // -------------------------------------------------------------
+        combo_naginata_ime_toggle_l {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <43 0>;
+            bindings = <&kp LA(GRAVE)>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+
+        combo_naginata_ime_toggle_r {
+            timeout-ms = <COMBO_TIMEOUT_MS>;
+            key-positions = <44 0>;
+            bindings = <&kp LA(GRAVE)>;
+            layers = <LAYER_NAGINATA>;
+            slow-release;
+        };
+    };
+};
