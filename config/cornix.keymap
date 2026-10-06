@@ -7,6 +7,7 @@
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
 #include "includes/base_keys.h"
+#include "includes/navigation_keys.h"
 #include "includes/layers.h"
 #include "includes/settings.h"
 #include <behaviors.dtsi>
@@ -133,21 +134,34 @@ SYMBOLS_BINDINGS(LM_SYMBOLS, &to_naginata, &kp LA(GRAVE))
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        navigation_layer {
-            display-name = "Navigation";
+        left_navigation_layer {
+            display-name = "Left-Navigation";
 
             // ------------------------------------------------------------------------------------------------------------
             // | TO_JA |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |TO_EN |
-            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN |  RET  |
-            // | LCTRL | F11 |     |LSHIFT|      |  F12 |        |  |       |SCRLCK|      |RSHIFT|      |INSERT| RCTRL |
-            // | LALT  | LGUI| TAB |  DEL |SFT/SP|TO_SYS|                   |TO_SYS|SFT/SP| BSPC | ESC  | MENU | RALT |
+            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN | RGUI |
+            // | LCTRL | F11 |     |      |      |  F12 |        |  |       |SCRLCK|LSHIFT|      |RSHIFT|INSERT| RCTRL |
+            // | LALT  | LGUI| TAB |  DEL |SFT/SP|TO_SYS|                   | RET  |SFT/SP| BSPC | ESC  | MENU | RALT |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to LAYER_NAGINATA &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp PRINTSCREEN &kp HOME &kp UP &kp END &kp PG_UP &to LAYER_LATIN
-&kp PAUSE_BREAK &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp CAPSLOCK &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &kp RET
-&kp LCTRL &kp F11 &none &kp LSHIFT &none &kp F12 &none &none &kp SCROLLLOCK &none &kp RSHIFT &none &kp INSERT &kp RCTRL
-&kp LALT &kp LGUI &kp TAB &kp DEL &mt LSHIFT SPACE &to LAYER_SYSTEM &to LAYER_SYSTEM &mt RSHIFT SPACE &kp BSPC &kp ESC &kp K_APP &kp RALT
+NAVIGATION_BINDINGS(NAV_EMPTY_SHIFTS, NAV_SHIFTS, &to LAYER_SYSTEM, &kp RET)
+            >;
+            sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
+        };
+
+        right_navigation_layer {
+            display-name = "Right-Navigation";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // | TO_JA |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |TO_EN |
+            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN | RGUI |
+            // | LCTRL | F11 |LSHIFT|     |RSHIFT|  F12 |        |  |       |SCRLCK|      |      |      |INSERT| RCTRL |
+            // | LALT  | LGUI| TAB |  DEL |SFT/SP| RET  |                   |TO_SYS|SFT/SP| BSPC | ESC  | MENU | RALT |
+            // ------------------------------------------------------------------------------------------------------------
+
+            bindings = <
+NAVIGATION_BINDINGS(NAV_SHIFTS, NAV_EMPTY_SHIFTS, &kp RET, &to LAYER_SYSTEM)
             >;
             sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
         };

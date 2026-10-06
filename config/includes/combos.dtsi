@@ -25,25 +25,25 @@
         };
 
         // -------------------------------------------------------------
-        // Navigation レイヤー呼び出し (3キー同時ホールド):
+        // Left-Navigation レイヤー呼び出し (3キー同時ホールド):
         // 左手: 「x」(26) + 「p」(27) + 「c」(28) (Layer 0) / ひ・は・こ (Layer 3)
         // -------------------------------------------------------------
         combo_navigation_l {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <26 27 28>;
-            bindings = <&mo LAYER_NAVIGATION>;
+            bindings = <&mo LAYER_LEFT_NAVIGATION>;
             layers = <LAYER_LATIN LAYER_NAGINATA>;
             slow-release;
         };
 
         // -------------------------------------------------------------
-        // Navigation レイヤー呼び出し (3キー同時ホールド):
+        // Right-Navigation レイヤー呼び出し (3キー同時ホールド):
         // 右手: 「m」(33) + 「.」(34) + 「-」(35) (Layer 0) / な・ん・ら (Layer 3)
         // -------------------------------------------------------------
         combo_navigation_r {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <33 34 35>;
-            bindings = <&mo LAYER_NAVIGATION>;
+            bindings = <&mo LAYER_RIGHT_NAVIGATION>;
             layers = <LAYER_LATIN LAYER_NAGINATA>;
             slow-release;
         };
