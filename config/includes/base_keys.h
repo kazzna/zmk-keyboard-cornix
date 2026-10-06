@@ -33,7 +33,7 @@
  * および親指キー(Del/Bspcの片手完結反転仕様、Space/Shift、Enter透過)の配置を定義。
  */
 #define SYMBOLS_BINDINGS(MOD_FN, TOP_L, TOP_R) \
-    TOP_L         &kp LBRC      &kp RBRC    &kp LBKT         &kp RBKT          &kp CARET                      &kp PRCNT      &kp HASH          &kp LT        &kp GT   &kp DLLR       TOP_R \
-    &none         &kp SEMI      &kp PIPE    &kp AMPS         &kp N0            &kp COLON                      &kp AT         &kp N1            &kp LPAR      &kp RPAR &kp EQUAL      &none \
-    MOD_FN(LCTRL) &kp N6        &kp N7      &kp N8           &kp N9            &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK     &kp N2            &kp N3        &kp N4   &kp N5         MOD_FN(RCTRL) \
+    TOP_L         &kp LBRC      &kp RBRC    &mm_lbkt         &mm_rbkt          &kp CARET                      &kp PRCNT      &kp HASH          &kp LT        &kp GT   &kp DLLR       TOP_R \
+    &none         &mm_semi      &kp PIPE    &kp AMPS         &mm_n0            &kp COLON                      &kp AT         &mm_n1            &kp LPAR      &kp RPAR &mm_equal      &none \
+    MOD_FN(LCTRL) &mm_n6        &mm_n7      &mm_n8           &mm_n9            &kp PLUS   &kp C_MUTE &kp LG(L) &kp ASTRK     &mm_n2            &mm_n3        &mm_n4   &mm_n5         MOD_FN(RCTRL) \
     MOD_FN(LALT)  MOD_FN(LGUI)  &kp TAB     &kp BSPC         &mt LSHIFT SPACE  &trans                    &trans         &mt RSHIFT SPACE  &kp DEL       &kp ESC  &kp K_APP      MOD_FN(RALT)

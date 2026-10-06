@@ -119,16 +119,16 @@ SYMBOLS_BINDINGS(LM_SYMBOLS, &to_naginata, &kp LA(GRAVE))
             display-name = "Naginata-Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |IME_TG |   (   | ) |  {   |  }   |  <-  |                   |  ->  |  1   |  2   |  3   |RECONV|TO_LATIN|
-            // |       |   [   | ] |  ?   |  ・  |      |                   |      |  4   |  5   |  6   |  UP  |       |
-            // |LM9/CTL|   <   | > |  !   |  ~   |      |        |  |       |  0   |  7   |  8   |  9   | DOWN |LM9/CTL|
-            // |LM9/ALT|LM9/GUI|TAB| BSPC |SFT/SP| (RET)|                   | (RET)|SFT/SP| DEL  | ESC  | MENU |LM9/ALT|
+            // |IME_TG |   (   | ) |  {   |  }   |  UP  |                   | DOWN |  1   |  2   |  3   |RECONV|TO_LATIN|
+            // |       |   [   | ] |  ?   |  ・  |CPY(C)|                   |CUT(X)|  4   |  5   |  6   |ALL(A)|       |
+            // |LM10/CTL|  <   | > |  !   |  ~   |PST(V)|        |  |       |  0   |  7   |  8   |  9   |      |LM10/CTL|
+            // |LM10/ALT|LM10/GUI|TAB|BSPC|SFT/SP|(RET)|                   | (RET)|SFT/SP| DEL  | ESC  | MENU |LM10/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp LA(GRAVE)               &kp LPAR                  &kp RPAR &kp LBRC  &kp RBRC  &kp LEFT                  &kp RIGHT &kp N1  &kp N2  &kp N3  &kp LG(FSLH) &to_latin
-&none                       &kp LBKT                  &kp RBKT &kp QMARK &kp FSLH  &none                     &none   &kp N4  &kp N5  &kp N6  &kp UP       &none
-&lm LAYER_MOD_SYMBOLS LCTRL &kp LT                    &kp GT   &kp EXCL  &kp TILDE &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN     &lm LAYER_MOD_SYMBOLS RCTRL
+&kp LA(GRAVE)               &kp LPAR                  &kp RPAR &kp LBRC  &kp RBRC  &kp UP                    &kp DOWN  &mm_n1  &mm_n2  &mm_n3  &kp LG(FSLH) &to_latin
+&none                       &mm_lbkt                  &mm_rbkt &kp QMARK &mm_fslh  &kp LC(C)                 &kp LC(X) &mm_n4  &mm_n5  &mm_n6  &kp LC(A)    &none
+&lm LAYER_MOD_SYMBOLS LCTRL &kp LT                    &kp GT   &kp EXCL  &kp TILDE &kp LC(V)  &kp C_MUTE &kp LG(L) &mm_n0  &mm_n7  &mm_n8  &mm_n9  &none        &lm LAYER_MOD_SYMBOLS RCTRL
 &lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp BSPC  &mt LSHIFT SPACE &trans     &trans  &mt RSHIFT SPACE  &kp DEL  &kp ESC &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;

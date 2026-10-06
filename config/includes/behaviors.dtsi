@@ -42,6 +42,35 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+#define SHIFT_IMMUNE_MM(name, keycode) \
+        name: name { \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <keycode>, <keycode>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+        /*
+         * Shift-Immune Mod-Morphs (custom/layout.md 凡例仕様)
+         * 記号面において Shift 押下時でも同一文字出力を維持するためのビヘイビア
+         */
+        SHIFT_IMMUNE_MM(mm_n0, &kp N0)
+        SHIFT_IMMUNE_MM(mm_n1, &kp N1)
+        SHIFT_IMMUNE_MM(mm_n2, &kp N2)
+        SHIFT_IMMUNE_MM(mm_n3, &kp N3)
+        SHIFT_IMMUNE_MM(mm_n4, &kp N4)
+        SHIFT_IMMUNE_MM(mm_n5, &kp N5)
+        SHIFT_IMMUNE_MM(mm_n6, &kp N6)
+        SHIFT_IMMUNE_MM(mm_n7, &kp N7)
+        SHIFT_IMMUNE_MM(mm_n8, &kp N8)
+        SHIFT_IMMUNE_MM(mm_n9, &kp N9)
+        SHIFT_IMMUNE_MM(mm_lbkt, &kp LBKT)
+        SHIFT_IMMUNE_MM(mm_rbkt, &kp RBKT)
+        SHIFT_IMMUNE_MM(mm_semi, &kp SEMI)
+        SHIFT_IMMUNE_MM(mm_equal, &kp EQUAL)
+        SHIFT_IMMUNE_MM(mm_fslh, &kp FSLH)
+#undef SHIFT_IMMUNE_MM
+
         rot_scroll_vert: rot_scroll_vert {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
