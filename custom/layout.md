@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # Cornix LP キーボードレイアウト仕様書 (Layout Specification)
 
 [Cornix LP](https://jezailfunder.jp/products/cornix-lp-keyboard) は、40%配列のロープロファイル分割型キーボードです。  
@@ -61,7 +63,7 @@
 ### レイヤー構成 (Layer Map)
 
 | レイヤー | 名称 | 主な役割 | 主な遷移先 |
-|:---:|:---|:---|:---|
+|:-:|:--|:--|:--|
 | **Layer 0** | **Latin** | ラテン面 | Symbols / Neovim / Naginata / Left-Navigation / Right-Navigation / Mod-Latin |
 | **Layer 1** | **Symbols** | 記号面 | Latin / Naginata / Mod-Symbols |
 | **Layer 2** | **Neovim** | Neovim移動面 | Latin |
@@ -81,7 +83,7 @@
 ### ロータリーエンコーダー (ダイアル)
 
 | レイヤー | 左ダイアル: 反時計回り | 左ダイアル: 押し込み | 左ダイアル: 時計回り | 右ダイアル: 反時計回り | 右ダイアル: 押し込み | 右ダイアル: 時計回り |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+|:--|:-:|:-:|:-:|:-:|:-:|:-:|
 | **ナビゲーション面 (Layer 6, 7)** | 水平スクロール (左) | 無反応 | 水平スクロール (右) | 垂直スクロール (上) | 無反応 | 垂直スクロール (下) |
 | **上記以外 (Layer 0〜5, 8〜10)** | 音量ダウン | ミュート / 解除 | 音量アップ | 明るさダウン | 画面ロック (Gui + L) | 明るさアップ |
 
@@ -120,7 +122,7 @@ From:
 - L42 (`L-Gui + MO(9)*`)
   - L-Gui をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
 
-Combos: 
+Combos:
 
 - L23 (t) + L22 (s)
   - `MO(2)` **Layer 2 (Neovim面)**
