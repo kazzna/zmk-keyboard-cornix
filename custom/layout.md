@@ -1,7 +1,7 @@
 # Cornix LP キーボードレイアウト仕様書 (Layout Specification)
 
 [Cornix LP](https://jezailfunder.jp/products/cornix-lp-keyboard) は、40%配列のロープロファイル分割型キーボードです。  
-本ドキュメントは、Cornix LP における全レイヤー (Layer 0〜9) のキーマップ論理仕様および運指設計をまとめた公式リファレンスです。
+本ドキュメントは、Cornix LP における全レイヤー (Layer 0〜10) のキーマップ論理仕様および運指設計をまとめた公式リファレンスです。
 
 ---
 
@@ -62,16 +62,17 @@
 
 | レイヤー | 名称 | 主な役割 | 主な遷移先 |
 |:---:|:---|:---|:---|
-| **Layer 0** | **Latin** | ラテン面 | Symbols / Neovim / Naginata / Navigation / Mod-Latin |
+| **Layer 0** | **Latin** | ラテン面 | Symbols / Neovim / Naginata / Left-Navigation / Right-Navigation / Mod-Latin |
 | **Layer 1** | **Symbols** | 記号面 | Latin / Naginata / Mod-Symbols |
 | **Layer 2** | **Neovim** | Neovim移動面 | Latin |
-| **Layer 3** | **Naginata** | 薙刀式基本面 | Latin / Naginata-Ext / Naginata-Symbols / Navigation / Mod-Latin |
+| **Layer 3** | **Naginata** | 薙刀式基本面 | Latin / Naginata-Ext / Naginata-Symbols / Left-Navigation / Right-Navigation / Mod-Latin |
 | **Layer 4** | **Naginata-Ext** | 薙刀式補完面 | Naginata / Mod-Latin |
 | **Layer 5** | **Naginata-Symbols** | 薙刀式記号面 | Latin / Naginata / Mod-Symbols |
-| **Layer 6** | **Navigation** | ナビゲーション面 | Latin / Naginata / System |
-| **Layer 7** | **System** | システム管理面 | Latin / Naginata |
-| **Layer 8** | **Mod-Latin** | 修飾キーラテン面 | Latin / Naginata / Mod-Symbols |
-| **Layer 9** | **Mod-Symbols** | 修飾キー記号面 | Symbols / Naginata-Symbols |
+| **Layer 6** | **Left-Navigation** | 左手ナビゲーション面 | Latin / Naginata / System |
+| **Layer 7** | **Right-Navigation** | 右手ナビゲーション面 | Latin / Naginata / System |
+| **Layer 8** | **System** | システム管理面 | Latin / Naginata |
+| **Layer 9** | **Mod-Latin** | 修飾キーラテン面 | Latin / Naginata / Mod-Symbols |
+| **Layer 10** | **Mod-Symbols** | 修飾キー記号面 | Symbols / Naginata-Symbols |
 
 ---
 
@@ -81,8 +82,8 @@
 
 | レイヤー | 左ダイアル: 反時計回り | 左ダイアル: 押し込み | 左ダイアル: 時計回り | 右ダイアル: 反時計回り | 右ダイアル: 押し込み | 右ダイアル: 時計回り |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **一般レイヤー (Layer 0〜5, 7〜9)** | 音量ダウン | ミュート / 解除 | 音量アップ | 明るさダウン | 画面ロック (Gui + L) | 明るさアップ |
-| **Layer 6 (Navigation面)** | 水平スクロール (左) | 無反応 | 水平スクロール (右) | 垂直スクロール (上) | 無反応 | 垂直スクロール (下) |
+| **ナビゲーション面 (Layer 6, 7)** | 水平スクロール (左) | 無反応 | 水平スクロール (右) | 垂直スクロール (上) | 無反応 | 垂直スクロール (下) |
+| **上記以外 (Layer 0〜5, 8〜10)** | 音量ダウン | ミュート / 解除 | 音量アップ | 明るさダウン | 画面ロック (Gui + L) | 明るさアップ |
 
 ---
 
@@ -97,25 +98,27 @@ From:
   - LT1 (Enter) + R16 または RT1 (Enter) + R16 -> `TO(0)`
 - **Layer 5: Naginata-Symbols (薙刀式記号面)**
   - R16 -> `TO(0)`
-- **Layer 6: Navigation (ナビゲーション面)**
+- **Layer 6: Left-Navigation (左手ナビゲーション面)**
   - R16 -> `TO(0)`
-- **Layer 7: System (システム管理面)**
+- **Layer 7: Right-Navigation (右手ナビゲーション面)**
+  - R16 -> `TO(0)`
+- **Layer 8: System (システム管理面)**
   - R16 または L41 -> `TO(0)`
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 ||b <strong>B</strong>|l <strong>L</strong>|d <strong>D</strong>|w <strong>W</strong>|z <strong>Z</strong>|❌|, <strong>!</strong>|f <strong>F</strong>|o <strong>O</strong>|u <strong>U</strong>|j <strong>J</strong>||
 |` <strong>~</strong>|n <strong>N</strong>|r <strong>R</strong>|t <strong>T</strong>|s <strong>S</strong>|g <strong>G</strong>|❌|y <strong>Y</strong>|h <strong>H</strong>|a <strong>A</strong>|e <strong>E</strong>|i <strong>I</strong>|' <strong>"</strong>|
-|L-Ctrl + MO(8)*|q <strong>Q</strong>|x <strong>X</strong>|p <strong>P</strong>|c <strong>C</strong>|v <strong>V</strong>|❌|k <strong>K</strong>|m <strong>M</strong>|. <strong>?</strong>|- <strong>_</strong>|/ <strong>\\</strong>|R-Ctrl + MO(8)*|
-|L-Alt + MO(8)*|L-Gui + MO(8)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(8)*|
+|L-Ctrl + MO(9)*|q <strong>Q</strong>|x <strong>X</strong>|p <strong>P</strong>|c <strong>C</strong>|v <strong>V</strong>|❌|k <strong>K</strong>|m <strong>M</strong>|. <strong>?</strong>|- <strong>_</strong>|/ <strong>\\</strong>|R-Ctrl + MO(9)*|
+|L-Alt + MO(9)*|L-Gui + MO(9)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(9)*|
 |❌|❌|❌|Del|Space<br><ins>L-Shift</ins>|Enter<br><ins>MO(1)</ins>|❌|Enter<br><ins>MO(1)</ins>|Space<br><ins>R-Shift</ins>|Bspc|❌|❌|❌|
 
-- L36 (`L-Ctrl + MO(8)*`) または R36 (`R-Ctrl + MO(8)*`)
-  - L-Ctrl または R-Ctrl をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
-- L43 (`L-Alt + MO(8)*`) または R43 (`R-Alt + MO(8)*`)
-  - L-Alt または R-Alt をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
-- L42 (`L-Gui + MO(8)*`)
-  - L-Gui をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
+- L36 (`L-Ctrl + MO(9)*`) または R36 (`R-Ctrl + MO(9)*`)
+  - L-Ctrl または R-Ctrl をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
+- L43 (`L-Alt + MO(9)*`) または R43 (`R-Alt + MO(9)*`)
+  - L-Alt または R-Alt をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
+- L42 (`L-Gui + MO(9)*`)
+  - L-Gui をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
 
 Combos: 
 
@@ -125,8 +128,10 @@ Combos:
   - `` Alt + ` `` 送信後 `TO(3)` **Layer 3: Naginata (薙刀式基本面)**
 - LT1 (Enter) + R16 または RT1 (Enter) + R16
   - `` Alt + ` ``
-- L34 (x) + L33 (p) + L32 (c) または R32 (m) + R33 (.) + R34 (-)
-  - `MO(6)` **Layer 6: Navigation (ナビゲーション面)**
+- L34 (x) + L33 (p) + L32 (c)
+  - `MO(6)` **Layer 6: Left-Navigation (左手ナビゲーション面)**
+- R32 (m) + R33 (.) + R34 (-)
+  - `MO(7)` **Layer 7: Right-Navigation (右手ナビゲーション面)**
 
 ---
 
@@ -141,16 +146,16 @@ From:
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TO(3)*|\{|\}|\[|\]|\^|❌|%|#|<|>|\$|Alt + `|
 ||;|\||\&|0|:|❌|@|1|\(|\)|=||
-|L-Ctrl + MO(9)*|6|7|8|9|+|❌|\*|2|3|4|5|R-Ctrl + MO(9)*|
-|L-Alt + MO(9)*|L-Gui + MO(9)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(9)*|
+|L-Ctrl + MO(10)*|6|7|8|9|+|❌|\*|2|3|4|5|R-Ctrl + MO(10)*|
+|L-Alt + MO(10)*|L-Gui + MO(10)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(10)*|
 |❌|❌|❌|Bspc|Space<br><ins>L-Shift</ins>|Enter|❌|Enter|Space<br><ins>R-Shift</ins>|Del|❌|❌|❌|
 
-- L36 (`L-Ctrl + MO(9)*`) または R36 (`R-Ctrl + MO(9)*`)
-  - L-Ctrl または R-Ctrl をホールド状態で `MO(9)` **Layer 9: Mod-Symbols (修飾キー記号面)**
-- L43 (`L-Alt + MO(9)*`) または R43 (`R-Alt + MO(9)*`)
-  - L-Alt または R-Alt をホールド状態で `MO(9)` **Layer 9: Mod-Symbols (修飾キー記号面)**
-- L42 (`L-Gui + MO(9)*`)
-  - L-Gui をホールド状態で `MO(9)` **Layer 9: Mod-Symbols (修飾キー記号面)**
+- L36 (`L-Ctrl + MO(10)*`) または R36 (`R-Ctrl + MO(10)*`)
+  - L-Ctrl または R-Ctrl をホールド状態で `MO(10)` **Layer 10: Mod-Symbols (修飾キー記号面)**
+- L43 (`L-Alt + MO(10)*`) または R43 (`R-Alt + MO(10)*`)
+  - L-Alt または R-Alt をホールド状態で `MO(10)` **Layer 10: Mod-Symbols (修飾キー記号面)**
+- L42 (`L-Gui + MO(10)*`)
+  - L-Gui をホールド状態で `MO(10)` **Layer 10: Mod-Symbols (修飾キー記号面)**
 - L16 (`TO(3)*`)
   - `` Alt + ` `` 送信後 `TO(3)` **Layer 3: Naginata (薙刀式基本面)**
 
@@ -183,25 +188,27 @@ From:
   - LT1 (Enter) + L16 または RT1 (Enter) + L16 -> `TO(3)`
 - **Layer 1: Symbols (記号面)**
   - L16 -> `TO(3)`
-- **Layer 6: Navigation (ナビゲーション面)**
+- **Layer 6: Left-Navigation (左手ナビゲーション面)**
   - L16 -> `TO(3)`
-- **Layer 7: System (システム管理面)**
+- **Layer 7: Right-Navigation (右手ナビゲーション面)**
+  - L16 -> `TO(3)`
+- **Layer 8: System (システム管理面)**
   - L16 または R41 -> `TO(3)`
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |||き|て|し|←|❌|→|さ|る|す|へ||
 ||ろ|け|と|か|っ|❌|く|あ|い|う|ー||
-|L-Ctrl + MO(8)*|ほ|ひ|は|こ|そ|❌|た|な|ん|ら|れ|R-Ctrl + MO(8)*|
-|L-Alt + MO(8)*|L-Gui + MO(8)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(8)*|
+|L-Ctrl + MO(9)*|ほ|ひ|は|こ|そ|❌|た|な|ん|ら|れ|R-Ctrl + MO(9)*|
+|L-Alt + MO(9)*|L-Gui + MO(9)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(9)*|
 |❌|❌|❌|Del|Space<br><ins>MO(4)</ins>|Enter<br><ins>MO(5)</ins>|❌|Enter<br><ins>MO(5)</ins>|Space<br><ins>MO(4)</ins>|Bspc|❌|❌|❌|
 
-- L36 (`L-Ctrl + MO(8)*`) または R36 (`R-Ctrl + MO(8)*`)
-  - L-Ctrl または R-Ctrl をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
-- L43 (`L-Alt + MO(8)*`) または R43 (`R-Alt + MO(8)*`)
-  - L-Alt または R-Alt をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
-- L42 (`L-Gui + MO(8)*`)
-  - L-Gui をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
+- L36 (`L-Ctrl + MO(9)*`) または R36 (`R-Ctrl + MO(9)*`)
+  - L-Ctrl または R-Ctrl をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
+- L43 (`L-Alt + MO(9)*`) または R43 (`R-Alt + MO(9)*`)
+  - L-Alt または R-Alt をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
+- L42 (`L-Gui + MO(9)*`)
+  - L-Gui をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
 
 Combos:
 
@@ -209,8 +216,10 @@ Combos:
   - `` Alt + ` ``
 - LT1 (Enter) + R16 または RT1 (Enter) + R16
   - `` Alt + ` `` 送信後 `TO(0)` **Layer 0: Latin (ラテン面)**
-- L34 (ひ) + L33 (は) + L32 (こ) または R32 (な) + R33 (ん) + R34 (ら)
-  - `MO(6)` **Layer 6: Navigation (ナビゲーション面)**
+- L34 (ひ) + L33 (は) + L32 (こ)
+  - `MO(6)` **Layer 6: Left-Navigation (左手ナビゲーション面)**
+- R32 (な) + R33 (ん) + R34 (ら)
+  - `MO(7)` **Layer 7: Right-Navigation (右手ナビゲーション面)**
 - 濁音・半濁音・拗音などの同時押しコンボ仕様は [naginata_combos.md](./naginata_combos.md) を参照。
 
 ---
@@ -226,16 +235,16 @@ From:
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |||ね|り|め|Shift + ←|❌|Shift + →|さ|よ|え|ゆ||
 ||せ|み|に|ま|ち|❌|や|の|も|つ|ふ||
-|Shift + L-Ctrl + MO(8)*|ほ|ひ|を|、|ぬ|❌|お|。|む|わ|れ|Shift + R-Ctrl + MO(8)*|
-|Shift + L-Alt + MO(8)*|Shift + L-Gui + MO(8)*|Shift + Tab|❌|❌|❌|❌|❌|❌|❌|Shift + Esc|Shift + Menu|Shift + R-Alt + MO(8)*|
+|Shift + L-Ctrl + MO(9)*|ほ|ひ|を|、|ぬ|❌|お|。|む|わ|れ|Shift + R-Ctrl + MO(9)*|
+|Shift + L-Alt + MO(9)*|Shift + L-Gui + MO(9)*|Shift + Tab|❌|❌|❌|❌|❌|❌|❌|Shift + Esc|Shift + Menu|Shift + R-Alt + MO(9)*|
 |❌|❌|❌|Shift + Del|Shift + Space|Shift + Enter<br><ins>MO(5)</ins>|❌|Shift + Enter<br><ins>MO(5)</ins>|Shift + Space|Shift + Bspc|❌|❌|❌|
 
-- L36 (`Shift + L-Ctrl + MO(8)*`) または R36 (`Shift + R-Ctrl + MO(8)*`)
-  - Shift + L-Ctrl または Shift + R-Ctrl をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
-- L43 (`Shift + L-Alt + MO(8)*`) または R43 (`Shift + R-Alt + MO(8)*`)
-  - Shift + L-Alt または Shift + R-Alt をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
-- L42 (`Shift + L-Gui + MO(8)*`)
-  - Shift + L-Gui をホールド状態で `MO(8)` **Layer 8: Mod-Latin (修飾キーラテン面)**
+- L36 (`Shift + L-Ctrl + MO(9)*`) または R36 (`Shift + R-Ctrl + MO(9)*`)
+  - Shift + L-Ctrl または Shift + R-Ctrl をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
+- L43 (`Shift + L-Alt + MO(9)*`) または R43 (`Shift + R-Alt + MO(9)*`)
+  - Shift + L-Alt または Shift + R-Alt をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
+- L42 (`Shift + L-Gui + MO(9)*`)
+  - Shift + L-Gui をホールド状態で `MO(9)` **Layer 9: Mod-Latin (修飾キーラテン面)**
 - 濁音・半濁音・拗音などの同時押しコンボ仕様は [naginata_combos.md](./naginata_combos.md) を参照。
 
 ---
@@ -251,18 +260,18 @@ From:
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|Alt + \`|（|）|『|』|←|❌|→|１|２|３|Gui + /|TO(0)*|
-||「|」|？|・||❌||４|５|６|↑||
-|L-Ctrl + MO(9)*|＜|＞|！|〜||❌|０|７|８|９|↓|R-Ctrl + MO(9)*|
-|L-Alt + MO(9)*|L-Gui + MO(9)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(9)*|
+|Alt + \`|（|）|『|』|↑|❌|↓|１|２|３|L-Gui + /|TO(0)*|
+||「|」|？|・|L-Ctrl + c|❌|L-Ctrl + x|４|５|６|L-Ctrl + a||
+|L-Ctrl + MO(10)*|＜|＞|！|〜|L-Ctrl + v|❌|０|７|８|９||R-Ctrl + MO(10)*|
+|L-Alt + MO(10)*|L-Gui + MO(10)*|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt + MO(10)*|
 |❌|❌|❌|Bspc|Space<br><ins>L-Shift</ins>|Enter|❌|Enter|Space<br><ins>R-Shift</ins>|Del|❌|❌|❌|
 
-- L36 (`L-Ctrl + MO(9)*`) または R36 (`R-Ctrl + MO(9)*`)
-  - L-Ctrl または R-Ctrl をホールド状態で `MO(9)` **Layer 9: Mod-Symbols (修飾キー記号面)**
-- L43 (`L-Alt + MO(9)*`) または R43 (`R-Alt + MO(9)*`)
-  - L-Alt または R-Alt をホールド状態で `MO(9)` **Layer 9: Mod-Symbols (修飾キー記号面)**
-- L42 (`L-Gui + MO(9)*`)
-  - L-Gui をホールド状態で `MO(9)` **Layer 9: Mod-Symbols (修飾キー記号面)**
+- L36 (`L-Ctrl + MO(10)*`) または R36 (`R-Ctrl + MO(10)*`)
+  - L-Ctrl または R-Ctrl をホールド状態で `MO(10)` **Layer 10: Mod-Symbols (修飾キー記号面)**
+- L43 (`L-Alt + MO(10)*`) または R43 (`R-Alt + MO(10)*`)
+  - L-Alt または R-Alt をホールド状態で `MO(10)` **Layer 10: Mod-Symbols (修飾キー記号面)**
+- L42 (`L-Gui + MO(10)*`)
+  - L-Gui をホールド状態で `MO(10)` **Layer 10: Mod-Symbols (修飾キー記号面)**
 - R16 (`TO(0)*`)
   - `` Alt + ` `` 送信後 `TO(0)` **Layer 0: Latin (ラテン面)**
 - R12 (`Gui + /`)
@@ -270,31 +279,52 @@ From:
 
 ---
 
-### Layer 6: Navigation (ナビゲーション面)
+### Layer 6: Left-Navigation (左手ナビゲーション面)
 
 From:
 
 - **Layer 0: Latin (ラテン面)**
-  - L34 (x) + L33 (p) + L32 (c) または R32 (m) + R33 (.) + R34 (-) -> `MO(6)`
+  - L34 (x) + L33 (p) + L32 (c) -> `MO(6)`
 - **Layer 3: Naginata (薙刀式基本面)**
-  - L34 (ひ) + L33 (は) + L32 (こ) または R32 (な) + R33 (ん) + R34 (ら) -> `MO(6)`
+  - L34 (ひ) + L33 (は) + L32 (こ) -> `MO(6)`
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |TO(3)|F1|F2|F3|F4|F5|❌|PrintScreen|Home|↑|End|Page Up|TO(0)|
-|Pause|F6|F7|F8|F9|F10|❌|CapsLock|←|↓|→|Page Down|Enter|
-|L-Ctrl|F11||L-Shift||F12|❌|ScrollLock||R-Shift||Insert|R-Ctrl|
+|Pause|F6|F7|F8|F9|F10|❌|CapsLock|←|↓|→|Page Down|R-Gui|
+|L-Ctrl|F11||||F12|❌|ScrollLock|L-Shift||R-Shift|Insert|R-Ctrl|
 |L-Alt|L-Gui|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt|
-|❌|❌|❌|Del|Space<br><ins>L-Shift</ins>|TO(7)|❌|TO(7)|Space<br><ins>R-Shift</ins>|Bspc|❌|❌|❌|
+|❌|❌|❌|Del|Space<br><ins>L-Shift</ins>|TO(8)|❌|Enter|Space<br><ins>R-Shift</ins>|Bspc|❌|❌|❌|
 
 ---
 
-### Layer 7: System (システム管理面)
+### Layer 7: Right-Navigation (右手ナビゲーション面)
 
 From:
 
-- **Layer 6: Navigation (ナビゲーション面)**
-  - LT1 または RT1 -> `TO(7)`
+- **Layer 0: Latin (ラテン面)**
+  - R32 (m) + R33 (.) + R34 (-) -> `MO(7)`
+- **Layer 3: Naginata (薙刀式基本面)**
+  - R32 (な) + R33 (ん) + R34 (ら) -> `MO(7)`
+
+| 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|TO(3)|F1|F2|F3|F4|F5|❌|PrintScreen|Home|↑|End|Page Up|TO(0)|
+|Pause|F6|F7|F8|F9|F10|❌|CapsLock|←|↓|→|Page Down|R-Gui|
+|L-Ctrl|F11|L-Shift||R-Shift|F12|❌|ScrollLock||||Insert|R-Ctrl|
+|L-Alt|L-Gui|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt|
+|❌|❌|❌|Del|Space<br><ins>L-Shift</ins>|Enter|❌|TO(8)|Space<br><ins>R-Shift</ins>|Bspc|❌|❌|❌|
+
+---
+
+### Layer 8: System (システム管理面)
+
+From:
+
+- **Layer 6: Left-Navigation (左手ナビゲーション面)**
+  - LT1 -> `TO(8)`
+- **Layer 7: Right-Navigation (右手ナビゲーション面)**
+  - RT1 -> `TO(8)`
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -319,22 +349,22 @@ From:
 
 ---
 
-### Layer 8: Mod-Latin (修飾キーラテン面)
+### Layer 9: Mod-Latin (修飾キーラテン面)
 
 From:
 
 - **Layer 0: Latin (ラテン面)**
-  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(8)`
-  - L43 (L-Alt) または R43 (R-Alt) -> `MO(8)`
-  - L42 (L-Gui) -> `MO(8)`
+  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(9)`
+  - L43 (L-Alt) または R43 (R-Alt) -> `MO(9)`
+  - L42 (L-Gui) -> `MO(9)`
 - **Layer 3: Naginata (薙刀式基本面)**
-  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(8)`
-  - L43 (L-Alt) または R43 (R-Alt) -> `MO(8)`
-  - L42 (L-Gui) -> `MO(8)`
+  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(9)`
+  - L43 (L-Alt) または R43 (R-Alt) -> `MO(9)`
+  - L42 (L-Gui) -> `MO(9)`
 - **Layer 4: Naginata-Ext (薙刀式補完面)**
-  - L36 (Shift + L-Ctrl) または R36 (Shift + R-Ctrl) -> `MO(8)`
-  - L43 (Shift + L-Alt) または R43 (Shift + R-Alt) -> `MO(8)`
-  - L42 (Shift + L-Gui) -> `MO(8)`
+  - L36 (Shift + L-Ctrl) または R36 (Shift + R-Ctrl) -> `MO(9)`
+  - L43 (Shift + L-Alt) または R43 (Shift + R-Alt) -> `MO(9)`
+  - L42 (Shift + L-Gui) -> `MO(9)`
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -342,24 +372,24 @@ From:
 |` <strong>~</strong>|n <strong>N</strong>|r <strong>R</strong>|t <strong>T</strong>|s <strong>S</strong>|g <strong>G</strong>|❌|y <strong>Y</strong>|h <strong>H</strong>|a <strong>A</strong>|e <strong>E</strong>|i <strong>I</strong>|' <strong>"</strong>|
 |L-Ctrl|q <strong>Q</strong>|x <strong>X</strong>|p <strong>P</strong>|c <strong>C</strong>|v <strong>V</strong>|❌|k <strong>K</strong>|m <strong>M</strong>|. <strong>?</strong>|- <strong>_</strong>|/ <strong>\\</strong>|R-Ctrl|
 |L-Alt|L-Gui|Tab|❌|❌|❌|❌|❌|❌|❌|Esc|Menu|R-Alt|
-|❌|❌|❌|Del|Space<br><ins>L-Shift</ins>|Enter<br><ins>MO(9)</ins>|❌|Enter<br><ins>MO(9)</ins>|Space<br><ins>R-Shift</ins>|Bspc|❌|❌|❌|
+|❌|❌|❌|Del|Space<br><ins>L-Shift</ins>|Enter<br><ins>MO(10)</ins>|❌|Enter<br><ins>MO(10)</ins>|Space<br><ins>R-Shift</ins>|Bspc|❌|❌|❌|
 
 ---
 
-### Layer 9: Mod-Symbols (修飾キー記号面)
+### Layer 10: Mod-Symbols (修飾キー記号面)
 
 From:
 
 - **Layer 1: Symbols (記号面)**
-  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(9)`
-  - L43 (L-Alt) または R43 (R-Alt) -> `MO(9)`
-  - L42 (L-Gui) -> `MO(9)`
+  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(10)`
+  - L43 (L-Alt) または R43 (R-Alt) -> `MO(10)`
+  - L42 (L-Gui) -> `MO(10)`
 - **Layer 5: Naginata-Symbols (薙刀式記号面)**
-  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(9)`
-  - L43 (L-Alt) または R43 (R-Alt) -> `MO(9)`
-  - L42 (L-Gui) -> `MO(9)`
-- **Layer 8: Mod-Latin (修飾キーラテン面)**
-  - LT1 (Enter) または RT1 (Enter) -> `MO(9)`
+  - L36 (L-Ctrl) または R36 (R-Ctrl) -> `MO(10)`
+  - L43 (L-Alt) または R43 (R-Alt) -> `MO(10)`
+  - L42 (L-Gui) -> `MO(10)`
+- **Layer 9: Mod-Latin (修飾キーラテン面)**
+  - LT1 (Enter) または RT1 (Enter) -> `MO(10)`
 
 | 左端 | 左小指 | 左薬指 | 左中指 | 左人指 | 左中央 | ギャップ | 右中央 | 右人指 | 右中指 | 右薬指 | 右小指 | 右端 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|

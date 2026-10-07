@@ -7,6 +7,7 @@
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
 #include "includes/base_keys.h"
+#include "includes/navigation_keys.h"
 #include "includes/layers.h"
 #include "includes/settings.h"
 #include <behaviors.dtsi>
@@ -118,36 +119,49 @@ SYMBOLS_BINDINGS(LM_SYMBOLS, &to_naginata, &kp LA(GRAVE))
             display-name = "Naginata-Symbols";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |IME_TG |   (   | ) |  {   |  }   |  <-  |                   |  ->  |  1   |  2   |  3   |RECONV|TO_LATIN|
-            // |       |   [   | ] |  ?   |  ・  |      |                   |      |  4   |  5   |  6   |  UP  |       |
-            // |LM9/CTL|   <   | > |  !   |  ~   |      |        |  |       |  0   |  7   |  8   |  9   | DOWN |LM9/CTL|
-            // |LM9/ALT|LM9/GUI|TAB| BSPC |SFT/SP| (RET)|                   | (RET)|SFT/SP| DEL  | ESC  | MENU |LM9/ALT|
+            // |IME_TG |   (   | ) |  {   |  }   |  UP  |                   | DOWN |  1   |  2   |  3   |RECONV|TO_LATIN|
+            // |       |   [   | ] |  ?   |  ・  |CPY(C)|                   |CUT(X)|  4   |  5   |  6   |ALL(A)|       |
+            // |LM10/CTL|  <   | > |  !   |  ~   |PST(V)|        |  |       |  0   |  7   |  8   |  9   |      |LM10/CTL|
+            // |LM10/ALT|LM10/GUI|TAB|BSPC|SFT/SP|(RET)|                   | (RET)|SFT/SP| DEL  | ESC  | MENU |LM10/ALT|
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&kp LA(GRAVE)               &kp LPAR                  &kp RPAR &kp LBRC  &kp RBRC  &kp LEFT                  &kp RIGHT &kp N1  &kp N2  &kp N3  &kp LG(FSLH) &to_latin
-&none                       &kp LBKT                  &kp RBKT &kp QMARK &kp FSLH  &none                     &none   &kp N4  &kp N5  &kp N6  &kp UP       &none
-&lm LAYER_MOD_SYMBOLS LCTRL &kp LT                    &kp GT   &kp EXCL  &kp TILDE &none      &kp C_MUTE &kp LG(L) &kp N0  &kp N7  &kp N8  &kp N9  &kp DOWN     &lm LAYER_MOD_SYMBOLS RCTRL
+&kp LA(GRAVE)               &kp LPAR                  &kp RPAR &kp LBRC  &kp RBRC  &kp UP                    &kp DOWN  &mm_n1  &mm_n2  &mm_n3  &kp LG(FSLH) &to_latin
+&none                       &mm_lbkt                  &mm_rbkt &kp QMARK &mm_fslh  &kp LC(C)                 &kp LC(X) &mm_n4  &mm_n5  &mm_n6  &kp LC(A)    &none
+&lm LAYER_MOD_SYMBOLS LCTRL &kp LT                    &kp GT   &kp EXCL  &kp TILDE &kp LC(V)  &kp C_MUTE &kp LG(L) &mm_n0  &mm_n7  &mm_n8  &mm_n9  &none        &lm LAYER_MOD_SYMBOLS RCTRL
 &lm LAYER_MOD_SYMBOLS LALT  &lm LAYER_MOD_SYMBOLS LGUI &kp TAB &kp BSPC  &mt LSHIFT SPACE &trans     &trans  &mt RSHIFT SPACE  &kp DEL  &kp ESC &kp K_APP &lm LAYER_MOD_SYMBOLS RALT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        navigation_layer {
-            display-name = "Navigation";
+        left_navigation_layer {
+            display-name = "Left-Navigation";
 
             // ------------------------------------------------------------------------------------------------------------
             // | TO_JA |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |TO_EN |
-            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN |  RET  |
-            // | LCTRL | F11 |     |LSHIFT|      |  F12 |        |  |       |SCRLCK|      |RSHIFT|      |INSERT| RCTRL |
-            // | LALT  | LGUI| TAB |  DEL |SFT/SP|TO_SYS|                   |TO_SYS|SFT/SP| BSPC | ESC  | MENU | RALT |
+            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN | RGUI |
+            // | LCTRL | F11 |     |      |      |  F12 |        |  |       |SCRLCK|LSHIFT|      |RSHIFT|INSERT| RCTRL |
+            // | LALT  | LGUI| TAB |  DEL |SFT/SP|TO_SYS|                   | RET  |SFT/SP| BSPC | ESC  | MENU | RALT |
             // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
-&to LAYER_NAGINATA &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp PRINTSCREEN &kp HOME &kp UP &kp END &kp PG_UP &to LAYER_LATIN
-&kp PAUSE_BREAK &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp CAPSLOCK &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &kp RET
-&kp LCTRL &kp F11 &none &kp LSHIFT &none &kp F12 &none &none &kp SCROLLLOCK &none &kp RSHIFT &none &kp INSERT &kp RCTRL
-&kp LALT &kp LGUI &kp TAB &kp DEL &mt LSHIFT SPACE &to LAYER_SYSTEM &to LAYER_SYSTEM &mt RSHIFT SPACE &kp BSPC &kp ESC &kp K_APP &kp RALT
+NAVIGATION_BINDINGS(NAV_EMPTY_SHIFTS, NAV_SHIFTS, &to LAYER_SYSTEM, &kp RET)
+            >;
+            sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
+        };
+
+        right_navigation_layer {
+            display-name = "Right-Navigation";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // | TO_JA |  F1 |  F2 |  F3  |  F4  |  F5  |                   |PRTSCN| HOME |  UP  |  END |PG_UP |TO_EN |
+            // | PAUSE |  F6 |  F7 |  F8  |  F9  |  F10 |                   | CAPS | LEFT | DOWN | RIGHT|PG_DN | RGUI |
+            // | LCTRL | F11 |LSHIFT|     |RSHIFT|  F12 |        |  |       |SCRLCK|      |      |      |INSERT| RCTRL |
+            // | LALT  | LGUI| TAB |  DEL |SFT/SP| RET  |                   |TO_SYS|SFT/SP| BSPC | ESC  | MENU | RALT |
+            // ------------------------------------------------------------------------------------------------------------
+
+            bindings = <
+NAVIGATION_BINDINGS(NAV_SHIFTS, NAV_EMPTY_SHIFTS, &kp RET, &to LAYER_SYSTEM)
             >;
             sensor-bindings = <&rot_scroll_horiz &rot_scroll_vert>;
         };
