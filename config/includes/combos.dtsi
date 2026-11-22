@@ -72,13 +72,13 @@
         };
 
         // -------------------------------------------------------------
-        // Latin面: Enter + 右上端キー ➔ IME切り替え (Alt + Grave)
+        // Latin面: Enter + 右上端キー ➔ IME切り替え (LANG2)
         // 左手Enter (43) / 右手Enter (44) + 右上端 (11)
         // -------------------------------------------------------------
         combo_latin_ime_toggle_l {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <43 11>;
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp LANG2>;
             layers = <LAYER_LATIN>;
             slow-release;
         };
@@ -86,7 +86,7 @@
         combo_latin_ime_toggle_r {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <44 11>;
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp LANG2>;
             layers = <LAYER_LATIN>;
             slow-release;
         };
@@ -112,13 +112,13 @@
         };
 
         // -------------------------------------------------------------
-        // 薙刀式面: Enter + 左上端キー ➔ IME切り替え (Alt + Grave)
+        // 薙刀式面: Enter + 左上端キー ➔ IME切り替え (LANG1)
         // 左手Enter (43) / 右手Enter (44) + 左上端 (0)
         // -------------------------------------------------------------
         combo_naginata_ime_toggle_l {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <43 0>;
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp LANG1>;
             layers = <LAYER_NAGINATA>;
             slow-release;
         };
@@ -126,7 +126,7 @@
         combo_naginata_ime_toggle_r {
             timeout-ms = <COMBO_TIMEOUT_MS>;
             key-positions = <44 0>;
-            bindings = <&kp LA(GRAVE)>;
+            bindings = <&kp LANG1>;
             layers = <LAYER_NAGINATA>;
             slow-release;
         };

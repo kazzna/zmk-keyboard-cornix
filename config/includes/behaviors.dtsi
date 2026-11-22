@@ -118,7 +118,7 @@
             #binding-cells = <0>;
             wait-ms = <IME_MACRO_WAIT_MS>;
             tap-ms = <IME_MACRO_TAP_MS>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_NAGINATA>;
+            bindings = <&macro_tap &kp LANG1>, <&macro_tap &to LAYER_NAGINATA>;
         };
 
         to_latin: to_latin {
@@ -126,7 +126,7 @@
             #binding-cells = <0>;
             wait-ms = <IME_MACRO_WAIT_MS>;
             tap-ms = <IME_MACRO_TAP_MS>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp GRAVE>, <&macro_release &kp LALT>, <&macro_tap &to LAYER_LATIN>;
+            bindings = <&macro_tap &kp LANG2>, <&macro_tap &to LAYER_LATIN>;
         };
     };
 };

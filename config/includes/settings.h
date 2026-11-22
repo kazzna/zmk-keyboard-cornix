@@ -11,9 +11,9 @@
 #define KANA_WAIT_MS 8 // キー送信間のウェイト
 #define KANA_TAP_MS 8 // キー押下時間
 
-// IME切り替えマクロ (Alt + `)
-#define IME_MACRO_WAIT_MS 10 // Alt + ` 送信時の待機時間
-#define IME_MACRO_TAP_MS 10 // Alt + ` 送信時のタップ時間
+// IME切り替えマクロ (LANG1 / LANG2)
+#define IME_MACRO_WAIT_MS 10 // LANG1 / LANG2 送信時の待機時間
+#define IME_MACRO_TAP_MS 10 // LANG1 / LANG2 送信時のタップ時間
 
 // ロータリーエンコーダー (Scroll)
 #define SCROLL_ENCODER_TAP_MS 20 // スクロール回転時のパルス時間
